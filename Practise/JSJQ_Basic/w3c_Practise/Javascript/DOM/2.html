@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM CSS</title>
+</head>
+<body>
+  <p id="demo">我是文字段落啊!!!!0000000000000001</p>
+  <p id="demo">我是文字段落啊!!!!0000000000000002</p>
+  <img src="xx.jpg" alt="这是没有图片的啊" title="没有图片" id="imga">
+
+  <h1 id="titlea">哈哈哈</h1>
+
+  <div  >
+    <p id="ddddd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quibusdam deserunt molestias vitae dignissimos atque pariatur aperiam doloribus odio nihil, obcaecati laborum iusto impedit ut repellendus eaque, dolore ea amet?</p>
+    <button type="button" id="show" onclick="showa()">点击我显示内容</button>
+    <button type="button" id="show" onclick="hidea()">点击我隐藏内容</button>
+  </div>
+
+  <script type="text/javascript">
+      document.getElementById("demo").innerHTML= "哟哟哟切克闹!!!";
+      //使用innerHTML直接替换标签内容
+
+      document.getElementById("imga").alt= "姜饼果子来一套!!!";
+      document.getElementById("imga").title= "啦啦啦德玛新亚!!!";
+      //可以通过更改标签属性参数
+
+      document.getElementById('titlea').style.color = "#F00";
+      document.getElementById('titlea').style.fontSize = "20px";
+      document.getElementById('titlea').style.fontWeight = "700px";
+      document.getElementById('titlea').style.border = "2px solid rgb(80,106,154)";
+      //定位CSS..属性写法(驼峰法)
+
+
+      function showa(){
+        document.getElementById('ddddd').style.visibility="visible";
+      }
+      function hidea(){
+        document.getElementById('ddddd').style.visibility="hidden";
+      }
+      //定义函数,用按钮click触发事件  
+
+
+  </script>
+</body>
+</html>

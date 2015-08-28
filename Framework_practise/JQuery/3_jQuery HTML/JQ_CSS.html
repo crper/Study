@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JQ操作CSS</title>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    .bgc{
+      background:rgb(110,111,222);
+    }
+
+    .font{
+      font-size:30px;
+      color:rgb(164,58,186);
+    }
+
+    .bd{
+      border:2px solid rgb(72,139,52);
+    }
+
+    .dsbl{
+      display:block;
+      width: 80%;
+      height:50px;
+      line-height: 50px;
+      background: rgb(9,9,9);
+      color:rgb(255,255,255);
+    }
+
+    .cf{
+      font-size:50px;
+      background: rgb(96,196,223);
+    }
+  </style>
+</head>
+<body>
+    <div id="demo">
+      <button type="buton" id="btn1">添加一个类</button>
+      <button type="buton" id="btn2">添加多个类</button>
+      <button type="buton" id="btn3">删除类</button>
+      <button type="buton" id="btn4">toggle类</button>
+      <button type="buton" id="btn5">设置类</button>
+      <button type="buton" id="btn6"></button>
+      <button type="buton" id="btn7"></button>
+      <button type="buton" id="btn8"></button>
+    </div>
+
+    <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quam rem alias expedita doloribus minus eligendi, beatae porro dolor quis, totam possimus magni optio quibusdam, ipsa harum assumenda quos dolore!</p>
+    <p id="p2">Voluptate omnis debitis repellendus explicabo reiciendis error id, fugit. Suscipit voluptas beatae neque ratione porro totam laudantium placeat, incidunt possimus dolor, facilis est provident ullam, adipisci autem. Inventore, consequatur, sapiente!</p>
+    <p id="p3" class="cf bd">Aut cumque voluptas quibusdam repellendus consectetur veritatis dignissimos voluptatum provident doloremque cupiditate officia odio perspiciatis dolorem distinctio, eum id adipisci consequuntur error, laboriosam! Doloribus reprehenderit odit nam itaque mollitia est.</p>
+    <p id="p4">Nemo explicabo soluta beatae fuga, officiis et, unde necessitatibus dicta eligendi architecto cum, quia doloremque velit nobis dignissimos consectetur, in. Ut, tempore ratione odit iure quod corporis, vel eveniet cupiditate.</p>
+    <p id="p5">Porro sint, minima deleniti laboriosam aliquam ipsam officia? Totam porro temporibus aliquid consectetur laboriosam quas facilis voluptatibus omnis, quos dolorum dolores dicta nostrum doloremque incidunt nemo nulla? Voluptatibus, corporis, libero!</p>
+    <p id="p6">Iure voluptatibus ab libero maiores tempora fugit aliquid voluptatum? Tempora facere a, voluptate expedita earum dolorum architecto debitis similique dolore exercitationem quasi consequuntur nesciunt odit, facilis repellendus doloribus. Est, voluptatum!</p>
+    <p id="p7">Nulla culpa quibusdam nostrum accusamus cumque voluptatibus, fuga doloribus. Incidunt excepturi magni placeat repellendus molestiae consequatur maiores pariatur nostrum, beatae, recusandae culpa eligendi temporibus voluptate possimus, natus, veritatis quasi illum?</p>
+    <p id="p8">Quo amet, rerum corporis eaque harum veniam beatae voluptatem aut deserunt, quisquam, praesentium ullam similique. Quis reprehenderit voluptate impedit nostrum non sapiente provident accusamus, cupiditate, a in dolor animi ipsam!</p>
+    <script>
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+          $("#p1").addClass("font");
+        });
+        $("#btn2").click(function(){
+          $("#p2").addClass("font bgc");
+        });
+        $("#btn3").click(function(){
+          $("#p3").removeClass("cf");
+        });
+        $("#btn4").click(function(){
+          $("#p4").toggleClass("dsbl");
+        });
+        $("#btn5").click(function(){
+          $("#p5").css({
+            // "font-size":"80px",
+            fontSize:"20px",
+            color:"rgb(82,42,179)",
+            background:"rgb(18,146,160)",
+            borderColor:"rgb(38,143,195)"
+          });
+        });
+      })
+
+    /*
+    addClass() - 向被选元素添加一个或多个类
+    removeClass() - 从被选元素删除一个或多个类
+    toggleClass() - 对被选元素进行添加/删除类的切换操作
+    css() - 设置或返回样式属性
+     */
+    </script>
+</body>
+</html>

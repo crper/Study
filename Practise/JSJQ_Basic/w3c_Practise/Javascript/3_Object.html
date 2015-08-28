@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Javascript对象</title>
+
+  </head>
+
+  <body>
+    <p>访问对象的属性方法,可以用.property或者["property"]</p>
+    <p id="demo">
+
+    </p>
+
+    <script type="text/javascript">
+      var person = {
+        firstName: "CRPER",
+        lastName: "LIN",
+        age: "23",
+        eyeColor: "black",
+        weight: "55kg",
+        alla : function (){
+          return "my name is "+person.firstName+" "+person.lastName+" "+person["age"];
+        }
+      }; //声明一个对象并赋值给person
+
+      //document.getElementById("demo").innerHTML = person.firstName + " " + person.lastName+"<br>";
+      //对象的访问
+      // document.getElementById("demo").innerHTML = person["age"] + " " + person["weight"];
+
+
+      document.getElementById('demo').innerHTML = person.alla();
+
+    </script>
+  </body>
+
+</html>

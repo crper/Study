@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Callback/Channing</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <button>隐藏</button>
+    <p>我们段落内容，点击“隐藏”按钮我就会消失</p>
+    <p id="p1">啦啦啦啦啦啦啦德玛西亚!!!!!!!!!!</p>
+    <script>
+      $(document).ready(function() {
+        $("#p1").css("color","red").slideUp(2000).slideDown(2000);
+        /*
+        不过，有一种名为链接（chaining）的技术，允许我们在相同的元素上运行多条 jQuery 命令，一条接着另一条。
+
+        提示： 这样的话，浏览器就不必多次查找相同的元素。
+
+        如需链接一个动作，您只需简单地把该动作追加到之前的动作上。
+        当进行链接时，代码行会变得很差。不过，jQuery 语法不是很严格；您可以按照希望的格式来写，包含换行和缩进。
+         */
+
+        $("button").click(function() {
+          $("p").hide("slow", function() {
+            alert("段落现在被隐藏了");
+          });
+        });
+      });
+      //Callback 函数在当前动画 100% 完成之后执行。
+      //
+
+
+
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>块状元素水平垂直居中(未知宽高)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /*简易版reset,工作环境不推荐使用*/
+
+      #container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                 -o-transform: translate(-50%, -50%);
+                      transform: translate(-50%, -50%);
+        background-color: #A4FF00;
+        color: rgb(33, 172, 134);
+      }
+      /*因为不知道宽高度,所以主要用translate属性拉回未知元素XY轴上的位置实现居中*/
+      /*若是单纯实现未知高度的元素居中,只要用到transform:translateY(-50%)即可实现*/
+
+    </style>
+  </head>
+
+  <body>
+    <div id="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae obcaecati expedita ducimus, rem laborum veniam qui quo facilis enim. Repellat blanditiis nemo, magnam, sequi illum perferendis consequatur modi maiores quaerat?</div>
+  </body>
+
+</html>

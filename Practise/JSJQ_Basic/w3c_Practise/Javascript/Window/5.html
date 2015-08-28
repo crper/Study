@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>JS COOKIE</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+
+      function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+      }//定义cookie
+
+      function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i].trim();
+          if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+      }//设置cookie
+
+      function checkCookie() {
+        var user = getCookie("username");
+        if (user != "") {
+          alert("Welcome again " + user);
+        } else {
+          user = prompt("Please enter your name:", "");
+          if (user != "" && user != null) {
+            setCookie("username", user, 30);
+          }
+        }
+      }//检测cookie
+
+      /**
+           Cookies 用于存储 web 页面的用户信息。
+
+          什么是 Cookies？
+          Cookies 是一些数据, 存储于你电脑上的文本文件中。
+
+          当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。
+
+          Cookies 的作用就是用于解决 "如何记录客户端的用户信息":
+
+          当用户访问 web 页面时，他的名字可以记录在 cookie 中。
+          在用户下一次访问该页面时，可以在 cookie 中读取用户访问记录。
+          Cookies 以名/值对形式存储，如下所示:
+
+          username=John Doe
+          当浏览器从服务器上请求 web 页面时， 属于该页面的 cookies 会被添加到该请求中。服务端通过这种方式来获取用户的信息。
+       */
+
+    </script>
+  </body>
+
+</html>

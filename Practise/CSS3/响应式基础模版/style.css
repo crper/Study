@@ -1,0 +1,111 @@
+/*清除影响*/
+* {
+	margin: 0;
+	padding: 0
+}
+
+/*主包含块居中*/
+.heading,
+.container,
+.footing {
+	margin: 10px auto;
+}
+
+/*头部高度及颜色*/
+.heading {
+	height: 100px;
+	background-color: #6C1FDA;
+}
+
+/*背景颜色*/
+.left,
+.main,
+.right {
+	background-color: #5AFCE8;
+}
+
+/*底部高度颜及背景色*/
+.footing {
+	height: 100px;
+	background-color: #E84B22;
+}
+
+
+/*当屏幕分辨率大于960px的时候看到的效果*/
+@media screen and (min-width:960px) {
+	.heading,
+	.container,
+	.footing {
+		width: 960px;
+	}
+	.left,
+	.main,
+	.right {
+		float: left;
+		height: 500px;
+	}
+	.left,
+	.right {
+		width: 200px;
+	}
+	.main {
+		width: 550px;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+	.container {
+		height: 500px;
+	}
+}
+
+/*当屏幕分辨率大于600px且小于960px的时候看到的效果*/
+@media screen and (min-width:600px) and (max-width:960px) {
+	.heading,
+	.container,
+	.footing {
+		width: 600px;
+	}
+	.left,
+	.main {
+		float: left;
+		height: 400px;
+	}
+	.right {
+		display: none;
+	}
+	.left {
+		width: 160px;
+	}
+	.main {
+		width: 435px;
+		margin-left: 5px;
+	}
+	.container {
+		height: 400px;
+	}
+}
+
+/*当分辨率小于600px的时候看到的效果*/
+@media screen and (max-width:600px) {
+	.heading,
+	.container,
+	.footing {
+		width: 400px;
+	}
+	.left,
+	.right {
+		width: 400px;
+		height: 100px;
+	}
+	.main {
+		margin-top: 10px;
+		width: 400px;
+		height: 200px;
+	}
+	.right {
+		margin-top: 10px;
+	}
+	.container {
+		height: 420px;
+	}
+}

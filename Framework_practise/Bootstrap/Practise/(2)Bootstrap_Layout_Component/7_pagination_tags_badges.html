@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>分页及标签</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>默认的分页</h1>
+          <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+        <!--
+        添加该 pagination class 来在页面上显示分页。
+        -->
+
+        <div class="col-md-6">
+          <h1>激活及禁用的分页标签</h1>
+          <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li class="disabled"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+        <!--
+        class .disabled、.active 的用法：
+        -->
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h1>分页的大小</h1>
+          <ul class="pagination pagination-sm">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li class="disabled"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+          <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li class="disabled"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+          <ul class="pagination pagination-lg">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li class="disabled"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+        <!--
+        大小有三种规格,lg ,sm及normal
+        -->
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>默认的分页</h1>
+        <ul class="pager">
+          <li><a href="#">Previous</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
+      </div>
+      <!--
+      添加类pager来实现分页效果
+      -->
+
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
+        <h1>分页链接对齐</h1>
+        <ul class="pager">
+          <li class="previous"><a href="#">&larr; Older</a></li>
+          <li class="next"><a href="#">Newer &rarr;</a></li>
+        </ul>
+      </div>
+      <!--
+      使用 class .previous 把链接向左对齐，
+      使用 .next 把链接向右对齐。
+    -->
+      <div class="col-md-6">
+        <h1>分页链接对齐</h1>
+        <ul class="pager">
+          <li class="previous disabled"><a href="#">&larr; Older</a></li>
+          <li class="next"><a href="#">Newer &rarr;</a></li>
+        </ul>
+      </div>
+      <!--
+      添加disabled 来获得一个颜色变淡的外观。
+      -->
+
+
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>BS标签展示</h1>
+        <span class="label label-default">默认标签</span>
+        <span class="label label-primary">主要标签</span>
+        <span class="label label-success">成功标签</span>
+        <span class="label label-info">信息标签</span>
+        <span class="label label-warning">警告标签</span>
+        <span class="label label-danger">危险标签</span>
+      </div>
+      <!--
+          可以使用修饰的 class label-default、label-primary、
+          label-success、label-info、label-warning、
+          label-danger 来改变标签的外观
+          -->
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 ">
+        <h1>胶囊式导航中的激活状态</h1>
+        <ul class="nav nav-pills">
+          <li class="active"><a href="#">首页 <span class="badge">42</span></a></li>
+          <li><a href="#">简介</a></li>
+          <li><a href="#">消息 <span class="badge">3</span></a></li>
+        </ul>
+      </div>
+      <!-- 综合运用一 -->
+
+      <div class="col-md-6">
+        <h1>列表导航中的激活状态</h1>
+        <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+          <li class="active">
+            <a href="#">
+              <span class="badge pull-right">42</span>
+              首页
+            </a>
+          </li>
+          <li><a href="#">简介</a></li>
+          <li>
+            <a href="#">
+              <span class="badge pull-right">3</span>
+              消息
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- 综合运用二 -->
+    </div>
+    </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

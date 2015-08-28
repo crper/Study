@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>JS对象</title>
+  </head>
+
+  <body>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script type="text/javascript">
+      var message = "Hello World!!";
+      var x = message.length; //对象属性
+      var y = message.toUpperCase(); //对象方法
+      /**
+       * 访问对象属性:objectName.propertyName
+       * 访问对象方法:objectName.methodName()
+       */
+
+
+      person = new Object();
+      person.firstName = "CRPER";
+      person.lastName = "LIN";
+      person.age = "23";
+      //常规声明对象手段
+
+      person1 = {
+        firstName: "CRPER",
+        lastName: "LIN",
+        age: "23"
+      }//字面量声明对象
+
+
+      function  person2(fname,lname,age){
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+      }//构造函数
+
+      my = new person2("AAA","BBB","55");
+      document.getElementById('p1').innerHTML = "我的名字是:" + my.fname +" "+my.lname;
+      //调用构造函数输出
+
+      var text="";
+      for(x in person1){
+         text += person[x]+" ";
+      }
+      document.getElementById('p2').innerHTML = text;
+      //for in 可以遍历数组也可以遍历对象属性
+
+    </script>
+
+  </body>
+
+</html>

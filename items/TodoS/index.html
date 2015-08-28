@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>TodoList_Demo</title>
+    <!--
+        功能需求实现:
+        1: 输入框判断是否为空,不为空追加内容显示 == pass
+        2: li的关闭符号默认隐藏,悬浮显示可以关闭 == pass
+        3: 实现全选和全不选功能,增加删除线和背景色 == pass
+        4: 全部选定,多个选定,单个选定,点击complete可以删除 == pass
+        5: 单个选定动态添加删除线和背景 == pass
+        6: 双击li的文字修改内容,并更新内容 == pass
+
+
+ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        /*删除标签的样式*/
+
+        #todoList li a {
+            text-decoration: none;
+            float: right;
+        }
+
+
+
+        /*添加li的基础样式*/
+
+        #todoList li {
+            width: 478px;
+            border-radius: 0 5px 5px 0;
+            font-size: 20px;
+            height:50px;
+            white-space:nowarp;
+        }
+
+
+
+        /*首页顶部h1样式*/
+
+        .change-H1 {
+            font-size: 80px;
+            color: #ecd8d8;
+        }
+
+
+
+        /*表单字体设置*/
+
+        #todoForm {
+            color: #4d4f75;
+        }
+
+
+        /*底部信息设置*/
+
+        .button-gap {
+            float: left;
+            margin-right: 45px;
+        }
+
+
+        /*li span的样式,取消大纲及设置宽度*/
+        .doubleChange span{
+            display: inline-block;
+            width:400px;
+            height:30px;
+        }
+
+        .doubleChange span:focus{
+            outline: none;
+        }
+
+        /*JQ 动态引用的类*/
+
+        .del-line {
+            text-decoration: line-through;
+        }
+
+        .todoDelete {
+            display: none;
+        }
+
+        .css-animate{
+            background-color:rgb(28, 49, 235);
+            color:rgb(252, 255, 250);
+            -webkit-transition: all 1s ease 1s;
+            -o-transition: all 1s ease 1s;
+            transition: all 1s ease 1s;
+
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1 class="text-center change-H1">TodoS</h1>
+                <form action="" id="todoForm" class="form-inline">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" name="check_list" id="selectAllorCancer">
+                        </span>
+                        <input type="text" size="60" id="todoInput" class="form-control" placeholder="What need to be done?">
+                    </div>
+                    <ul id="todoList" class="list-group"></ul>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="wrapper">
+                        <span id="todoCount" class="button-gap">0 item list</span>
+                        <button type="button" class="button-gap btn btn-default">All</button>
+                        <button type="button" class="button-gap btn btn-default">Active</button>
+                        <button type="button" class="button-gap btn btn-default" id="deleteAllorCaner">Complete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/myScript.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

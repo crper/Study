@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景图片裁剪</title>
+	<style>
+		div{
+			width:100px;
+			height:100px;
+			padding:30px;
+			margin:20px;
+			border: 30px dashed rgba(25,25,125,.5);
+			background-image:url(img/3.jpeg);
+		}
+
+		/*裁剪图片范围为border-box*/
+		.border-box{
+
+			background-clip: border-box;
+		}
+
+		/*裁剪图片范围为padding-box*/
+		.padding-box{
+			background-clip:padding-box;
+		}
+
+		/*裁剪图片范围为content-box*/
+		.content-box{
+			background-clip: content-box;
+		}
+
+		/*文字内部填充图片*/
+		.text-full-image{
+			width:350px;
+			background: orange url(img/2.jpeg);
+			padding:20px;
+			font-size:60px;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color:transparent;
+		}
+	</style>
+</head>
+<body>
+	<div class="border-box"></div>
+	<div class="padding-box"></div>
+	<div class="content-box"></div>
+	<div class="text-full-image">
+		啦啦啦啦,德玛西亚!!!
+	</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>flex实现子块的完美居中</title>
+  <style>
+      *{margin: 0;padding: 0;}
+
+      .parent{
+          display: flex;
+          height:500px;
+          background: #03A1FA;
+      }
+
+      .child{
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background: #BB3713;
+      }
+      /*
+      这个依赖于设置“margin”值为“auto”值，自动获取伸缩容器中剩余的空间。所以设置垂直方向margin值为“auto”，可以使伸缩项目在伸缩容器的两上轴方向都完全集中。
+       */
+  </style>
+</head>
+<body>
+      <div class="parent">
+            <div class="child">ff</div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskOne</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <div class="wrapper noneOverflow">
+            <div class="checkbox" id="checkAllorCaner"></div>
+            <ul class="nav">
+                <li class="nav-item  mouse-normal"><a href="#" class="nav-item-show">名称</a>
+                    <i class="i-triangle"></i>
+                    <ul class="nav-item-list init-hide">
+                        <li class="nav-list-item mouse-normal"><a href="#">名称</a></li>
+                        <li class="nav-list-item mouse-normal"><a href="#">创建时间</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mouse-normal">过滤查询
+                    <i class="i-triangle"></i>
+                    <div class="search init-hide">
+                        <p class="text-left">根据组名进行搜索</p>
+
+                        <div class="input-group">
+                            <input type="text" class="input-value" placeholder="请输入您要查询的组名!!">
+                            <input type="button" value="搜索" class="search-button">
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item nav-item-del mouse-normal init-hide">删除</li>
+                <li class="nav-item nav-item-add mouse-normal ">新增</li>
+            </ul>
+        </div>
+    </div>
+    <!--/头部内容区域-->
+    <div id="content">
+        <!--<div class="wrapper ">-->
+        <!--<div class="checkbox"></div>-->
+        <!--<ul class="contact-name">-->
+        <!--<li>-->
+        <!--<a href="#">骏越</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--创建日期:2015-07-09 10:38:41</li>-->
+        <!--</ul>-->
+        <!--<ul class="contact-info">-->
+        <!--<li>-->
+        <!--<span>4</span>-->
+        <!--<span>0.00%</span>-->
+        <!--<span>0.00%</span>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<span>订阅数</span>-->
+        <!--<span>打开率</span>-->
+        <!--<span>点击率</span>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--<ul class="contact-subscr ">-->
+        <!--<li>-->
+        <!--<i class="icon-contact"></i>-->
+        <!--</li>-->
+        <!--<li>订阅管理-->
+        <!--<i class="i-triangle"></i>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+    </div>
+    <!--/中间内容区域-->
+    <div id="footer">
+        <div class="pagin-left ">
+            <p class="li-basic-style">分页行数</p>
+
+            <p class="li-basic-style select-button mouse-hand">10</p>
+            <ul class="select-option init-hide">
+                <li class="li-basic-style "><a href="javascript:void(0)">20</a></li>
+                <li class="li-basic-style "><a href="javascript:void(0)">25</a></li>
+                <li class="li-basic-style "><a href="javascript:void(0)">50</a></li>
+                <li class="li-basic-style "><a href="javascript:void(0)">100</a></li>
+            </ul>
+        </div>
+        <div class="pagin-right">
+            <span class="pagin-prev mouse-hand">&lt;</span>
+            <div class="inline-block">
+            	<span class="current_page"></span>
+				<span>/</span>
+				<span class="total_page"></span>
+            </div>
+            <span class="pagin-next mouse-hand">&gt;</span>
+        </div>
+    </div>
+    <!--/尾部内容区域-->
+    <div id="overlay" class="init-hide"></div>
+    <!-- 遮罩层 -->
+    <div class="add-contact-info init-hide">
+        <h4>添加联系人</h4>
+        <dl>
+            <dt><span>*</span>组名称</dt>
+            <dd><input type="text" class="input-value-add input-value-add-groupname" placeholder="请输入小组名称!"/></dd>
+            <dt><span>*</span>默认邮箱地址</dt>
+            <dd><input type="text" class="input-value-add" placeholder="您的工作邮箱!"/></dd>
+            <dt><span>*</span>默认邮箱发送名称</dt>
+            <dd><input type="text" class="input-value-add" placeholder="您工作邮箱的发送名称!"/></dd>
+        </dl>
+        <ul class="save-input-group mouse-hand">
+            <li class="contact-info-save">保存</li>
+            <li class="contact-info-cancer close-window">取消</li>
+        </ul>
+        <div class="icon-dismiss icon-dismiss-position close-window mouse-hand">&times;</div>
+    </div>
+    <!--增加联系人窗口结构-->
+    <div class="delete-contact-info init-hide">
+        <h4>是否删除</h4>
+        <ul>
+            <li class="li-basic-style"><span>组名称</span><span>订阅数</span></li>
+        </ul>
+        <div class="static-info-wrap">
+            <p>执行删除操作后该列表中所有组和组下的订阅着及其相关信息都将被删除</p>
+
+            <div class="checkbox single-check " id="delete-checkbox-confirm"></div>
+            <p class="p-extra-indent">确认删除联系组</p>
+            <ul class="save-input-group mouse-hand">
+                <li class="contact-info-del">删除</li>
+                <li class="contact-info-cancer close-window mouse-hand">返回</li>
+            </ul>
+        </div>
+        <div class="icon-dismiss icon-dismiss-position close-window mouse-hand">&times;</div>
+    </div>
+    <!--删除联系人窗口结构-->
+
+</div>
+
+<script data-main="scripts/main" src="scripts/libs/require.js" meta="utf-8"></script>
+</body>
+</html>

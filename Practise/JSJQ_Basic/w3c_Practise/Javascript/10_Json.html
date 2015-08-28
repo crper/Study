@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>JSON/javascript:void(0)</title>
+  </head>
+
+  <body>
+    <p>JSON定义及使用</p>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      var text ={
+        "employees": [{
+          "firstName": "CRPER",
+          "lastName": "LIN"
+        }, {
+          "firstName": "AAAA",
+          "lastName": "BBBB"
+        }, {
+          "firstName": "DDDD",
+          "lastName": "EEEE"
+        } ]
+      }
+
+      var obj = JSON.parse(text);
+      //var obj = eval("(" + text + ")");
+      document.getElementById('demo').innerHTML = obj.employees[0].firstName + obj.employees[0].lastName;
+      /**
+             JSON 语法规则
+            数据为 键/值 对。
+            数据由逗号分隔。
+            大括号保存对象
+            方括号保存数组
+
+            使用 JavaScript 内置函数 JSON.parse() 将字符串转换为 JavaScript 对象:
+           */
+
+
+
+      /**
+           javascript:void(0) 中最关键的是 void 关键字， void 是 JavaScript 中非常重要的关键字，该操作符指定要计算一个表达式但是不返回值。
+
+           href="#"与href="javascript:void(0)"的区别
+          # 包含了一个位置信息，默认的锚是#top 也就是网页的上端。
+
+          而javascript:void(0), 仅仅表示一个死链接。
+
+          在页面很长的时候会使用 # 来定位页面的具体位置，格式为：# + id。
+
+          如果你要定义一个死链接请使用 javascript:void(0) 。
+       */
+
+    </script>
+  </body>
+
+</html>

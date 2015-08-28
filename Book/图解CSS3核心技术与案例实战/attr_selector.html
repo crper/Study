@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性选择器的使用方法详解</title>
+	<style>
+		.demo{
+			width:300px;
+			border:1px solid #ccc;
+			margin:20px auto;
+			pading:10px;
+			overflow: hidden;
+			margin:20px auto;
+		}
+
+		.demo a{
+			float: left;
+			display: block;
+			height:50px;
+			width:50px;
+			border-radius: 10px;
+			text-align: center;
+			background: #aac;
+			font:bold 20px/50px Arial;
+			margin-right: 5px;
+			text-decoration: none;
+			margin:5px;
+		}
+
+		/*匹配属性带有ID*/
+		a[id]{
+			background-color: yellow;
+		}
+
+		/*匹配带有ID又有title*/
+		a[id][title]{
+			background-color: red;
+		}
+
+		/*匹配带有ID名字first的*/
+		a[id="first"]{
+			background-color: #141C41;
+			color:#fff;
+		}
+
+		/*匹配lang属性zh开头的*/
+		a[lang|="zh"]{
+			background-color: #8C2DE0;
+		}
+
+		/*匹配包含link类的*/
+		a[class*="link"]{
+			color:#2DDD4A;
+		}
+
+		/*匹配title包含website的*/
+		a[title~="website"]{
+			background-color: #000;
+			color:#fff;
+		}
+
+		/*匹配href以http开头的*/
+		a[href^="http"]{
+			background-color: #E68C15;
+		}
+
+		/*匹配href以png结尾的*/
+		a[href$="png"]{
+			background-color: #AEE63B;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="demo">
+		<a href="#" id="first" title="w3cplus">1</a>
+		<a href="#" class="link active item" title="test website" lang="zh">2</a>
+		<a href="http://www.baidu.com" class="link item" lang="zh-cn">3</a>
+		<a href="sites/file/test.png" class="link item" lang="zh-tw">4</a>
+		<a href="#" class="link item" title="test website" lang="zh-cn">5</a>
+		<a href="#" class="link item" lang="zh">6</a>
+		<a href="#" class="link item" lang="cn">7</a>
+		<a href="#" class="link item" lang="en-zh">8</a>
+		<a href="#" class="link item">9</a>
+		<a href="abd.doc" class="link item" id="last">10</a>
+	</div>
+</body>
+</html>

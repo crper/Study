@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>自适应表现形式</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container" style="padding: 40px;">
+      <div class="row visible-on">
+        <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+          <span class="hidden-xs">特别小型</span>
+          <span class="visible-xs">✔ 在特别小型设备上可见</span>
+        </div>
+        <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+          <span class="hidden-sm">小型</span>
+          <span class="visible-sm">✔ 在小型设备上可见</span>
+        </div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+          <span class="hidden-md">中型</span>
+          <span class="visible-md">✔ 在中型设备上可见</span>
+        </div>
+        <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+          <span class="hidden-lg">大型</span>
+          <span class="visible-lg">✔ 在大型设备上可见</span>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <p class="visible-xs">✔visible-xs </p>
+          <p class="hidden-xs">当在col-xs (小于768px)是见不到我的,其他可视范围是允许看到的</p>
+          <p class="visible-sm">✔visible-sm</p>
+          <p class="hidden-sm">当在col-sm (大于等于768px)是见不到我的,其他可视范围是允许看到的</p>
+          <p class="visible-md">✔visible-md</p>
+          <p class="hidden-md">当在col-md(大于等于992px)是见不到我的,其他可视范围是允许看到的</p>
+          <p class="visible-lg">✔visible-lg </p>
+          <p class="hidden-lg">当在col-lg(大于等于1200px)是见不到我的,其他可视范围是允许看到的</p>
+        </div>
+      </div>
+      <!--
+
+                          超小屏幕手机 (<768px)	小屏幕 平板 (≥768px)	中等屏幕桌面 (≥992px)	大屏幕桌面 (≥1200px)
+.visible-xs-*	        可见	                                        隐藏	                      隐藏	                        隐藏
+.visible-sm-*	       隐藏	                                        可见	                      隐藏	                          隐藏
+.visible-md-*	      隐藏	                                        隐藏	                      可见	                          隐藏
+.visible-lg-*	        隐藏	                                        隐藏	                      隐藏	                          可见
+.hidden-xs	         隐藏	                                        可见	                      可见	                          可见
+.hidden-sm	        可见	                                        隐藏	                      可见	                          可见
+.hidden-md	        可见	                                        可见	                      隐藏	                          可见
+.hidden-lg	          可见	                                        可见	                      可见	                          隐藏
+
+--><br><br><br><br><br><br>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <p class="visible-xs-block">✔visible-xs-block </p>
+          <p class="visible-xs-inline">✔visible-xs-inline </p>
+          <p class="visible-xs-inline-block">✔visible-xs-inline-block</p>
+          <p class="hidden-xs">当在col-xs (小于768px)是见不到我的,其他可视范围是允许看到的</p>
+          <p class="visible-sm-block">✔visible-sm-block</p>
+          <p class="visible-sm-inline">✔visible-sm-inline </p>
+          <p class="visible-sm-inline-block">✔visible-sm-inline-block</p>
+          <p class="hidden-sm">当在col-sm (大于等于768px)是见不到我的,其他可视范围是允许看到的</p>
+          <p class="visible-md-block">✔visible-md-block</p>
+          <p class="visible-md-inline">✔visible-md-inline </p>
+          <p class="visible-md-inline-block">✔visible-md-inline-block</p>
+          <p class="hidden-md">当在col-md(大于等于992px)是见不到我的,其他可视范围是允许看到的</p>
+          <p class="visible-lg-block">✔visible-lg-block </p>
+          <p class="visible-lg-inline">✔visible-lg-inline </p>
+          <p class="visible-lg-inline-block">✔visible-lg-inline-block</p>
+          <p class="hidden-lg">当在col-lg(大于等于1200px)是见不到我的,其他可视范围是允许看到的</p>
+        </div>
+        </div>
+<!--
+类组	                              CSS display
+.visible-*-block	              display: block;
+.visible-*-inline	              display: inline;
+.visible-*-inline-block	        display: inline-block;
+因此，以超小屏幕（xs）为例，可用的 .visible-*-* 类是：.visible-xs-block、.visible-xs-inline 和 .visible-xs-inline-block。
+
+.visible-xs、.visible-sm、.visible-md 和 .visible-lg 类也同时存在。但是从 v3.2.0 版本开始不再建议使用。除了 <table> 相关的元素的特殊情况外，它们与 .visible-*-block 大体相同。
+
+-->
+
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+      <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

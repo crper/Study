@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>javascript作用域</title>
+</head>
+<body>
+  <p id="demo"></p>
+  <p id="demo1"></p>
+  <script>
+    function myFunction(){
+      var a = 10;
+    }
+    document.write(typeof(a));
+   /**
+    * JavaScript 局部作用域
+    * 变量在函数内声明，变量为局部作用域。
+    * 局部变量：只能在函数内部访问。
+    */
+
+
+    var myfunctiona = 100;
+   function myFunction1(){
+      document.getElementById('demo').innerHTML = myfunctiona;
+   }
+   myFunction1();
+   /**
+    * JavaScript 全局变量
+    * 变量在函数外定义，即为全局变量。
+    * 全局变量有 全局作用域: 网页中所有脚本和函数均可使用。
+    */
+
+
+      var temp = "fsdfjlsk";
+      function myFunction2(){
+          document.getElementById('demo1').innerHTML = window.temp;
+      }
+      myFunction2();
+      /**
+       * 在 HTML 中, 所有全局变量都会成为 window 变量。
+       */
+
+
+
+   /*
+   JavaScript 变量生命周期
+
+  JavaScript 变量生命周期在它声明时初始化。
+
+  局部变量在函数执行完毕后销毁。
+
+  全局变量在页面关闭后销毁。
+  函数参数
+
+  函数参数只在函数内起作用，是局部变量。
+
+    */
+  </script>
+</body>
+</html>

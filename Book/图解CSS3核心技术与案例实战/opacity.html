@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>透明度技巧</title>
+	<style>
+		div{
+			width:200px;
+			height:200px;
+			margin:20;
+			background-color: hsl(120,56%,75%);
+
+		}
+		.demo1{
+			opacity: .8;
+			background-image: -webkit-linear-gradient(top 45deg, #871F16, #A82AF2);
+			background-image: linear-gradient(top 45deg,#871F16,#A82AF2);
+			/*IE5~7*/
+			filter: alpha(opacity=0.8);
+			/*IE8*/
+			-ms-filter:"progid:DXImageTransform.Microsoft.alpha(opacity=0.8)";
+		}
+		.demo2{
+			opacity: .6;
+			background-image: -webkit-linear-gradient(top right, #A22B84, #8DC393);
+			background-image: linear-gradient(top right,#A22B84,#8DC393);
+			filter: alpha(opacity=0.6);
+			/*IE5~7*/
+			filter: alpha(opacity=0.6);
+			/*IE8*/
+			-ms-filter:"progid:DXImageTransform.Microsoft.alpha(opacity=0.8)";
+		}
+		.demo3{
+			opacity: .4;
+			background-image: -webkit-linear-gradient(top left, #31A15E, #CF8F23);
+			background-image: linear-gradient(top left,#A22B84,#8DC393);
+			filter: alpha(opacity=0.4);
+			/*IE5~7*/
+			filter: alpha(opacity=0.4);
+			/*IE8*/
+			-ms-filter:"progid:DXImageTransform.Microsoft.alpha(opacity=0.8)";
+		}
+		.demo4{
+			opacity: .3;
+			background-image: -webkit-linear-gradient(90deg, #58A22B, #C0D5C2);
+			background-image: linear-gradient(90deg,#58A22B, #C0D5C2);
+			filter: alpha(opacity=0.3);
+			/*IE5~7*/
+			filter: alpha(opacity=0.3);
+			/*IE8*/
+			-ms-filter:"progid:DXImageTransform.Microsoft.alpha(opacity=0.8)";
+		}
+		.demo5{
+			opacity: .2;
+			background-image: -webkit-linear-gradient(135deg, #A2402B, #292F29);
+			background-image: linear-gradient(135deg ,#A2402B, #292F29);
+			filter: alpha(opacity=0.2);
+			/*IE5~7*/
+			filter: alpha(opacity=0.2);
+			/*IE8*/
+			-ms-filter:"progid:DXImageTransform.Microsoft.alpha(opacity=0.8)";
+		}
+	</style>
+</head>
+<body>
+	<div class="demo1"></div>
+	<div class="demo2"></div>
+	<div class="demo3"></div>
+	<div class="demo4"></div>
+	<div class="demo5"></div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>制作3D搜索表单</title>
+		<style>
+			.clearfix:before,
+			.clearfix:after {
+				content: "";
+				display: table;
+			}
+			.clearfix:after {
+				clear: both;
+				overflow: hidden;
+			}
+
+			#formWrapper {
+				margin:0 auto;
+				width: 650px;
+				/*设置搜索表单的宽度*/
+				padding: 8px;
+				overflow: hidden;
+				/*清除浮动*/
+				/*设置表单的边框效果*/
+				border-width: 1px;
+				border-style: solid;
+				border-color: #dedede #bababa #aaa #bababa;
+
+				/*最为关键的代码,设置表单3D立体效果*/
+				box-shadow: 0 5px 5px rgba(255, 255, 255, 0.3), 0 3px 0 #bbb, 0 4px 0 #aaa,0 5px 5px #444,0px 0 5px rgba(228,162,50,.3) inset;
+				/*设置圆角效果*/
+				border-radius: 10px;
+				-webkit-border-image: -webkit-linear-gradient(NaNdeg, #5191AC, #5A7BC6);
+				-o-border-image: linear-gradient(top 35deg, #5191AC, #5A7BC6);
+				border-image: linear-gradient(top 35deg, #5191AC, #5A7BC6);
+			}
+			/*输入框样式效果*/
+			#formWrapper .search {
+				width: 530px;
+				height: 20px;
+				padding: 10px 5px;
+				float: left;
+				font: bold 16px 'lucida sans','trebuchet MS','Tahoma';
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				border-radius: 5px;
+				box-shadow: 0 0 5px rgba(78,166,189,.25) inset,1px 0 1px rgba(99,157,179,.79);
+			}
+			/*输入框得到焦点时样式*/
+			#formWrapper .search:focus {
+				outline: 0;
+				color:#0483a0;
+				text-shadow: 1px 2px 1px #CCC;
+				border-color: #C7D1D0;
+				box-shadow: 0 1px 1px #bbb inset;
+			}
+
+			#formWrapper .search:-ms-input-placeholder,
+			#formWrapper .search:-moz-placeholder,
+			#formWrapper .search::-webkit-input-placeholder {
+				color: #2DAF2B;
+				font-weight: 700;
+			}
+
+			/*搜索按钮效果*/
+			#formWrapper .btn {
+				float: right;
+				border: 1px solid #00748f;
+				height: 42px;
+				width: 100px;
+				padding: 0;
+				cursor: pointer;
+				font: bold 15px Arial,Helvetica;
+				color: #fafafa;
+				text-transform: uppercase;
+				color: #fafafa;
+				background-color: #0483a0;
+				-webkit-border-image: -webkit-linear-gradient(top, #31b2c3, #0483a0);
+				-o-border-image: linear-gradient(top,#31b2c3,#0483a0);
+				border-image: linear-gradient(top,#31b2c3,#0483a0);
+				border-radius: 5px;
+				text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3) ;
+				box-shadow: 0 1px 0 rgba(255, 0, 0, 0.3) inset,1px 1px 1px #0483a0;
+			}
+
+			/*按钮悬浮状态和焦点状态下效果*/
+			#formWrapper .btn:hover,
+			#formWrapper .btn:focus {
+				background-color: #31b2c3;
+				box-shadow: 1 1 3px #31b2c3;
+				border-radius: 5px;
+				background-image: -webkit-linear-gradient(top, #0483a0, #31b2c3);
+				background-image: linear-gradient(top,#0483a0,#31b2c3);
+			}
+
+			/*按钮点击时效果*/
+			#formWrapper .btn:active {
+				outline: 0;
+				box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+			}
+			/*firefox下按钮去除焦点线*/
+			#formWrapper::-moz-focus-inner {
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#" id="formWrapper">
+			<div class="formFiled clearfix">
+				<input class="search" placeholder="Search for CSS3,HTML5,JQuery..." required="" type="text">
+				<input class="btn submit" type="submit" value="go >>">
+			</div>
+		</form>
+	</body>
+</html>

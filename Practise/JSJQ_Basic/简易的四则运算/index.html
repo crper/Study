@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> 简易的四则运算</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <script type="text/javascript">
+   function count(){
+     /** 获取ID的值 */
+    var left_input_num = document.getElementById("txt1").value;
+    var right_input_num = document.getElementById("txt2").value;
+    var operate = document.getElementById("select").value;
+    var num4 = "";
+    /*进行判断运算*/\
+    switch(operate) {
+        case "+":
+            num4 = parseInt(left_input_num) + parseInt(right_input_num);
+            break;
+        case "-":
+            num4 = parseInt(left_input_num) - parseInt(right_input_num);
+            break;
+        case "*":
+            num4 = parseInt(left_input_num) * parseInt(right_input_num);
+            break;
+        case "/":
+            num4 = parseInt(left_input_num) / parseInt(right_input_num);
+        default:
+              alert("Are you kidding me!!!");
+    }
+    //得到的结果反馈给fruit,也就是value..在页面看到结果
+    document.getElementById("fruit").value = num4;
+
+   }
+  </script>
+ </head>
+ <body>
+   <input type='text' id='txt1' />
+   <select id='select'>
+    	<option value='+'>+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+   </select>
+   <input type='text' id='txt2' />
+   <input type='button' value=' = ' onclick=count() /> <!--通过 = 按钮来调用创建的函数，得到结果-->
+   <input type='text' id='fruit' />
+ </body>
+</html>

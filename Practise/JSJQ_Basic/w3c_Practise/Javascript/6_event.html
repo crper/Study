@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Javascript事件</title>
+    <style>
+      input {
+        margin: 20px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <form action="#">
+      <input type="text" id="demo1" onclick="my()">onclick
+      <br>
+      <input type="text" id="demo2" onchange="cg()" placeholder="拉啦啦德玛新亚">onchange
+      <br>
+      <input type="text" id="demo3" onmouseover="omv()">onmouseover
+      <br>
+      <input type="text" id="demo4" onmouseout="omo()">onmouseout
+      <br>
+      <input type="text" id="demo5" onkeydown="okd()">onkeydown
+      <br>
+      <input type="text" id="demo5" onload="ol()">onload
+    </form>
+    <script>
+      function my() {
+        alert("onclick");
+      }
+
+      function cg() {
+        alert("change");
+      }
+
+      function omv() {
+        alert("onmounseover");
+      }
+
+      function omo() {
+        alert("onmouseout");
+      }
+
+      function okd() {
+        alert("onkeydown");
+      }
+
+      function ol() {
+        alert("onload");
+      }
+
+      /**
+ onchange 	HTML 元素改变
+onclick 	用户点击 HTML 元素
+onmouseover 	用户在一个HTML元素上移动鼠标
+onmouseout 	用户从一个HTML元素上移开鼠标
+onkeydown 	用户按下键盘按键
+onload 	浏览器已完成页面的加载
+       */
+
+    </script>
+
+
+  </body>
+
+</html>

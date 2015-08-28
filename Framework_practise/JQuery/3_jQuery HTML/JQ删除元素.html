@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>JQ删除元素</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+      p[id^=p] {
+        background: rgb(16, 188, 207);
+        font-size: 30px;
+        display: block;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="demo">
+      <p class="tt">append()/prepend()</p>
+      <button type="button" id="btn1">删除元素</button>
+      <button type="button" id="btn2">清空元素</button>
+      <button type="button" id="btn3">带过滤的删除元素</button>
+
+      <p id="p1">这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!</p>
+      <p id="p2">这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!</p>
+      <p id="p3">这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!</p>
+      <p >这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!</p>
+      <p >这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!</p>
+      <p >这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!</p>
+      <p >这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!</p>
+      <p >这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!这是一个测试文本!!!!!</p>
+
+    </div>
+    <script>
+      $(function() {
+        $("#btn1").click(function() {
+          $("#p1").remove();
+        });
+        $("#btn2").click(function() {
+          $("#p2").empty();
+        });
+        $("#btn3").click(function() {
+          $("p").empty(".tt");
+        });
+      })
+
+
+      /*
+      remove() - 删除被选元素（及其子元素）
+      empty() - 从被选元素中删除子元素
+       */
+
+    </script>
+  </body>
+
+</html>

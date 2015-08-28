@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQuery mobile引用</title>
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+
+<!-- 引用JQUERY MOBILE的样式 -->
+		<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>
+
+<!-- 个人样式置于之后 -->
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+	<body>
+
+<!-- 在body之中，用data-role=“page”来标记的一个div容器，用来定义一个page，页面，
+			data-role="header"来标记的div容器用来定义页面的头部栏，
+			data-role="content"来标记的div容器用来定义页面的内容区域，
+			这些用 HTML5的data- 属性标记的标签会通过jQuery Mobile框架自动将基本的标记增强为部件。 -->
+		<div data-role="page">
+			<div data-role="header">
+				<h1>My Title</h1>
+			</div>
+<!-- /header -->
+
+			<div data-role="content">
+				<p>Hello world</p>
+			</div>
+<!-- /content -->
+			<div data-role="footer"></div>
+<!-- /footer -->
+		</div>
+<!-- /page -->
+	</body>
+
+<!-- 先引入JQUERY 再引入 JQURY MOBILE
+	 jquery mobile 1.4.5依赖JQ1.8/1.11/2.1的版本
+ -->
+	<script src="lib/jquery-2.1.4.min.js"></script>
+	<script src="lib/jquery.mobile-1.4.5.js"></script>
+</html>

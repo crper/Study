@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>制作手风琴效果</title>
+		<style>
+			.accordionMenu {
+				background: #fff;
+				color: #424242;
+				font: 12px Arial,Verdana,sans-serif;
+				margin: 0 auto;
+				padding: 10px;
+				width: 500px;
+			}
+
+			.accordionMenu h2 {
+				margin: 5px 0;
+				padding: 0;
+				position: relative;
+			}
+
+			.accordionMenu h2:before {
+				/*制作下三角效果*/
+				border: 5px solid #fff;
+				border-color: #fff transparent transparent;
+				content: "";
+				height: 0;
+				position: absolute;
+				top: 15px;
+				width: 0;
+			}
+
+			.accordionMenu h2 a {
+				/*制作手风琴标题栏效果*/
+				background: #8f8f8f;
+				background: -webkit-linear-gradient(top, #cecece, #8f8f8f8);
+				background: linear-gradient(top,#cecece,#8f8f8f8);
+				border-radius: 5px;
+				color: #424242;
+				display: block;
+				font-size: 13px;
+				font-weight: normal;
+				margin: 0;
+				padding: 10px;
+				text-shadow: 2px 2px 2px #aeaeae;
+				text-decoration: none;
+			}
+			.accordionMenu:/*目标标题的效果*/target h2 a,
+			.accordionMenu h2 a:focus,
+			.accordionMenu h2 a:hover,
+			.accordionMenu h2 a:active {
+				background: #28d;
+				background:-webkit-linear-gradient(top, #6bb2ff, #2288dd); color: #fff;
+				background:linear-gradient( top,#6bb2ff,#2288dd ); color: #fff
+			}
+
+			.accordionMenu p{ /*标题栏对应的内容*/
+				margin:0;
+				height:0; /*默认栏目高度为0,达到隐藏的效果*/
+				overflow:hidden;
+				padding:0 10px;
+				-webkit-transition:height 0.5s ease-in;
+				        transition:height 0.5s ease-in;
+			}
+
+			/*这部分是显示内容的关键代码*/
+			.accordionMenu :target p{ /*展开对应的内容*/
+				height:100px; /*显示对应栏目的内容*/
+				overflow: auto;
+			}
+			.accordionMenu :target h2:before{/*展开时标题三角效果*/
+				border-color:transparent transparent transparent #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="accordionMenu">
+			<div class="menuSetion" id="brand">
+				<h2>
+					<a href="#brand">Brand</a>
+				</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officiis aute? Odio!</p>
+			</div>
+			<div class="menuSetion" id="promotion">
+				<h2>
+					<a href="#brand">Brand</a>
+				</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officiis aute? Odio!</p>
+			</div>
+			<div class="menuSetion" id="event">
+				<h2>
+					<a href="#brand">Brand</a>
+				</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem officiis aute? Odio!</p>
+			</div>
+		</div>
+	</body>
+</html>

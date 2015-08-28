@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>JQ Ajax</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="demo">
+      <button type="button" id="btn1">Load()</button>
+      <button type="button" id="btn2">Get()</button>
+      <button type="button" id="btn3">Post()</button>
+    </div>
+
+    <div id="demoe">
+
+    </div>
+    <script>
+      $(function() {
+          $("#btn1").click(function() {
+            $("#demoe").load("t.txt");
+          });
+        })
+        /*
+        jQuery load() 方法是简单但强大的 AJAX 方法。
+
+        load() 方法从服务器加载数据，并把返回的数据放入被选元素中。
+
+        语法:
+
+        $(selector).load(URL,data,callback);
+        必需的 URL 参数规定您希望加载的 URL。
+
+        可选的 data 参数规定与请求一同发送的查询字符串键/值对集合。
+
+        可选的 callback 参数是 load() 方法完成后所执行的函数名称。
+
+
+          回调函数可以设置不同的参数：
+
+          responseTxt - 包含调用成功时的结果内容
+          statusTXT - 包含调用的状态
+          xhr - 包含 XMLHttpRequest 对象
+         */
+
+
+          /*
+          jQuery - AJAX get() 和 post() 方法
+          HTTP 请求：GET vs. POST
+          两种在客户端和服务器端进行请求-响应的常用方法是：GET 和 POST。
+
+          GET - 从指定的资源请求数据
+          POST - 向指定的资源提交要处理的数据
+          GET 基本上用于从服务器获得（取回）数据。注释：GET 方法可能返回缓存数据。
+
+          POST 也可用于从服务器获取数据。不过，POST 方法不会缓存数据，并且常用于连同请求一起发送数据。
+
+
+          $.get(URL,callback);
+          必需的 URL 参数规定您希望请求的 URL。
+
+          可选的 callback 参数是请求成功后所执行的函数名。
+
+
+          $.post(URL,data,callback);
+          必需的 URL 参数规定您希望请求的 URL。
+
+          可选的 data 参数规定连同请求发送的数据。
+
+          可选的 callback 参数是请求成功后所执行的函数名。
+           */
+    </script>
+  </body>
+
+</html>

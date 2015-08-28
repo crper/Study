@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>表格样式</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <table class="table">
+      <caption>BS中.table为基础类,添加了基本样式分割线</caption>
+      <thead>
+        <tr>
+          <th>表头单元格一</th>
+          <th>表头单元格二</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MuMu01</td>
+          <td>MuMu01</td>
+        </tr>
+        <tr>
+          <td>MuMu02</td>
+          <td>MuMu02</td>
+        </tr>
+        <tr>
+          <td>MuMu03</td>
+          <td>MuMu03</td>
+        </tr>
+        <tr>
+          <td>MuMu04</td>
+          <td>MuMu04</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>我是华丽的尾巴</td>
+      </tr></tfoot>
+    </table>
+    <table class="table table-striped">
+      <caption>BS中.table-striped是添加斑马线</caption>
+      <thead>
+        <tr>
+          <th>表头单元格一</th>
+          <th>表头单元格二</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MuMu01</td>
+          <td>MuMu01</td>
+        </tr>
+        <tr>
+          <td>MuMu02</td>
+          <td>MuMu02</td>
+        </tr>
+        <tr>
+          <td>MuMu03</td>
+          <td>MuMu03</td>
+        </tr>
+        <tr>
+          <td>MuMu04</td>
+          <td>MuMu04</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>我是华丽的尾巴</td>
+      </tr></tfoot>
+    </table>
+    <table class="table table-hover">
+      <caption>BS中.table-hover添加了鼠标悬浮的样式</caption>
+      <thead>
+        <tr>
+          <th>表头单元格一</th>
+          <th>表头单元格二</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MuMu01</td>
+          <td>MuMu01</td>
+        </tr>
+        <tr>
+          <td>MuMu02</td>
+          <td>MuMu02</td>
+        </tr>
+        <tr>
+          <td>MuMu03</td>
+          <td>MuMu03</td>
+        </tr>
+        <tr>
+          <td>MuMu04</td>
+          <td>MuMu04</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>我是华丽的尾巴</td>
+      </tr></tfoot>
+    </table>
+    <table class="table table-bordered">
+      <caption>BS中.table-bordered给所有单元格增加边框</caption>
+      <thead>
+        <tr>
+          <th>表头单元格一</th>
+          <th>表头单元格二</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MuMu01</td>
+          <td>MuMu01</td>
+        </tr>
+        <tr>
+          <td>MuMu02</td>
+          <td>MuMu02</td>
+        </tr>
+        <tr>
+          <td>MuMu03</td>
+          <td>MuMu03</td>
+        </tr>
+        <tr>
+          <td>MuMu04</td>
+          <td>MuMu04</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>我是华丽的尾巴</td>
+      </tr></tfoot>
+    </table>
+    <table class="table table-condensed">
+      <caption>BS中.table-condensed使表格内容更加紧凑</caption>
+      <thead>
+        <tr>
+          <th>表头单元格一</th>
+          <th>表头单元格二</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MuMu01</td>
+          <td>MuMu01</td>
+        </tr>
+        <tr>
+          <td>MuMu02</td>
+          <td>MuMu02</td>
+        </tr>
+        <tr>
+          <td>MuMu03</td>
+          <td>MuMu03</td>
+        </tr>
+        <tr>
+          <td>MuMu04</td>
+          <td>MuMu04</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>我是华丽的尾巴</td>
+      </tr></tfoot>
+    </table>
+    <table class="table table-bordered table-hover">
+      <caption>这个表展示作用于行单元格的样式</caption>
+      <thead>
+        <tr>
+          <th>表头单元格一</th>
+          <th>表头单元格二</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="success ">
+          <td>这一行用success类,默认样式是绿色的</td>
+          <td class="active">因为还包括了active这个类,所以默认选定该行</td>
+        </tr>
+        <tr class="info">
+          <td>这一行用info类,默认样式是蓝色的</td>
+          <td>MuMu02</td>
+        </tr>
+        <tr class="warning ">
+          <td>这一行用warning类,默认样式是黄色的</td>
+          <td>MuMu03</td>
+        </tr>
+        <tr class="danger">
+          <td>这一行用danger类,默认样式是红色的</td>
+          <td>MuMu04</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>我是华丽的尾巴</td>
+      </tr></tfoot>
+    </table>
+    <table class="table table-bordered table-hover table-responsive">
+      <caption>响应式表格</caption>
+      <thead>
+        <tr>
+          <th>表头单元格一</th>
+          <th>表头单元格二</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="success ">
+          <td>这一行用success类,默认样式是绿色的</td>
+          <td>因为还包括了active这个类,所以默认选定该行</td>
+        </tr>
+        <tr class="info">
+          <td>这一行用info类,默认样式是蓝色的</td>
+          <td>MuMu02</td>
+        </tr>
+        <tr class="warning active">
+          <td>这一行用warning类,默认样式是黄色的</td>
+          <td>MuMu03</td>
+        </tr>
+        <tr class="danger">
+          <td>这一行用danger类,默认样式是红色的</td>
+          <td>MuMu04</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>我是华丽的尾巴</td>
+      </tr></tfoot>
+    </table>
+    <!--
+用于表格的类:
+.table	为任意 <table> 添加基本样式 (只有横向分隔线)
+.table-striped	在 <tbody> 内添加斑马线形式的条纹 ( IE8 不支持)
+.table-bordered	为所有表格的单元格添加边框
+.table-hover	在 <tbody> 内的任一行启用鼠标悬停状态
+.table-condensed	让表格更加紧凑
+
+用于tr,td,th的类:
+.active	将悬停的颜色应用在行或者单元格上	尝试一下
+.success	表示成功的操作	尝试一下
+.info	表示信息变化的操作	尝试一下
+.warning	表示一个警告的操作	尝试一下
+.danger	表示一个危险的操作
+
+将任何 .table 元素包裹在 .table-responsive 元素内，即可创建响应式表格，
+其会在小屏幕设备上（小于768px）水平滚动。当屏幕大于 768px 宽度时，水平滚动条消失。
+-->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

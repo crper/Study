@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery 效果 - 滑动</title>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    #btn-group{
+      position:absolute;
+      left:200px;
+      top:50px;
+    }
+    #demo{
+      display:none;
+      width: 150px;
+      height:150px;
+      background: rgb(12,237,191);
+    }
+  </style>
+</head>
+<body>
+  <div id="btn-group">
+    <button type="button" id="btn1">点击下拉渐现</button>
+    <button type="button" id="btn2">点击上拉渐隐</button>
+    <button type="button" id="btn3">切换渐隐渐现</button>
+    <p>效果展示</p>
+    <div id="demo">
+      p{这是一段测试文本}
+    </div>
+  </div>
+  <script>
+      $(function(){
+          $("#btn1").click(function(){
+            $("#demo").slideDown(2000);
+          });
+          $("#btn2").click(function(){
+            $("#demo").slideUp(2000);
+          });
+          $("#btn3").click(function(){
+            $("#demo").slideToggle(2000);
+          });
+      })
+      /*
+      jQuery 滑动方法
+      通过 jQuery，您可以在元素上创建滑动效果。
+      $(selector).slideDown(speed,callback);
+      $(selector).slideUp(speed,callback);
+      $(selector).slideToggle(speed,callback);
+
+      jQuery 拥有以下滑动方法：
+
+      slideDown()  --- jQuery slideDown() 方法用于向下滑动元素。
+      slideUp() --- jQuery slideUp() 方法用于向上滑动元素。
+      slideToggle() --- jQuery slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换。
+       */
+  </script>
+</body>
+</html>

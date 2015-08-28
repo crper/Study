@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>noConflict() 方法/JSON</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="demo">
+      <h1> jQuery noConflict() 方法</h1>
+      <h2>先注释其中两种方法才能正常运行..</h2>
+      <button type="button" id="btn1">全局jQuery</button>
+      <button type="button" id="btn2">自定义别名</button>
+      <button type="button" id="btn3">全局自定混用</button>
+    </div>
+    <p>这是一段测试文本</p>
+    <!--
+  如果其他 JavaScript 框架也使用 $ 符号作为简写怎么办？
+
+其他一些 JavaScript 框架包括：MooTools、Backbone、Sammy、Cappuccino、Knockout、JavaScript MVC、Google Web Toolkit、Google Closure、Ember、Batman 以及 Ext JS。
+
+其中某些框架也使用 $ 符号作为简写（就像 jQuery），如果您在用的两种不同的框架正在使用相同的简写符号，有可能导致脚本停止运行。
+
+jQuery 的团队考虑到了这个问题，并实现了 noConflict() 方法。
+  -->
+    <script>
+      // $.noConflict();
+      // jQuery(function() {
+      //   jQuery("#btn1").click(function() {
+      //     jQuery("p").text("全局jQuery正常工作");
+      //   })
+      // });//第一种
+
+      // var jq = $.noConflict();
+      // jq(document).ready(function() {
+      //   jq("#btn2").click(function() {
+      //     jq("p").text("自定义别名JQ正常工作");
+      //   })
+      // });//第二种
+
+      $.noConflict();
+      jQuery(document).ready(function($) {
+        $("#btn3").click(function() {
+          $("p").text("混合模式正常工作");
+        })
+      });//第三种
+
+    </script>
+  </body>
+
+</html>

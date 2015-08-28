@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS固定层的效果实现</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        border: 0;
+        font-size: 100%;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      ul li {
+        float: left;
+        margin:  25px;
+        border: 2px solid #000;
+        width: 140px;
+        height: 40px;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: bold;
+      }
+
+      div a {
+        text-decoration: none;
+      }
+      /*基ul及li的基础样式*/
+
+      body {
+        padding-top: 100px;
+        padding-bottom: 80px;
+      }
+      /*看最后一段注释*/
+
+      p.hightline {
+        color: #f00;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+      }
+      /*高亮内容第一段和最后一段*/
+
+      #contianer {
+        margin: 0 auto;
+        background: #99E025;
+        width: 800px;
+        positon: relative;
+      }
+      /*盒子居中,背景颜色,宽度*/
+
+      #header {
+        background: #5CE755;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+      }
+      /*顶部固定,因为宽度100%所以铺满*/
+
+      #content p {
+        text-indent: 2em;
+      }
+      /*行首缩进*/
+
+      #footer {
+        background: #5CE755;
+        height: 80px;
+        position: fixed;
+        bottom: 0;
+        left: 100px;
+        right: 100px;
+      }
+      /*不设置块的宽度,通过left和right来适应窗口宽度*/
+      /*#content{margin:100px auto;}*/
+      /*可以通过设置margin,使页面初始化的时候内容不会被挡住,具体根据其他块大小设置
+    当然也可以通过body增加padding,使其正常显示(Bootstrap就是这样做的)
+    */
+
+      .feedback {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        width: 120px;
+        height: 40px;
+        border: 2px solid #000;
+      }
+      /*固定*/
+
+    </style>
+  </head>
+
+  <body>
+    <div id="contianer">
+      <div id="header">
+        <ul>
+          <li><a href="#">测试001</a></li>
+          <li><a href="#">测试002</a></li>
+          <li><a href="#">测试003</a></li>
+          <li><a href="#">测试004</a></li>
+          <li><a href="#">测试005</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <p class="hightline">我是第一段啊,,看看有木有挡住</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sed quisquam voluptatem veritatis incidunt enim dolore tenetur voluptas labore ex modi tempore culpa expedita, quis esse fugit vel atque dolor!</p>
+        <p>Ratione, doloribus ipsum reiciendis delectus rerum. Recusandae unde officia enim facere doloribus ut omnis velit voluptatibus, distinctio, quisquam sit quae veniam, accusantium possimus repudiandae dicta dignissimos consequatur magnam eaque corporis.</p>
+        <p>Ipsum expedita magni quod, nesciunt velit voluptate autem esse, sit tenetur quaerat nisi necessitatibus quae, repellendus ad optio quis suscipit laudantium. Corrupti non illum aliquid quisquam perspiciatis tempore esse nihil?</p>
+        <p>Delectus, similique minima eligendi aliquid omnis animi repellendus tenetur necessitatibus sint reiciendis voluptatum ipsum eaque deserunt recusandae laborum sapiente dolores, non explicabo pariatur temporibus nam minus ut enim repudiandae illo!</p>
+        <p>Quod deleniti quidem harum facere doloribus eaque aspernatur error. Labore facere repellendus quo, eaque atque fugiat quis perferendis amet dignissimos aspernatur impedit hic, eveniet beatae tempora ea dolorum nisi deleniti!</p>
+        <p>Voluptatibus, beatae tempora consequuntur nihil non molestias, dicta aliquid nostrum ut libero quas enim necessitatibus placeat ducimus molestiae quod! Nesciunt repellendus perspiciatis provident laboriosam dicta doloremque quia sunt minima eius!</p>
+        <p>Voluptas minus tenetur libero corrupti fugit modi dolorum, laborum quasi ab odio necessitatibus ut repellat delectus officiis impedit laudantium voluptates? Numquam tenetur quisquam odio omnis quis quaerat, recusandae quibusdam, nemo!</p>
+        <p>Dicta tempora dolorum, molestiae ratione dolore quae alias libero reiciendis in harum porro eos magnam aliquam aut explicabo, iste ipsa temporibus nulla vel voluptates veritatis doloremque ut? Accusantium reprehenderit, dicta!</p>
+        <p>Alias ea minus voluptates, quis, recusandae molestiae tempora quaerat eaque! Temporibus natus voluptas magni quisquam eaque, atque cum distinctio, iste, voluptates repellendus tenetur delectus veniam fuga aspernatur laborum similique voluptatem!</p>
+        <p>Fugiat ducimus quis aut unde eligendi dolor sapiente numquam quasi repellendus, adipisci veniam minus alias sequi eaque maiores quam. Voluptatibus adipisci quo nobis voluptate quibusdam, tenetur deleniti velit vitae quis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam recusandae autem, et quasi sit, necessitatibus? Quo numquam magnam ipsum omnis! Voluptas labore, saepe excepturi, quod minus aliquam iste vitae laborum?</p>
+        <p>Omnis asperiores ad, cumque. Impedit nisi ratione quas in libero eaque! Cumque vero ut, sint obcaecati dolorem quisquam alias esse iure nesciunt eligendi! Minus, iste. Doloribus libero animi natus laborum.</p>
+        <p>Nulla laboriosam voluptates dolor totam, amet laudantium eos esse ea explicabo odit natus excepturi, unde iusto provident illo, nesciunt eveniet consectetur cupiditate consequuntur! Odio praesentium, placeat deleniti, accusantium aperiam quisquam.</p>
+        <p>Iure maxime assumenda corporis consequuntur adipisci odit facilis doloribus, optio a nisi pariatur, inventore possimus aut. Consequatur vitae sapiente commodi, nostrum assumenda, similique nihil, molestiae repellendus amet ipsum exercitationem
+          saepe.</p>
+        <p>Esse magnam, nisi quae suscipit possimus. Excepturi asperiores consequuntur voluptatem omnis voluptatum iusto est pariatur id, rerum expedita, mollitia eos et consectetur dolorum, doloribus tempora corrupti fugiat quidem necessitatibus tempore!</p>
+        <p>Recusandae hic rerum, facilis quae blanditiis et, voluptate reiciendis ad deserunt animi culpa tempora odit repellat molestiae unde saepe mollitia temporibus ab. Consequatur nisi cum similique voluptates provident velit. Suscipit?</p>
+        <p>Ipsa quod dolore ullam rerum eius eum aliquid cupiditate quas suscipit ad eaque facilis, distinctio eveniet deserunt aut odio a officia ipsam id, perferendis architecto consectetur voluptatibus laborum! Accusamus, porro!</p>
+        <p>Maxime dolores aliquid eum eaque temporibus harum esse laudantium qui atque velit, veritatis labore cumque id dolorem incidunt nulla optio, soluta doloremque praesentium commodi corporis eveniet necessitatibus. Velit, perspiciatis. Iusto.</p>
+        <p>Incidunt ipsum quibusdam officiis odit laboriosam hic sequi illo animi quisquam eos quia, aperiam voluptatibus dicta mollitia nemo minus molestiae a non rem optio natus nam recusandae sapiente blanditiis, deleniti!</p>
+        <p>Ea, tempora. Laborum animi, voluptate! Error sapiente numquam inventore, eveniet saepe non ipsam iusto nisi! Natus explicabo deserunt aperiam unde, consectetur assumenda, tenetur delectus reprehenderit quo nesciunt blanditiis et quis.</p>
+        <p>Nihil tenetur vero asperiores, ad illo assumenda nostrum, at itaque amet eius enim neque, sapiente quis tempora a. Doloribus amet neque dicta nihil atque voluptatum molestiae odit, consequatur optio aliquid.</p>
+        <p>Labore cumque libero qui voluptatibus veniam hic quibusdam cum, tenetur magnam nemo, odio ipsam ipsum ea. Rem facilis officiis minus, aut temporibus dignissimos voluptatem quasi necessitatibus cupiditate illo aperiam, adipisci?</p>
+        <p>Iste minus eveniet nemo eius voluptatum in, excepturi sit quibusdam similique qui fugit, dicta est mollitia, corporis, placeat voluptatem quos. Amet reprehenderit saepe vitae doloribus unde, maxime sapiente, doloremque voluptas.</p>
+        <p>Ipsum natus veritatis ducimus excepturi voluptatibus in, modi voluptate quod. Neque magni voluptatem, hic dignissimos minus veritatis harum quasi. Quidem accusamus nihil sapiente eaque recusandae assumenda eius, maiores vitae quaerat.</p>
+        <p>Totam itaque fugiat quasi quos quidem, vel modi cum impedit corrupti iure, quo laborum dolores doloremque libero nam facere praesentium? Nam quam dolores, iusto nemo minus magnam iure sit consequatur.</p>
+        <p>Voluptatem nemo, dolorum commodi ipsa, quasi ut aliquam quas aut quos! Nemo quae vel odio sunt, perspiciatis quo dolor, esse sequi saepe aperiam nostrum sed, cupiditate corporis, totam natus quia.</p>
+        <p>Ratione vero numquam, officiis vitae illum debitis odio nemo fuga, laboriosam, ut iusto? Obcaecati maxime blanditiis error tempore rerum doloribus consequatur veniam optio voluptatibus enim aspernatur nobis aliquam, reprehenderit non.</p>
+        <p>Qui asperiores alias deleniti ipsam, sapiente quasi nobis pariatur accusamus deserunt inventore aut incidunt officiis maiores, rerum saepe necessitatibus sit! Ipsam iusto reiciendis quod suscipit, non sint repudiandae, error nulla.</p>
+        <p>Ipsa est aliquam non, odio illo veniam beatae eaque. Aperiam tempore odit laboriosam vitae incidunt dignissimos, dolorem blanditiis quam nobis nihil magni laudantium libero sit accusantium, inventore hic laborum provident!</p>
+        <p>Voluptates minus veritatis sint quas laborum nostrum, velit, sed eveniet at accusamus repellat ut est impedit ipsam deleniti eos in aspernatur. Minima porro enim consequatur debitis illo pariatur deleniti quod.</p>
+        <p>Maxime, fugit, odit! Neque dolorem velit minima mollitia est consectetur, omnis vero hic ipsam natus at deserunt, unde assumenda ullam perspiciatis in a nulla odit doloremque quam laudantium quis. Error!</p>
+        <p>Qui, molestiae! Ut, nostrum, quia veniam necessitatibus illo eaque a magni saepe eum ipsum? Neque pariatur perferendis dolore temporibus voluptas sapiente enim accusamus hic molestias, cum illo magnam rerum quaerat.</p>
+        <p>Earum, inventore, porro. Officiis recusandae blanditiis repudiandae error incidunt nesciunt iste, voluptatibus similique nihil voluptatum, asperiores deleniti harum velit praesentium minima nobis ea repellendus aliquid vitae, excepturi! Dolore
+          doloribus, vel.</p>
+        <p>Esse reiciendis dolorem neque repellendus doloremque voluptatibus natus nostrum dignissimos eveniet voluptatum non eum commodi facilis deleniti iusto cum consequatur vel praesentium in, dicta consequuntur eos? Neque totam, rerum quis!</p>
+        <p>Voluptates pariatur laudantium possimus et deserunt blanditiis ratione voluptatum aut. Error, assumenda, vero? Nam possimus sequi repudiandae molestias iusto laboriosam error, quisquam debitis non, alias placeat quasi facilis nostrum assumenda.</p>
+        <p>Explicabo deleniti, aut qui assumenda. Cumque in minima cupiditate sint facere temporibus error omnis, similique nostrum facilis fugit, eos voluptatum molestiae possimus soluta quos excepturi magnam, repellendus nulla maiores amet.</p>
+        <p>Non provident consequuntur minus libero voluptates voluptatum omnis maiores rem, dolorum, saepe quibusdam dignissimos corporis unde quisquam, pariatur dicta, animi illum? Earum voluptatum iure nemo consequuntur et incidunt quia aliquid.</p>
+        <p>Molestiae voluptatem modi mollitia libero facilis suscipit at porro, expedita ipsam laboriosam nihil sed, commodi voluptatibus itaque, ex doloribus repellat saepe ea numquam dolores magnam officia. Natus explicabo adipisci inventore?</p>
+        <p>Possimus dolorem ad obcaecati. Provident iusto doloribus incidunt, nihil, amet eum omnis pariatur dolor accusantium libero cupiditate, blanditiis architecto ea vero? Totam perferendis ipsam, est natus enim magnam beatae vel.</p>
+        <p>Voluptatibus ratione fuga expedita placeat odio dolores maxime quas voluptas exercitationem, illum repudiandae laborum nobis libero, earum rem deserunt quam laboriosam suscipit quasi. Ducimus iusto laborum, error reiciendis voluptatem magni.</p>
+        <p class="hightline">我是最后一段啊,,看看有木有挡住</p>
+      </div>
+      <div id="footer">
+        <ul>
+          <li><a href="#">测试001</a></li>
+          <li><a href="#">测试002</a></li>
+          <li><a href="#">测试003</a></li>
+          <li><a href="#">测试004</a></li>
+          <li><a href="#">测试005</a></li>
+        </ul>
+      </div>
+      <div class="feedback">我是反馈窗口啊</div>
+    </div>
+
+  </body>
+
+</html>

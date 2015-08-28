@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>实现三角形效果</title>
+		<style>
+			/*使用透明属性....*/
+			.triangle-css2 {
+				width: 0;
+				height: 0;
+				line-height: 0;
+				font-size: 0;
+				/*使用font-size：0 来去掉inline-block元素之间的换行高度*/
+				border: 50px solid #000;
+				border-color: transparent #4fc176 transparent transparent;
+				/* 红 黄 蓝 绿 */
+				content: "";
+			}
+
+			/*使用HTML实体符号实现*/
+			.triangle-entity {
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				font-size: 50px;
+				color: #f00;
+				text-shadow: 1px 1px 2px #eeb9d5 ,-1px -1px #653bb4 ,-2px -2px #19863b;
+			}
+
+			/*截断溢出元素*/
+			.triangle-rotate-wrap{
+				overflow: hidden;
+				height:50px;
+				width:50px;
+			}
+
+			.triangle-rotate{
+				width:50px;
+				height:50px;
+				transform: rotate(45deg);
+				background-color: #E063EE;
+				margin-top: 35px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 实体特殊符号实现 -->
+		<div class="triangle-entity">▲</div>
+
+		<!-- 边框透明实现 -->
+		<div class="triangle-css2"></div>
+
+		<!-- 旋转截断实现 -->
+		<div class="triangle-rotate-wrap">
+			<div class="triangle-rotate"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title> DOM EVENT</title>
+  </head>
+
+  <body>
+    <h1 onclick="this.innerHTML='谢谢!!!!!!'">点我点我点我</h1>
+    <h1 onclick="changeText(this)">点点点点</h1>
+    <button type="button" onclick="displayDate()">点击这里</button>
+    <p id="demo"></p>
+
+    <div id="demo1" onmousedown="msd(this)" onmouseup="msu(this)" style="font-size:35px;">
+      谢谢
+    </div>
+    <script>
+      function changeText(id) {
+        id.innerHTML = "啦啦啦啦德玛新亚!!!";
+      }
+
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      }
+
+      function msd(obj) {
+        obj.style.background = "rgb(218,99,155)";
+        obj.style.fontSize = "35px";
+        obj.style.color = "#FFF";
+        obj.innerHTML = "按住了这个块";
+      }//按下的时候样式
+
+      function msu(obj) {
+        obj.style.background = "rgb(47,85,10)";
+        obj.style.fontSize = "35px";
+        obj.style.color = "#FFF";
+        obj.innerHTML = "释放了这个块";
+      }//释放鼠标的时候的样式
+
+    </script>
+  </body>
+
+</html>

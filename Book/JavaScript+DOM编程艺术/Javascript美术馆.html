@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getElementById&getElementsByTagName&</title>
+	<script type="text/javascript" src="js/showPic.js"></script>
+	<style type="text/css">
+		body{
+			color :#333;
+			background: #CCC;
+			margin: 1em 10%;
+		}
+		a{
+			color:#C60;
+			background-color: transparent;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		li{
+			float:left;
+			padding:1em;
+			list-style: none;
+		}
+		div{
+			clear:left;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<!-- 此处的return false只是为了防止跳转到其他页面 -->
+		<li><a href="img/1.jpg" alt="Alt内容:这是一张奇葩的图片" title="标题A---AAAAAAAA"  onclick="showPic(this);return false;">测试图片1</a></li>
+		<li><a href="img/2.jpg" alt="Alt内容:这是一张无语的图片" title="标题B---BBBBBBBBB"  onclick="showPic(this);return false;">测试图片2</a></li>
+		<li><a href="img/3.jpg" alt="Alt内容:这是一张搭讪大师" title="标题C---CCCCCCCCC"  onclick="showPic(this);return false;">测试图片3</a></li>
+		<li><a href="img/4.jpg" alt="Alt内容:这是一张额温柔温柔" title="标题D---DDDDDDDD"  onclick="showPic(this);return false;">测试图片4</a></li>
+	</ul>
+	<div>
+		<img src="img/5.jpg" alt="我是占位图片" id="placeholder" alt="我的图片廊">
+			<p id="description_title">image title.</p>
+			<p id="description_content">image alt</p>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+/*全局UL默认取消点*/
+
+ul,dl{
+	list-style-type: none;
+
+}
+
+
+/*初始化隐藏元素*/
+
+.init-hide {
+	display: none;
+}
+
+
+/*小三角图标*/
+
+.i-triangle {
+	width: 0;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	/*使用font-size：0 来去掉inline-block元素之间的换行高度*/
+	border-top: 5px solid #949494;
+	border-left:5px solid transparent;
+	border-right:5px solid transparent;
+	position: absolute;
+	top:14px;
+	right:5px;
+	/* 红 黄 蓝 绿 */
+	content: "";
+}
+
+
+/*鼠标正常样式及手势*/
+
+.mouse-normal {
+	cursor: default;
+}
+
+.mouse-hand {
+	cursor: pointer;
+}
+
+
+/*文本对齐方向*/
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+
+/*超链接复用样式*/
+a:link,a:visited{
+	text-decoration: none;
+}
+
+
+/*li通用样式*/
+.li-basic-style{
+	text-align: center;
+	line-height: 35px;
+	height:35px;
+}
+
+
+/*取消overflow*/
+.noneOverflow{
+    overflow: visible !important;
+}
+
+/*---增加和删除联系人复用类----*/
+/*关闭按钮位置*/
+.icon-dismiss-position{
+    position: absolute;
+    right:10px;
+    top:7px;
+}
+
+/*保存按钮组的基本样式*/
+.save-input-group  li{
+    float: left;
+    width:60px;
+    height:35px;
+    line-height: 35px;
+    display: inline-block;
+    text-align: center;
+}
+
+/*处理联系人的保存按钮样式*/
+.contact-info-save,.contact-info-del{
+    background-color: #e0e0e0;
+    color:#484848;
+    border-radius: 3px;
+    font-weight: bolder;
+}
+
+.save-input-group  li:last-child{
+    font-size:14px;
+    color:#4f9ba9;
+}
+
+
+/*弹窗的关闭按钮*/
+.icon-dismiss{
+    width:32px;
+    height:32px;
+    border:2px solid #4ca4cc;
+    color:#4ca4cc;
+    font-size:32px;
+    text-align: center;
+    line-height: 34px;
+    border-radius: 17px;
+}
+
+
+
+
+/*------------JQ调用的类-------*/
+/*checkbox选中效果*/
+.checkbox-selector-bg{
+    border-radius: 100% !important;
+    -webkit-animation-name: rotatea;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 50;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+
+
+}
+/*CSS3 animation*/
+@-webkit-keyframes rotatea{
+    0% {
+        -webkit-box-shadow: 0 0 12px rgba(72, 106, 170, .3);
+        border-color: rgba(36,235,110,.5);
+        background-color:#00AEFF;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+    25% {
+        -webkit-box-shadow: 0 0 12px rgba(106,146,219,.5);
+        border-color: rgba(36,235,110,.5);
+        background-color:#00AEFF;
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    50% {
+        -webkit-box-shadow: 0 0 12px rgba(106,146,219,.5);
+        border-color: rgba(36,235,110,.5);
+        background-color:#00AEFF;
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    75% {
+        -webkit-box-shadow: 0 0 12px rgba(106,146,219,.75);
+        border-color: rgba(36,235,110,.5);
+        background-color:#00AEFF;
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 12px rgba(85,127,205,85);
+        border-color: rgba(255,255,255,.5);
+        background-color: #0093dd;
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+@keyframes rotatea{
+    0% {
+        -webkit-box-shadow: 0 0 12px rgba(72, 106, 170, .3);
+        border-color: rgba(36,235,110,.5);
+        background-color:#00AEFF;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+    25% {
+        -webkit-box-shadow: 0 0 12px rgba(106,146,219,.5);
+        border-color: rgba(36,235,110,.5);
+        background-color:#00AEFF;
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    50% {
+        -webkit-box-shadow: 0 0 12px rgba(106,146,219,.5);
+        border-color: rgba(36,235,110,.5);
+        background-color:#00AEFF;
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    75% {
+        -webkit-box-shadow: 0 0 12px rgba(106,146,219,.75);
+        border-color: rgba(36,235,110,.5);
+        background-color:#00AEFF;
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 12px rgba(85,127,205,85);
+        border-color: rgba(255,255,255,.5);
+        background-color: #0093dd;
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+
+/*确认删除按钮选定*/
+.checkbox-confirm-bg{
+
+}
+
+
+/*滚动条*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 2em;
+    border: 3px solid #eee;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #1EA5FB;
+    background-image: -webkit-linear-gradient(55deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+    border-radius: 2em;
+}

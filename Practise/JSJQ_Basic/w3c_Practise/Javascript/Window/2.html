@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>location对象/history/Navigator/popupalert</title>
+  </head>
+
+  <body>
+    <div id="example"></div>
+
+    <button type="button" onclick="viewS()">点击查看网址相关信息</button>
+    <p id="demo1"></p>
+
+    <button type="button" id="btn1" onclick="goBack()">后退</button>
+    <button type="button" id="btn2" onclick="onForward()">前进</button>
+    <script type="text/javascript">
+      function viewS() {
+        document.getElementById('demo1').innerHTML = " web 主机的域名: " + location.hostname +
+          "<br>返回当前页面的路径和文件名: " + location.pathname +
+          "<br>返回 web 主机的端口: " + location.port +
+          "<br>返回所使用的 web 协议: " + location.protocol;
+      }
+
+      /**
+       * Window Location
+
+            window.location 对象在编写时可不使用 window 这个前缀。
+
+            一些例子：
+            •location.hostname 返回 web 主机的域名
+            •location.pathname 返回当前页面的路径和文件名
+            •location.port 返回 web 主机的端口 （80 或 443）
+            •location.protocol 返回所使用的 web 协议（http:// 或 https://）
+
+            location.assign() 方法加载新的文档。
+
+       */
+
+
+
+       function goBack(){
+         window.history.back()
+       }
+       function onForward(){
+         window.history.forward()
+       }
+      /**
+       * Window History
+
+            window.history 对象在编写时可不使用 window 这个前缀。
+
+            为了保护用户隐私，对 JavaScript 访问该对象的方法做出了限制。
+
+            一些方法：
+            •history.back() - 与在浏览器点击后退按钮相同
+            •history.forward() - 与在浏览器中点击按钮向前相同
+
+       */
+
+
+        txt = "<p>Browser CodeName: " + window.navigator.appCodeName + "</p>";
+        txt+= "<p>Browser Name: " + window.navigator.appName + "</p>";
+        txt+= "<p>Browser Version: " + window.navigator.appVersion + "</p>";
+        txt+= "<p>Cookies Enabled: " + window.navigator.cookieEnabled + "</p>";
+        txt+= "<p>Platform: " + window.navigator.platform + "</p>";
+        txt+= "<p>User-agent header: " + window.navigator.userAgent + "</p>";
+        txt+= "<p>User-agent language: " + window.navigator.systemLanguage + "</p>";
+        document.getElementById("example").innerHTML=txt;
+
+
+
+
+        
+        /*
+
+        警告框
+
+        警告框经常用于确保用户可以得到某些信息。
+
+        当警告框出现后，用户需要点击确定按钮才能继续进行操作。
+
+        语法：
+        alert("文本")
+
+
+        确认框
+
+        确认框用于使用户可以验证或者接受某些信息。
+
+        当确认框出现后，用户需要点击确定或者取消按钮才能继续进行操作。
+
+        如果用户点击确认，那么返回值为 true。如果用户点击取消，那么返回值为 false。
+
+        语法：
+        confirm("文本")
+
+
+        提示框
+
+        提示框经常用于提示用户在进入页面前输入某个值。
+
+        当提示框出现后，用户需要输入某个值，然后点击确认或取消按钮才能继续操纵。
+
+        如果用户点击确认，那么返回值为输入的值。如果用户点击取消，那么返回值为 null。
+
+        语法：
+        prompt("文本","默认值")
+
+         */
+    </script>
+  </body>
+
+</html>

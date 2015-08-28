@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery 效果 - 淡入淡出</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+      #div1 {
+        width: 100px;
+        height: 100px;
+        background: #000;
+      }
+
+      #div2 {
+        width: 100px;
+        height: 100px;
+        background: rgb(142, 45, 199);
+      }
+
+      #div3 {
+        width: 100px;
+        height: 100px;
+        background: rgb(157, 223, 129);
+      }
+
+      #div4 {
+        width: 100px;
+        height: 100px;
+        background: rgb(215, 74, 13);
+      }
+
+      div {
+        display: none;
+      }
+
+      #demo{
+        display: block;
+        position:fixed;
+        top:0;
+        left:150px;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="demo">
+      <button type="button" id="btn1">渐出</button>
+      <button type="button" id="btn2">渐入</button>
+      <button type="button" id="btn3">切换</button>
+      <button type="button" id="btn4">淡化</button>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $("#btn1").click(function() {
+          $("#div1").fadeIn();
+          $("#div2").fadeIn("slow");
+          $("#div3").fadeIn(3000);
+          $("#div4").fadeIn(6000);
+        })
+        $("#btn2").click(function() {
+          $("#div1").fadeOut();
+          $("#div2").fadeOut("slow");
+          $("#div3").fadeOut(3000);
+          $("#div4").fadeOut(6000);
+        })
+        $("#btn3").click(function() {
+          $("#div1").fadeToggle();
+          $("#div2").fadeToggle("slow");
+          $("#div3").fadeToggle(3000);
+          $("#div4").fadeToggle(6000);
+        })
+        $("#btn4").click(function() {
+          $("#div1").fadeTo(1000,0.1);
+          $("#div2").fadeTo(1000,0.3);
+          $("#div3").fadeTo(1000,0.6);
+          $("#div4").fadeTo(1000,0.8);
+        })
+      })
+
+      /**
+        JQuery Fading 方法
+          通过 jQuery，您可以实现元素的淡入淡出效果。
+          $(selector).fadeIn(speed,callback);
+          $(selector).fadeOut(speed,callback);
+          $(selector).fadeToggle(speed,callback);
+          $(selector).fadeTo(speed,opacity,callback);
+
+          jQuery 拥有下面四种 fade 方法：
+
+          fadeIn() -- jQuery fadeIn() 用于淡入已隐藏的元素。
+          fadeOut() -- jQuery fadeOut() 方法用于淡出可见元素。
+          fadeToggle()  --  jQuery fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。
+          fadeTo() -- jQuery fadeTo() 方法允许渐变为给定的不透明度（值介于 0 与 1 之间）。
+  */
+
+    </script>
+  </body>
+
+</html>

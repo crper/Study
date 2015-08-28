@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>输入框组</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>基本的输入框组</h1>
+          <form class="bs-example bs-example-form" action="#" method="post">
+            <div class="input-group">
+              <span class="input-group-addon">@</span>
+              <input type="text" class="form-control">
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-addon">.0 0</span>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control">
+              <span class="input-group-addon">.00</span>
+            </div>
+          </form>
+        </div>
+        <!--
+        .form-control 添加前缀或后缀元素的步骤如下：
+
+        把前缀后后缀元素放在一个带有 class .input-group 的 <div> 中。
+        接着，在相同的 <div> 内，在 class 为 .input-group-addon 的 <span> 内放置额外的内容。
+        把该 <span> 放置在 <input> 元素的前面或者后面。
+        -->
+
+
+        <div class="col-md-6">
+          <h1>输入框组的大小</h1>
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control">
+          </div>
+          <div class="input-group ">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control">
+          </div>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control">
+          </div>
+          <!--
+          向 .input-group 添加相对表单大小的 class（比如 .input-group-lg、input-group-sm、input-group-xs）来改变输入框组的大小。
+          -->
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h1>复选框和单选插件</h1>
+          <form action="#" class="bs-example bs-excample-form">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <input type="checkbox" name="" id="">
+              </span>
+              <input type="text" name="" id="" class="form-control">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <input type="radio" name="" id="">
+              </span>
+              <input type="text" name="" id="" class="form-control">
+            </div>
+          </form>
+        </div>
+        <!--
+        可以把复选框和单选插件作为输入框组的前缀或者后缀元素
+        -->
+
+        <div class="col-md-6">
+          <h1>Bootstrap 实例 - 输入框组的按钮插件</h1>
+          <form action="#" class="bs-example bs-example-form">
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default">GO!</button>
+              </span>
+              <input type="text" class="form-control">
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default">GO!</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- class .input-group-btn 来包裹按钮 -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <h1>带有下拉菜单的按钮</h1>
+          <form action="#" class="bs-example bs-example-form">
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <div class="input-group-btn">
+                <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">下拉菜单
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li><a href="#">功能</a></li>
+                  <li><a href="#">功能二</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">哈哈</a></li>
+                  <li><a href="#">哈哈额</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- 在一个 .input-group-btn class 中包裹按钮和下拉菜单即可  -->
+
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">下拉菜单
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">功能</a></li>
+                  <li><a href="#">功能二</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">哈哈</a></li>
+                  <li><a href="#">哈哈额</a></li>
+                </ul>
+              </div>
+              <input type="text" class="form-control">
+            </div>
+            <!-- 在一个 .input-group-btn class 中包裹按钮和下拉菜单即可 -->
+          </form>
+        </div>
+
+
+
+        <div class="col-md-6">
+          <h1>实例 - 输入框组中分割的下拉菜单按钮</h1>
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button type="button" tabindex="-1" class="btn btn-default">下拉菜单</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">切换下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">测试选项</a></li>
+                <li><a href="#">测试选项</a></li>
+                <li class="divider"></li>
+                <li><a href="#">测试选项</a></li>
+                <li><a href="#">测试选项</a></li>
+              </ul>
+            </div>
+            <input type="text" class="form-control">
+          </div> <!-- 在一个 .input-group-btn class 中包裹按钮和下拉菜单即可 -->
+
+
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <div class="input-group-btn">
+              <button type="button" tabindex="-1" class="btn btn-default">下拉菜单</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">切换下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">测试选项</a></li>
+                <li><a href="#">测试选项</a></li>
+                <li class="divider"></li>
+                <li><a href="#">测试选项</a></li>
+                <li><a href="#">测试选项</a></li>
+              </ul>
+            </div>
+          </div><!-- 在一个 .input-group-btn class 中包裹按钮和下拉菜单即可 -->
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
+
+
+      </div>

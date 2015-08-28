@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery 效果- 隐藏和显示</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <p>这是一个测试段落啊啊!!!!!!!!!!!!!!!!</p>
+    <p>这是一个测试段落啊啊!!!!!!!!!!!!!!!!</p>
+    <p>这是一个测试段落啊啊!!!!!!!!!!!!!!!!</p>
+    <button type="button" id="hide">隐藏文本</button>
+    <button type="button" id="show">显示文本</button>
+    <button type="button" id="btn">切换隐藏显示</button>
+    <script>
+      $(document).ready(function(){
+        $("#hide").click(function() {
+          $("p").hide(1500);
+        });
+
+        $("#show").click(function(){
+            $("p").show(1500);
+        });
+
+        $("#btn").click(function(){
+          $("p").toggle(1500);
+        });
+      })
+
+      /**
+       * jQuery hide() 和 show()
+          语法:
+
+          $(selector).hide(speed,callback);
+
+          $(selector).show(speed,callback);
+          可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+       */
+
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>结构伪类选择器的使用方法详解</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			ul {
+				margin: 50px auto;
+				width: 400px;
+				list-style: none outside none;
+				/*取消列表样式,完美兼容,取代list-style:none*/
+			}
+
+			li {
+				display: inline-block;
+				margin: 5px;
+				padding: 5px;
+				width: 50px;
+				height: 50px;
+				font: bold 30px/50px arial;
+				background: #000;
+				color: #fff;
+				text-align: center;
+				border-radius: 50px;
+			}
+
+			/*第一个子元素*/
+			ul>li:first-child {
+				background-color: green;
+			}
+
+			/*最后一个子元素*/
+			ul>li:last-child {
+				background-color: blue;
+			}
+
+			/*指定第几个子元素,正序,支持odd,even,n+b*/
+			ul> li:nth-child(3) {
+				background-color: yellow;
+			}
+
+			/*even*/
+			ul >li:nth-child(2n) {
+				background-color: #26b7d2;
+			}
+
+			/*odd = 2n+1 || 2n-1*/
+			ul >li:nth-child(2n+1) {
+				background-color: #a4097c;
+			}
+
+			/*倒数第四个子元素*/
+			ul>li:nth-last-child(4) {
+				background-color: #67f994;
+			}
+
+			/*选择同类型的子元素:正序*/
+			ul>li:nth-of-type(2n+3) {
+				background-color: #9c9948;
+			}
+			/*选择同类型的子元素:反序*/
+			ul>li:nth-last-of-type(3) {
+				background-color: #3efcd4;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+			<li>13</li>
+			<li>14</li>
+			<li>15</li>
+			<li>16</li>
+			<li>17</li>
+			<li>18</li>
+			<li>19</li>
+			<li>20</li>
+		</ul>
+	</body>
+</html>

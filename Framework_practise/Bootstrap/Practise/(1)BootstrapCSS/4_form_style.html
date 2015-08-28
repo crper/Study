@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>表单样式展示</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <span>标准表单</span>
+        </div>
+        <div class="col-md-9">
+          <form action="#">
+            <div class="form-group">
+              <label for="name">名称 </label>
+              <input type="text" class="form-control" id="name" placeholder="请输入名称">
+            </div>
+            <div class="form-group">
+              <label for="inputfile">文件输入</label>
+              <input type="file" id="inputfile">
+              <p class="help-block">这里是块级帮助文本的实例。</p>
+            </div>
+            <div class="checkbox">
+              <label for="">
+                <input type="checkbox">请打勾</label>
+            </div>
+            <button type="submit" class="btn btn-default">提交</button>
+          </form>
+        </div>
+      </div>
+      <!--
+    单独的表单控件会被自动赋予一些全局样式。所有设置了 .form-control 类的 <input>、<textarea> 和 <select> 元素都将被默认设置宽度属性为 width: 100%;。
+     将 label 元素和前面提到的控件包裹在 .form-group 中可以获得最好的排列。
+
+     help-block是控件的帮助文本,一个较长的帮助文本块，超过一行，需要扩展到下一行。
+    -->
+
+      <div class="row">
+        <div class="col-md-3">
+          <span>内联表单</span>
+        </div>
+        <div class="col-md-9">
+          <form action="#" class="form-inline">
+            <div class="form-group">
+              <label for="name">名称 </label>
+              <input type="text" class="form-control" id="name" placeholder="请输入名称">
+            </div>
+            <div class="form-group">
+              <label for="inputfile">文件输入</label>
+              <input type="file" id="inputfile">
+              <p class="help-block">这里是块级帮助文本的实例。</p>
+            </div>
+            <div class="checkbox">
+              <label for="">
+                <input type="checkbox">请打勾</label>
+            </div>
+            <button type="submit" class="btn btn-default">提交</button>
+          </form>
+        </div>
+      </div>
+      <!--
+      内联表单
+    为 <form> 元素添加 .form-inline 类可使其内容左对齐并且表现为 inline-block 级别的控件。
+    只适用于视口（viewport）至少在 768px 宽度时（视口宽度再小的话就会使表单折叠）。
+
+可能需要手动设置宽度
+在 Bootstrap 中，输入框和单选/多选框控件默认被设置为 width: 100%; 宽度。
+在内联表单，我们将这些元素的宽度设置为 width: auto;，因此，多个控件可以排列在同一行。根据你的布局需求，可能需要一些额外的定制化组件。
+
+.form-control作用范围:
+
+包括大部分表单控件、文本输入域控件，还支持所有 HTML5 类型的输入控件：
+ text、password、datetime、datetime-local、date、month、time、week、number、email、url、search、tel 和 color。
+
+-->
+
+      <div class="col-md-3">
+        <span>水平表单</span>
+      </div>
+      <div class="col-md-9">
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label">名字</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastname" class="col-sm-2 control-label">姓</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 请记住我
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">登录</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    <!--
+水平表单与其他表单不仅标记的数量上不同，而且表单的呈现形式也不同。如需创建一个水平布局的表单，请按下面的几个步骤进行：
+
+向父 <form> 元素添加 class .form-horizontal。
+把标签和控件放在一个带有 class .form-group 的 <div> 中。
+向标签添加 class .control-label。
+
+一定要添加 label 标签
+如果你没有为每个输入控件设置 label 标签，屏幕阅读器将无法正确识别。对于这些内联表单，你可以通过为 label 设置 .sr-only 类将其隐藏。
+还有一些辅助技术提供label标签的替代方案，比如 aria-label、aria-labelledby 或 title 属性。
+如果这些都不存在，屏幕阅读器可能会采取使用 placeholder 属性，如果存在的话，使用占位符来替代其他的标记，但要注意，这种方法是不妥当的。
+
+通过为表单添加 .form-horizontal 类，并联合使用 Bootstrap 预置的栅格类，可以将 label 标签和控件组水平并排布局。这样做将改变 .form-group 的行为，使其表现为栅格系统中的行（row），因此就无需再额外添加 .row 了。
+-->
+
+
+    <div class="row">
+      <div class="col-md-3">
+        <span>表单控件</span>
+      </div>
+      <div class="col-md-9">
+        <form role="form">
+          <label for="name">默认的复选框和单选按钮的实例</label>
+          <div class="form-group">
+            <div class="checkbox">
+              <label for="">
+                <input type="text" class="form-control">选项1</input>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label for="">
+                <input type="text" class="form-control">选项2</input>
+              </label>
+            </div>
+          </div>
+
+          <div class="radio">
+            <label for="">
+              <input type="radio" name="testname" id="testRadio1" checked>选项1</label>
+          </div>
+          <div class="radio">
+            <label for="">
+              <input type="radio" name="testname" id="testRadio2">选项2</label>
+          </div>
+          <label for="name">内联的复选框和单选按钮的实例</label>
+          <div class="form-group">
+            <label for="" class="checkbox-inline">
+              <input type="checkbox" value="option1" id="inlineCheckBox1">选项1</input>
+            </label>
+            <label for="" class="checkbox-inline">
+              <input type="checkbox" value="option2" id="inlineCheckBox2">选项2</input>
+            </label>
+            <label for="" class="checkbox-inline">
+              <input type="checkbox" value="option3" id="inlineCheckBox3" disabled>选项3</input>
+            </label>
+            <label for="" class="radio-inline disabled">
+              <input type="radio" value="option4" id="inlineCheckBox4" name="radioTest">选项1</input>
+            </label>
+            <label for="" class="radio-inline">
+              <input type="radio" value="option5" id="inlineCheckBox5" name="radioTest">选项2</input>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--
+通过将 .checkbox-inline 或 .radio-inline 类应用到一系列的多选框（checkbox）或单选框（radio）控件上，可以使这些控件排列在一行。
+
+设置了 disabled 属性的单选或多选框都能被赋予合适的样式。对于和多选或单选框联合使用的 <label> 标签，
+如果也希望将悬停于上方的鼠标设置为“禁止点击”的样式，请将 .disabled 类赋予 .radio、.radio-inline、.checkbox、.checkbox-inline 或 <fieldset>。
+-->
+
+
+    <div class="row">
+      <div class="col-md-3">表单列表</div>
+      <div class="col-md-9">
+        <form action="#">
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+
+          <select multiple class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <!--
+    multiple属性是展开select_list,,.form-control是添加了默认的表单样式
+  -->
+
+
+    <div class="row">
+      <div class="col-md-3">表单控件</div>
+      <div class="col-md-9">
+        <form class="form-inline">
+          <div class="form-group">
+            <label class="sr-only">Email</label>
+            <p class="form-control-static">email@example.com</p>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-default">Confirm identity</button>
+        </form>
+      </div>
+    </div>
+    <!--如果需要在表单中将一行纯文本和 label 元素放置于同一行，为 <p> 元素添加 .form-control-static 类即可。-->
+
+
+    <div class="row">
+      <div class="col-md-3">表单</div>
+      <div class="col-md-9">
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">聚焦</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="focusedInput" type="text" value="该输入框获得焦点...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">
+              禁用
+            </label>
+            <div class="col-sm-10">
+              <input class="form-control" id="disabledInput" type="text" placeholder="该输入框禁止输入..." disabled>
+            </div>
+          </div>
+          <fieldset disabled>
+            <div class="form-group">
+              <label for="disabledTextInput" class="col-sm-2 control-label">
+                禁用输入（Fieldset disabled）
+              </label>
+              <div class="col-sm-10">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="禁止输入">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="disabledSelect" class="col-sm-2 control-label">
+                禁用选择菜单（Fieldset disabled）
+              </label>
+              <div class="col-sm-10">
+                <select id="disabledSelect" class="form-control">
+                  <option>禁止选择</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-group has-success">
+            <label class="col-sm-2 control-label" for="inputSuccess">
+              输入成功
+            </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control input-sm" id="inputSuccess">
+            </div>
+          </div>
+          <div class="form-group has-warning">
+            <label class="col-sm-2 control-label" for="inputWarning">
+              输入警告
+            </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control input-md" id="inputWarning">
+            </div>
+          </div>
+          <div class="form-group has-error">
+            <label class="col-sm-2 control-label" for="inputError">
+              输入错误
+            </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control input-lg" id="inputError">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--
+  除了 :focus 状态（即，用户点击 input 或使用 tab 键聚焦到 input 上），Bootstrap 还为禁用的输入框定义了样式，并提供了表单验证的 class。
+
+输入框焦点
+
+当输入框 input 接收到 :focus 时，输入框的轮廓会被移除，同时应用 box-shadow。
+
+
+禁用的输入框 input
+
+如果您想要禁用一个输入框 input，只需要简单地添加 disabled 属性，这不仅会禁用输入框，还会改变输入框的样式以及当鼠标的指针悬停在元素上时鼠标指针的样式。
+
+
+
+禁用的字段集 fieldset
+
+对 <fieldset> 添加 disabled 属性来禁用 <fieldset> 内的所有控件。
+
+
+验证状态
+
+Bootstrap 包含了错误、警告和成功消息的验证样式。只需要对父元素简单地添加适当的 class（.has-warning、 .has-error 或 .has-success）即可使用验证状态。
+
+
+控件大小可使用input-lg,input-sm,input-md;或者包裹层控制大小,如col-xx-xx
+
+  -->
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>我的第一个 JavaScript 程序</title>
+    <script type="text/JavaScript">
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      } //这是调用日期函数插入网页页面
+
+      document.write("<p>这是JavaScript：直接写入 HTML 输出流的内容</p>");
+      document.write("<h5>这是JavaScript：直接写入 HTML 输出流的内容</h5>");
+      //JavaScript：直接写入 HTML 输出流
+
+      function changeFont() {
+        var x = document.getElementById('demo1').style.color = "#F00";
+        x.innerHTML = "我改变了h1的内容和改变了颜色";
+      } //改变文字内容及颜色
+
+
+      function ifNum() {
+        var temp = document.getElementById('demo2').value;
+        if (temp == "" || isNaN(temp)) {
+          alert("您输入的这货不是数字啊!!");
+        } //判断内容是否为数字
+      }
+
+    </script>
+
+
+  </head>
+
+  <body>
+    <h1 id="demo1">我的第一个Javascript程序</h1>
+    <p id="demo">这是一个段落,等会变变变!!</p>
+
+    <button type="button" onclick="displayDate()">显示日期</button>
+    <!-- JavaScript：对事件的反应 -->
+
+    <button type="button" onclick="changeFont()">改变H1文字内容及颜色</button>
+    <!-- JavaScript：对事件的反应 -->
+
+    <div class="wrap">
+      <p>请输入数字。如果输入值不是数字或者没有输入，浏览器会弹出提示框。</p>
+      <form action="#" method="post">
+        <input type="text" name="" id="demo2">
+        <button type="button" onclick="ifNum()">点击这里判断</button>
+      </form>
+    </div>
+  </body>
+
+</html>

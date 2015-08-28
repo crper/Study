@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>setIntelval/clearIntelval/setTimeout/clearTimeout</title>
+  </head>
+
+  <body>
+    <p>setIntelval/clearInterval</p>
+    <p id="demo"></p>
+    <button type="button" onclick="stopMyTimer()">停止执行</button>
+
+    <p>setTimeout/clearTimeout</p>
+    <p id="demo1"></p>
+    <button type="button" onclick="stopSet()">取消timeout</button>
+    <script type="text/javascript">
+      var myVar = setInterval(function() {
+        myTimer()
+      }, 1000);
+
+      function myTimer() {
+        var d = new Date();
+        var t = d.toLocaleTimeString();
+        document.getElementById("demo").innerHTML = t;
+      }
+
+      function stopMyTimer() {
+          clearInterval(myVar);
+      }
+
+      var temp = setTimeout(function() {
+        myFunction1()
+      }, 3000)
+
+      function myFunction1() {
+        document.getElementById('demo1').innerHTML = "我是三秒后才出现的";
+      }
+
+      function stopSet() {
+        clearTimeout(temp);
+      }
+
+
+      /**过使用 JavaScript，我们有能力作到在一个设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。我们称之为计时事件。
+
+在 JavaScritp 中使用计时事件是很容易的，两个关键方法是:
+
+setInterval() - 间隔指定的毫秒数不停地执行指定的代码。
+setTimeout() - 暂停指定的毫秒数后执行指定的代码
+Note: setInterval() 和 setTimeout() 是 HTML DOM Window对象的两个方法。
+
+clearInterval() 方法用于停止 setInterval() 方法执行的函数代码
+clearTimeout() 方法用于停止执行setTimeout()方法的函数代码。
+     */
+
+    </script>
+  </body>
+
+</html>

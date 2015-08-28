@@ -1,0 +1,123 @@
+
+/*覆盖浏览器的默认边距和填充*/
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/*初始化主体的字体大小及行距*/
+body
+{
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/*取消列表的样式【圆点】*/
+li
+{
+    list-style: none;
+}
+
+/*设置内容的宽度和自动居中，外填充20像素*/
+#content
+{
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*设置网页content DIV标题*/
+#content h1
+{
+    color: #08b;
+}
+
+/*设置通用类的填充，模块之间的间距及边框效果*/
+#content .item
+{
+    margin-bottom: 20px;
+    padding: 20px;
+
+    border: 1px dotted #08b;
+}
+
+/*设置模块内部字体为粗体，16px，增加2px的下边框及10px下边距*/
+#content .item h2
+{
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+    border-bottom: 2px solid #08b;
+}
+
+/*模块列表为内联，li元素之间间隔10px*/
+#content .item li
+{
+    display: inline;
+
+    margin-right: 10px;
+}
+
+/*模块图片大小的设定，且取消图片边框*/
+#content .item li a img
+{
+    width: 230px;
+    height: 230px;
+
+    border: none;
+}
+
+/*固定导航行，用position进行偏移定位*/
+#menu
+{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+
+    width: 50px;
+    margin-left: 400px;
+}
+
+/*设置菜单链接的样式*/
+#menu ul li a
+{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 50px;
+
+    display: block;
+
+    width: 80px;
+    height: 50px;
+    margin: 5px 0;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #333;
+}
+
+/*设置鼠标悬浮和聚焦时候超链接的效果*/
+#menu ul li a:hover,
+#menu ul li a.current
+{
+    color: #fff;
+    background: #08b;
+}
+
+* html,
+* html body
+{
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+
+* html #menu
+{
+    position: absolute;
+    top: expression(100+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+'px');
+    bottom: auto;
+}

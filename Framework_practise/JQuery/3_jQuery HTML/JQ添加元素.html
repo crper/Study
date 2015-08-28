@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>JQ添加元素</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+      #demoa{
+        width: 100px;
+        height:100px;
+        background: rgb(192,204,73);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="demo">
+      <p>append()/prepend()</p>
+      <button type="button" id="btn1">末尾增加文本</button>
+      <button type="button" id="btn2">行首插入文本</button>
+      <button type="button" id="btn3">列表末尾追加元素</button>
+      <button type="button" id="btn4">列表首追加元素</button>
+      <button type="button" id="btn5">after追加元素</button>
+      <button type="button" id="btn6">before追加元素</button>
+    </div>
+    <div id="demo1">
+      <button type="button" id="btn7">通过 append() 和 prepend() 方法添加若干新元素</button>
+      <button type="button" id="btn8">通过 after() 和 before() 方法添加若干新元素</button>
+    </div>
+    <p id="p1">这是一段测试文本</p>
+    <p id="p2">这是另一段测试文本</p>
+    <ul>
+      <li>这是测试列表项</li>
+      <li>这是测试列表项</li>
+      <li>这是测试列表项</li>
+      <li>这是测试列表项</li>
+    </ul>
+    <div id="demoa">AAAAA</div>
+
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <script>
+      $(function() {
+          $("#btn1").click(function() {
+            $("#p1").append("<b>在末尾追加的文本.</b>");
+          });
+          $("#btn2").click(function() {
+            $("#p2").prepend("<b>在行首插入的文本</b>");
+          });
+          $("#btn3").click(function() {
+            $("ul").append("<li>尾追加</li>");
+          });
+          $("#btn4").click(function() {
+            $("ul").prepend("<li>首追加</li>");
+          });
+          $("#btn5").click(function() {
+            $("#demoa").before("<i>首追加</l>");
+          });
+          $("#btn6").click(function() {
+            $("#demoa").after("<strong>尾追加</strong>");
+          });
+          $("#btn7").click(function(){
+              var txt1 = "<p>这是一段测试文本</p>" // Create element with HTML
+              var txt2 = $("<p></p>").text("这是JQ创建的文本") // Create with jQuery
+              var txt3 = document.createElement("p");
+              txt3.innerHTML="这是DOM创建的文本";
+              $("#p3").append(txt1,txt2,txt3);
+          });
+          $("#btn8").click(function(){
+            var txt1="<b>I </b>";                    // Create element with HTML
+            var txt2=$("<i></i>").text("love ");     // Create with jQuery
+            var txt3=document.createElement("big");  // Create with DOM
+            txt3.innerHTML="jQuery!";
+            $("#p4").after(txt1,txt2,txt3);          // Insert new elements after img
+          });
+        })
+
+
+        /*
+        append() - 在被选元素的结尾插入内容
+        prepend() - 在被选元素的开头插入内容
+        after() - 在被选元素之后插入内容
+        before() - 在被选元素之前插入内容
+
+
+         */
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>JQ事件</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!--
+        jQuery 是为事件处理特别设计的。
+
+          什么是事件？
+          页面对不同访问者的响应叫做事件。
+
+          事件处理程序指的是当 HTML 中发生某些事件时所调用的方法。
+
+          实例：
+
+          在元素上移动鼠标。
+          选取单选按钮
+          点击元素
+    -->
+
+    <div id="container">
+      <div id="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid donulla?
+          <br>
+          <span>点我消失</span>
+          <br>
+          <span>双击我改变颜色</span>
+          <br>
+          <span>鼠标移动到这里触发事件</span>
+          <br>
+          <span>鼠标脱离这里触发事件</span>
+          <br>
+          <span>按住变色,松开又变</span>
+          <br>
+          <span>悬浮=移动+脱离</span>
+          <br>
+          <input type="text" placeholder="聚焦改变背景">
+          <br>
+          <input type="text" placeholder="失焦改变背景">
+          <br>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      $("span:first").click(function() {
+        $(this).hide();
+      })
+      $("span:eq(1)").dblclick(function() {
+        $(this).css("color", "rgb(242,6,27)")
+      })
+
+      $("span:eq(2)").mouseenter(function() {
+        alert("您已经触发mouseenter事件!!");
+      })
+      $("span:eq(3)").mouseleave(function() {
+        alert("您已经触发mouseleave事件!!");
+      })
+      $("span:eq(4)").mousedown(function() {
+        $(this).css("color", "rgb(242,6,27)")
+      })
+      $("span:eq(4)").mouseleave(function() {
+        $(this).css("color", "rgb(242,6,27)")
+      })
+
+      $("span:eq(5)").hover(function() {
+          alert("You entered p1!");
+        },
+        function() {
+          alert("Bye! You now leave p1!");
+        });
+
+        $("input:eq(0)").focus(function() {
+          $(this).css("background-color", "#DDD")
+        })
+        $("input:eq(1)").blur(function() {
+          $(this).css("background-color", "#3823B8")
+        })
+
+
+    </script>
+  </body>
+
+</html>

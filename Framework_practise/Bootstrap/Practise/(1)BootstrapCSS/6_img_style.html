@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>图片样式展示</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>自适应图片</h1>
+          <img src="../img/iconfont-github.jpg" alt="github" class="img-responsive">
+        </div>
+      </div><br><br><br>
+      <div class="row">
+        <div class="col-md-4"><img    class="img-rounded" src="../img/mm.jpg" alt="github"><p class="text-center">为图片添加圆角 (IE8 不支持)</p></div>
+        <div class="col-md-4"><img   class="img-circle" src="../img/mm.jpg" alt="blog"><p class="text-center">将图片变为圆形 (IE8 不支持)</p></div>
+        <div class="col-md-4 "><img    class="img-thumbnail" src="../img/mm.jpg" alt="sina_weibo"><p class="text-center">缩略图功能</p></div>
+      </div>
+    </div>
+    <!--
+      .img-rounded	为图片添加圆角 (IE8 不支持)
+      .img-circle	将图片变为圆形 (IE8 不支持)
+      .img-thumbnail	缩略图功能
+      .img-responsive	图片响应式 (将很好地扩展到父元素)
+
+      .img-rounded：添加 border-radius:6px 来获得图片圆角。
+      .img-circle：添加 border-radius:500px 来让整个图片变成圆形。
+      .img-thumbnail：添加一些内边距（padding）和一个灰色的边框。
+      .img-responsive 类将 max-width: 100%; 和 height: auto; 样式应用在图片上：
+    -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

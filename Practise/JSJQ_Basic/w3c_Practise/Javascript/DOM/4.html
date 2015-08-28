@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM NODE</title>
+</head>
+<body>
+  <div id="demo">
+    <p id="p1">这是一个段落</p>
+    <p id="p2">这是另外一个段落</p>
+    <div id="demo2">
+      <div id="demo3">
+        <p id="p3">这是一个段落啊!!!!</p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var para = document.createElement("p");//创建一个元素P
+    var node = document.createTextNode("这是段落");//创建一文本节点,也就是P内部的内容
+    para.appendChild(node);//创建一个完整的元素...内容追加到p里面
+    var element = document.getElementById("demo");//获取包裹块
+    element.appendChild(para);//把新创建的元素追进进去
+
+
+    var parent = document.getElementById("demo");
+    var child = document.getElementById("p1");
+    parent.removeChild(child);
+    /**
+     * 获取包裹块(父),获取内部元素...从包裹块剔除子元素
+     */
+
+    var childa  = document.getElementById("p3");
+    childa.parentNode.removeChild(childa);
+    /**
+     * 通过parentNode获取父节点再干掉子元素
+     */
+
+
+  </script>
+</body>
+</html>

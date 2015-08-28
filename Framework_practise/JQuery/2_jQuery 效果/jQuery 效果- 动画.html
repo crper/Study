@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery 效果- 动画</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+      #test {
+        width: 150px;
+        height: 150px;
+        background: rgb(68, 177, 226);
+        margin-top: 50px;
+        position: absolute;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="demo">
+      <button type="button" id="btn1">操作一个值</button>
+      <button type="button" id="btn2">操作多个值</button>
+      <button type="button" id="btn3">使用相对值</button>
+      <button type="button" id="btn4">使用预定义的值</button>
+      <button type="button" id="btn5">使用队列功能</button>
+      <button type="button" id="btn6">停止动画</button>
+
+    </div>
+    <div id="test"></div>
+    <script>
+      $(function() {
+          $("#btn1").click(function() {
+            $("#test").animate({
+              left: "600px"
+            }, 3000);
+          });
+          $("#btn2").click(function() {
+            $("#test").animate({
+              left: "600px",
+              opacity: "0.4",
+              height: "300px",
+              width: "500px"
+            }, 1000);
+          });
+          $("#btn3").click(function() {
+            $("#test").animate({
+              left: "600px",
+              width: "+=100px",
+              height: "-=50px"
+            }, 1000);
+          });
+          $("#btn4").click(function() {
+            $("#test").animate({
+              height: 'toggle',
+              width: 'toggle'
+            }, 1000);
+          });
+          $("#btn5").click(function() {
+            var query = $("#test");
+            query.animate({
+              height: '300px',
+              width: '700px',
+              opacity: '0.2'
+            }, 1000);
+            query.animate({
+              height: '500px',
+              width: '600px',
+              opacity: '0.8'
+            }, 1000);
+            query.animate({
+              height: '100px',
+              opacity: '0.4'
+            }, 1000);
+            query.animate({
+              width: '100px',
+              opacity: '0.8'
+            }, 1000);
+          });
+          $("#btn6").click(function() {
+            $("#test").stop();
+          });
+        })
+        /*
+        jQuery 动画 - animate() 方法
+        jQuery animate() 方法用于创建自定义动画。
+
+        语法：
+
+        $(selector).animate({params},speed,callback);
+        必需的 params 参数定义形成动画的 CSS 属性。
+
+        可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+         */
+
+      //  jQuery stop() 方法
+      //  jQuery stop() 方法用于停止动画或效果，在它们完成之前。
+      //
+      //  stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。
+      //
+      //  语法:
+      //
+      //  $(selector).stop(stopAll,goToEnd);
+      //  可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。
+      //
+      //  可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。
+      //
+      //  因此，默认地，stop() 会清除在被选元素上指定的当前动画。
+
+    </script>
+  </body>
+
+</html>

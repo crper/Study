@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>column</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" style="background:#995709">col-md-6</div>
+        <div class="col-md-6" style="background:#995709">col-md-6</div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="background:#24A6EE">col-md-12
+            <div class="row">
+              <div class="col-md-8" style="background:#995709">col-md-8</div>
+              <div class="col-md-4" style="background:#995709">col-md-4</div>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3" style="background:#995709" >col-md-3</div>
+        <div class="col-md-9" style="background:#995709">col-md-9</div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="background:#24A6EE">col-md-12
+          <div class="row">
+            <div class="col-md-4" style="background:#099954">col-md-4</div>
+            <div class="col-md-8" style="background:#995709">col-md-8</div>
+          </div>
+        </div>
+        <div class="col-md-12" style="background:#24A6EE">col-md-12
+          <div class="row">
+            <div class="col-md-4 col-md-push-8" style="background:#995709">col-md-4</div>
+            <div class="col-md-8 col-md-pull-4" style="background:#099954">col-md-8</div>
+          </div>
+        <div class="col-md-12" style="background:#24A6EE">col-md-12
+          <div class="row">
+            <div class="col-md-4 col-md-offset-3" style="background:#850999">col-md-4  offset-3</div>
+            <div class="col-md-2  col-md-offset-1" style="background:#5E9909">col-md-2 offset-1</div>
+            <div class="col-md-2  " style="background:#159909">col-md-2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    好像没啥好注释的...一行最多拍12列;超过12则换行
+    每个栅格排列用.row包裹
+    通过使用 .col-md-push-* 和 .col-md-pull-* 类就可以很容易的改变列（column）的顺序。
+    使用 .col-md-offset-* 类可以将列向右侧偏移。这些类实际是通过使用 * 选择器为当前元素增加了左侧的边距（margin）。
+    -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

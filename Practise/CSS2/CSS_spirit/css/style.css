@@ -1,0 +1,164 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/*CSS reset*/
+
+
+h1{
+  text-align:center;
+  font-size:30px;
+  font-weight:bold;
+}
+
+
+.content
+{
+    width: 176px;
+    height: 176px;
+    margin: 0 auto;
+    border:2px solid #2af1d6;
+    padding: 10px;
+
+}
+/*主块大小,位置*/
+
+ul
+{
+    list-style: none;
+    display: inline-block;
+}
+/*取消列表样式,设置内联块*/
+
+
+i
+{
+    display: block;
+    margin:10px;
+    width: 17px;height:17px;background: url(../img/cssspirit.png) no-repeat;
+}
+/*设置图标为块,定义宽高及背景*/
+
+ul li a:link{text-decoration: none;} /*取消下划线*/
+ul li a:hover .icon_fdj{
+  background-position:-21px -132px;
+}
+ul li a:hover .icon_xj{
+  background-position:-62px -132px;
+}
+ul li a:hover .icon_dy{
+  background-position:-102px -132px;
+}
+ul li a:hover .icon_xx{
+  background-position:-122px -132px;
+}
+
+ul li a:hover .icon_xxk{
+  background-position:-21px -152px;
+}
+ul li a:hover .icon_bjb{
+  background-position:-62px -152px;
+}
+ul li a:hover .icon_dw{
+  background-position:-102px -152px;
+}
+ul li a:hover .icon_bq{
+  background-position:-122px -152px;
+}
+
+ul li a:hover .icon_info{
+  background-position:-21px -172px;
+}
+ul li a:hover .icon_infoa{
+  background-position:-62px -172px;
+}
+ul li a:hover .icon_qes{
+  background-position:-102px -172px;
+}
+ul li a:hover .icon_cz{
+  background-position:-122px -172px;
+}
+ul li a:hover .icon_hb{
+  background-position:-21px -192px;
+}
+ul li a:hover .icon_dp{
+  background-position:-62px -192px;
+}
+ul li a:hover .icon_fj{
+  background-position:-102px -192px;
+}
+ul li a:hover .icon_ck{
+  background-position:-122px -192px;
+}
+/*浮动背景位置*/
+
+
+
+
+.icon_fdj{
+  background-position: -1px -132px;
+}
+.icon_xj{
+  background-position:-42px -132px;
+}
+.icon_dy{
+  background-position:-82px -132px;
+}
+.icon_xx{
+  background-position:-122px -132px;
+}
+
+.icon_xxk{
+  background-position:-1px -152px;
+}
+.icon_bjb{
+  background-position:-42px -152px;
+}
+.icon_dw{
+  background-position:-82px -152px;
+}
+.icon_bq{
+  background-position:-122px -152px;
+}
+
+.icon_info{
+  background-position:-1px -172px;
+}
+.icon_infoa{
+  background-position:-42px -172px;
+}
+.icon_qes{
+  background-position:-82px -172px;
+}
+.icon_cz{
+  background-position:-122px -172px;
+}
+.icon_hb{
+  background-position:-1px -192px;
+}
+.icon_dp{
+  background-position:-42px -192px;
+}
+.icon_fj{
+  background-position:-82px -192px;
+}
+.icon_ck{
+  background-position:-122px -192px;
+}
+/*基本的定位*/

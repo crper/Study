@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>JQuery尺寸(盒子)</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+      .bgc {
+        width: 600px !important;
+        height: 600px !important;
+        background: rgb(86, 201, 101) !important;
+        color: rgb(255, 255, 255) !important;
+        font-size: 40px !important;
+        border: 10px solid rgb(57, 185, 246) !important;
+        margin: 30px !important;
+      }
+
+      .testClass {
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        border: 2px solid #33AD8C;
+        margin: 30px;
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="demo">
+      <button type="button" id="btn1">显示盒子大小</button>
+      <button type="button" id="btn2">增加样式显示盒子大小</button>
+    </div>
+    <h1>内容展示区域</h1>
+    <div id="test" class="testClass"></div>
+    <script>
+      $(document).ready(function() {
+          $("#btn1").click(function() {
+            var text = "";
+            text += "内容宽度: " + $("#test").width() + "px<br>"
+            text += "内容高度: " + $("#test").height() + "px<br>"
+            text += "包括填充宽度: " + $("#test").innerWidth() + "px<br>"
+            text += "包括填充高度: " + $("#test").innerHeight() + "px<br>"
+            text += "包括边框宽度: " + $("#test").outerWidth() + "px<br>"
+            text += "包括边框高度: " + $("#test").outerHeight() + "px<br>"
+            text += "包括边距宽度: " + $("#test").outerWidth(true) + "px<br>"
+            text += "包括边距高度: " + $("#test").outerHeight(true) + "px<br>"
+            $("#test").html(text);
+          });
+          $("#btn2").click(function() {
+            var temp = $("#test").addClass("bgc");
+            var text = "";
+            text += "内容宽度: " + $(temp).width() + "px<br>";
+            text += "内容高度: " + $(temp).height() + "px<br>";
+            text += "包括填充宽度: " + $(temp).innerWidth() + "px<br>";
+            text += "包括填充高度: " + $(temp).innerHeight() + "px<br>";
+            text += "包括边框宽度: " + $(temp).outerWidth() + "px<br>";
+            text += "包括边框高度: " + $(temp).outerHeight() + "px<br>";
+            text += "包括边距宽度: " + $(temp).outerWidth(true) + "px<br>";
+            text += "包括边距高度: " + $(temp).outerHeight(true) + "px<br>";
+            $("#test").html(text);
+          });
+        })
+        /*
+        jQuery 尺寸 方法
+        jQuery 提供多个处理尺寸的重要方法：
+        width()  = W3C盒子的content
+        height() = W3C盒子的content
+        innerWidth() = W3C盒子的padding
+        innerHeight() = W3C盒子的padding
+        outerWidth() = W3C盒子的border
+        outerHeight() = W3C盒子的border
+        outerWidth(true) = W3C盒子的margin
+        outerHeight(true) =  W3C盒子的margin
+
+         */
+
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM HTML</title>
+</head>
+<body>
+  <p id="demo">我是文字段落啊!!!!0000000000000001</p>
+  <p id="demo">我是文字段落啊!!!!0000000000000002</p>
+  <img src="xx.jpg" alt="这是没有图片的啊" title="没有图片" id="imga">
+
+  <script type="text/javascript">
+      document.getElementById("demo").innerHTML= "哟哟哟切克闹!!!";
+      //使用innerHTML直接替换标签内容
+
+      document.getElementById("imga").alt= "姜饼果子来一套!!!";
+      document.getElementById("imga").title= "啦啦啦德玛新亚!!!";
+      //可以通过更改标签属性参数
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box-sizing</title>
+	<style>
+		/*DIV基本样式*/
+		.demo1,.demo2,.demo3{
+			width:200px;
+			height:200px;
+			background-color: #2277AD;
+			margin:20px;
+		}
+
+		/*第一个DIV的盒子模型为标准盒子*/
+		.demo1{
+			box-sizing: content-box;
+			border:30px solid #12D732;
+			padding:10px;
+
+		}
+
+		/*第二个DIV盒子模型为IE6盒子*/
+		.demo2{
+			box-sizing: border-box;
+			border:30px solid #12D732;
+			padding:10px;
+		}
+
+		/*新型的padding-box*/
+		.demo3{
+			box-sizing: padding-box;
+			border:30px solid #12D732;
+			padding:10px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="demo1">
+		我是盒子内部的内容啊!!
+	</div>
+	<div class="demo2">
+		我是盒子内部的内容啊!!
+	</div>
+	<div class="demo3">
+		我是盒子内部的内容啊!!
+	</div>
+</body>
+</html>

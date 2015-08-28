@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>捕捉异常抛出处理</title>
+</head>
+<body>
+  <h1>捕捉异常处理</h1>
+  <p>请输入5~10的数字</p>
+  <input type="text" id="demo">
+  <button type="button" onclick="myFunction()">测试输入值 </button>
+  <p id="mess"></p>
+  <script>
+      function myFunction(){
+        try {
+          var x = document.getElementById('demo').value;
+          if(x == ""){
+            throw "值为空"
+          }else if(isNaN(x)){
+            throw "不是数字";
+          }else if(x>10){
+            throw "值输入大了";
+          }else if(x < 5){
+            throw "值输入小了";
+          }else if(x>=5&&x<=10){
+          }else{
+            throw "您确定您输入了或者是输入数字!!";
+          }
+        } catch (e) {
+          var y = document.getElementById('mess');
+          y.innerHTML = "错误:" + e + "!!!!";
+        } finally {
+        }
+      }
+      /*
+      try 语句测试代码块的错误。
+
+      catch 语句处理错误。
+
+      throw 语句创建自定义错误。
+
+      finally是必然执行的代码片段
+       */
+  </script>
+</body>
+</html>

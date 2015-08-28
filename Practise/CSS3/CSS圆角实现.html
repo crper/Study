@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS圆角实现</title>
+  <style type="text/css">
+    /*
+  方块样式定义
+  正方形要产生圆形:半径等于宽或高(border+padding+content)的一半
+  要注意块的总大小 = border(around)+padding(around)+content(around)+margin(around)
+   */
+
+    div {
+      width: 150px;
+      height: 150px;
+      background: #000000;
+      padding: 50px;
+      margin: 50px;
+    }
+
+    div p {
+      text-align: center;
+      color: #5b90e7;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: inline-block;
+    }
+
+    ul li {
+      float: left;
+    }
+    /*
+  border-radius
+   */
+
+    ul .T11 {
+      border-top-left-radius: 125px;
+    }
+
+    ul .T22 {
+      border-top-right-radius: 125px;
+    }
+
+    ul .T33 {
+      border-bottom-right-radius: 125px;
+    }
+
+    ul .T44 {
+      border-bottom-left-radius: 125px
+    }
+
+    ul .T1 {
+      border-radius: 125px
+    }
+
+    ul .T2 {
+      border-radius: 125px 60px;
+    }
+
+    ul .T3 {
+      border-radius: 125px 90px 45px
+    }
+
+    ul .T4 {
+      border-radius: 125px 90px 45px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>
+      <div class="T11">
+        <p>border-top-left-radius:125px</p>
+      </div>
+    </li>
+    <li>
+      <div class="T22">
+        <p>border-top-right-radius:125px</p>
+      </div>
+    </li>
+    <li>
+      <div class="T33">
+        <p>border-bottom-right-radius:125px</p>
+      </div>
+    </li>
+    <li>
+      <div class="T44">
+        <p>border-bottom-left-radius:125px</p>
+      </div>
+    </li>
+  </ul>
+  <span>精确到每个部位的角度写法</span>
+  <hr>
+  <ul>
+    <li>
+      <div class="T1">
+        <p>一个参数:所有半径相等</p <p>border-radius:125px</p>
+      </div>
+    </li>
+    <li>
+      <div class="T2">
+        <p>两个参数:对角相等.第一个参数:左上角=右下角;第二个参数:右上角=左下角</p>
+        <p>border-radius:125px 60px;</p>
+      </div>
+    </li>
+    <li>
+      <div class="T3">
+        <p>三个参数.第一个参数:左上角;第二个参数:右上角=左下角;第三个参数:右下角</p>
+        <p>border-radius:125px 90px 45px</p>
+      </div>
+    </li>
+    <li>
+      <div class="T4">
+        <p>四个参数:自左上角到左下角,顺时针</p>
+        <p>border-radius:125px 90px 45px 20px;</p>
+      </div>
+    </li>
+  </ul>
+  <span>精确到每个部位的角度缩写</span>
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>按钮组及按钮菜单</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>基本的按钮组</h3>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">左边按钮</button>
+            <button type="button" class="btn btn-default">中间按钮</button>
+            <button type="button" class="btn btn-default">中间按钮</button>
+            <button type="button" class="btn btn-default">右边按钮</button>
+          </div>
+        </div>
+        <!--
+        给包裹块添加类btn-group即可实现标准的按钮组
+        -->
+        <div class="col-md-8">
+          <h3>按钮菜单</h3>
+          <div class="btn-toolbar">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default">左边按钮</button>
+              <button type="button" class="btn btn-default">中间按钮</button>
+              <button type="button" class="btn btn-default">中间按钮</button>
+              <button type="button" class="btn btn-default">右边按钮</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default">左边按钮2</button>
+              <button type="button" class="btn btn-default">中间按钮2</button>
+              <button type="button" class="btn btn-default">中间按钮2</button>
+              <button type="button" class="btn btn-default">右边按钮2</button>
+            </div>
+          </div>
+        </div>
+        <!--
+        给按钮组的包裹块添加类btn-toolbar即可实现标准的按钮组
+        -->
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3>按钮组大小展示</h3>
+          <div class="btn-toolbar">
+            <div class="btn-group btn-group-xs">
+              <button type="button" class="btn btn-default">xs</button>
+              <button type="button" class="btn btn-default">xs</button>
+              <button type="button" class="btn btn-default">xs</button>
+            </div>
+            <div class="btn-group btn-group-sm">
+              <button type="button" class="btn btn-default">sm</button>
+              <button type="button" class="btn btn-default">sm</button>
+              <button type="button" class="btn btn-default">sm</button>
+            </div>
+            <div class="btn-group btn-group-md">
+              <button type="button" class="btn btn-default">md</button>
+              <button type="button" class="btn btn-default">md</button>
+              <button type="button" class="btn btn-default">md</button>
+            </div>
+            <div class="btn-group btn-group-lg">
+              <button type="button" class="btn btn-default">lg</button>
+              <button type="button" class="btn btn-default">lg</button>
+              <button type="button" class="btn btn-default">lg</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+        按钮大小有四种规格:xs/sm/md/lg(依次增大)
+        -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <h3>按钮嵌套菜单</h3>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+            <button type="button" class="btn btn-default">4</button>
+            <button type="button" class="btn btn-default">5</button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">下拉菜单
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">我是标题啊</li>
+                <li><a href="#">选项1</a></li>
+                <li class="divider"></li>
+                <li class="disabled"><a href="#">禁用选项</a></li>
+                <li><a href="#">随意子项</a></li>
+              </ul>
+            </div>
+            </button>
+          </div>
+          <!--
+          这里的btn-group充当包裹成的类dropdown
+          -->
+        </div>
+        <div class="col-md-6">
+          <h3>垂直按钮组</h3>
+          <div class="btn-group-vertical">
+            <button type="button" class="btn btn-default">我是测试按钮1</button>
+            <button type="button" class="btn btn-default">我是测试按钮2</button>
+            <button type="button" class="btn btn-default">我是测试按钮3</button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">下拉菜单
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">我是标题啊</li>
+                <li><a href="#">选项1</a></li>
+                <li class="divider"></li>
+                <li class="disabled"><a href="#">禁用选项</a></li>
+                <li><a href="#">随意子项</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--
+        只要把包裹层的添加类btn-group-vertical即可实现垂直排列
+        -->
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>两端对齐排列的按钮组</h3>
+            <div class=" btn-group btn-group-justified">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">测试按钮1</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">测试按钮2</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">测试按钮3</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">测试按钮4</button>
+              </div>
+              <div class="btn-group"> <a href="#" class="btn btn-default">连接按钮</a></div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">下拉菜单
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">我是标题啊</li>
+                  <li><a href="#">选项1</a></li>
+                  <li class="divider"></li>
+                  <li class="disabled"><a href="#">禁用选项</a></li>
+                  <li><a href="#">随意子项</a></li>
+                </ul>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">下拉菜单2
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">我是标题啊</li>
+                  <li><a href="#">选项1</a></li>
+                  <li class="divider"></li>
+                  <li class="disabled"><a href="#">禁用选项</a></li>
+                  <li><a href="#">随意子项</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--
+        关于边框的处理
+        由于对两端对齐的按钮组使用了特定的 HTML 和 CSS （即 display: table-cell），两个按钮之间的边框叠加在了一起。
+        在普通的按钮组中，margin-left: -1px 用于将边框重叠，而没有删除任何一个按钮的边框。然而，margin 属性不支持 display: table-cell。
+        因此，根据你对 Bootstrap 的定制，你可以删除或重新为按钮的边框设置颜色。
+
+
+        IE8 和边框
+        Internet Explorer 8 不支持在两端对齐的按钮组中绘制边框，无论是 <a> 或 <button> 元素。
+        为了照顾 IE8，把每个按钮放入另一个 .btn-group 中即可。
+        -->
+
+        <div class="row">
+          <div class="col-md-6">
+            <h3>分割的按钮下拉菜单</h3>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">主要</button>
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-success">成功</button>
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-info">信息</button>
+              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-danger">危险</button>
+              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-warning">警告</button>
+              <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--
+          .caret就是下三角图形
+          .sr-only就是元素不可见
+          其他就是按钮组的写法.分裂其实就是把单一的按钮分成两个按钮写
+          至于颜色..添加辅助类(warning,danger,primary,info,default)
+          -->
+          <div class="col-md-6">
+            <h3>分割的按钮下拉菜单+向上弹出式菜单</h3>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-primary">主要</button>
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-success">成功</button>
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-info">信息</button>
+              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-danger">危险</button>
+              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-warning">警告</button>
+              <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--
+        给父元素添加 .dropup 类就能使触发的下拉菜单朝上方打开。
+        也就是此处btn-group那里
+        -->
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h3>分割的按钮下拉菜单+向上弹出式菜单+按钮规格</h3>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-primary btn-xs">主要</button>
+              <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-success btn-sm">成功</button>
+              <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-info btn-md">信息</button>
+              <button type="button" class="btn btn-info btn-md dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-danger btn-lg">危险</button>
+              <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+            <div class="btn-group dropup">
+              <button type="button" class="btn btn-warning">警告</button>
+              <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">下拉菜单</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">李子</a></li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">雪梨</a></li>
+                <li class="divider"></li>
+                <li><a href="#">其他</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+                <!--
+             只要给按钮添加对应的规格类即可,有
+             btn-xs/btn-sm/btn-md/btn-lg(依次增大)
+         -->
+      </div>
+    </div>
+
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

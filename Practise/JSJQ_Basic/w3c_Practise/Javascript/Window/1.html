@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>获取所有浏览器视口的宽高度即可用的屏幕宽高</title>
+</head>
+<body>
+  <p id="p1">
+    <h1>显示浏览器窗口的高度和宽度：（不包括工具栏/滚动条）</h1>
+  </p><hr>
+  <p id="p2">
+    <h1>显示浏览器可用高度和宽度：（以像素计，减去界面特性，比如窗口任务栏。）</h1>
+  </p>
+  <script type="text/javascript">
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    x = document.getElementById('p1');
+    x.innerHTML = "浏览器视口高度: " + h +"<br>浏览器的视口宽度是: " + w;
+
+
+    /**
+     * Window 尺寸
+
+        有三种方法能够确定浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）。
+
+        对于Internet Explorer、Chrome、Firefox、Opera 以及 Safari：
+
+            window.innerHeight - 浏览器窗口的内部高度
+            window.innerWidth - 浏览器窗口的内部宽度
+
+        对于 Internet Explorer 8、7、6、5：
+
+            document.documentElement.clientHeight
+            document.documentElement.clientWidth
+
+        或者
+
+            document.body.clientHeight
+            document.body.clientWidth
+
+     */
+
+       var x = screen.availWidth;
+       var y = screen.availHeight;
+       document.getElementById('p2').innerHTML = "浏览器可用高度是: " + y +"<br>浏览器可用宽度是: " + x;
+       //返回访问者屏幕的高度，以像素计，减去界面特性，比如窗口任务栏。
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用动态伪类选择器美化按钮</title>
+	<style>
+		.download-info{
+			text-align: center;
+		}
+		.btn{
+			background-color: #0074CC;
+			background-image: -webkit-linear-gradient(top, #0088CC, #0055cc);
+			background-image: linear-gradient(top,#0088CC,#0055cc);
+			background-repeat: repeat-x;
+			display: inline-block;
+			*display: inline;
+			border:1px solid #CCC;
+			*border:0;
+			border-color: #CCC;
+
+			/*CSS3的色彩模块*/
+			border-color:rgba(0, 0, 0, 0.1) rgba(0,0,0,.1) rgba(0, 0, 0, 0.25);
+			border-radius:6px;
+			color:#FFF;
+			cursor:pointer;
+			font-size: 20px;
+			font-weight: normal;
+			filter:progid:dximagetransform.microsoft.gradient(startColorstr='#0088CC',endColorstr='#0055CC',GradientType=0);
+			filter:progid:dximagetransform.microsoft.gradient(endabled=false);
+			line-height: normal;
+			padding: 14px 24px;
+			text-align: center;
+
+			/*CSS3文字阴影属性*/
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+			text-decoration: none;
+			vertical-align: center;
+			*zoom:1;
+		}
+
+		/*悬浮状态下的按钮效果*/
+		.btn:hover{
+			background-position: 0 -15px;
+			background-color: #0055cc;
+			*background-color:#004ab3;
+			color:#FFF;
+			text-decoration: none;
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+			/*CSS3动画效果*/
+			transition:background-position 0.1s linear;
+		}
+
+		.btn:active {
+			background-color: #0055CC;
+			*background-color: #004ab3;
+			background-color: #004099 \9;
+			background-image: none;
+			outline: 0;
+			/*CSS3盒子阴影特性*/
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset,0 1px 2px rgba(0, 0, 0, 0.5);
+			color: rgba(255, 255, 255, 0.75);
+
+		/*获得焦点按钮效果*/
+		.btn:focus{
+			outline:thin dotted #333;
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: -2px
+		}
+		}
+	</style>
+</head>
+<body>
+	<div class="download-info">
+		<a href="#" class="btn">View project on Github</a>
+	</div>
+</body>
+</html>

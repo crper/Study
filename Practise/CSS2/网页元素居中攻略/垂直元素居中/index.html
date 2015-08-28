@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>单行内元素垂直居中</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background: rgb(30, 186, 250);
+      }
+      /*设置父块大小及颜色*/
+
+      div a {
+        text-decoration: none;
+        font-size: 25px;
+        color: rgb(254, 7, 183);
+        font-weight: 700;
+        line-height: 200px;
+      }
+      /*设置内联元素的行高等于父块高度的行高即可实现垂直居中*/
+
+      span {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        font-size: 35px;
+        line-height: 150px;
+        background: rgb(97, 71, 130);
+      }
+      /*原理同上,行高等于块的高度即可实现内容垂直居中*/
+
+    </style>
+  </head>
+
+  <body>
+    <div><a href="#">测试链接</a></div>
+    <span>测试文字</span>
+  </body>
+
+</html>

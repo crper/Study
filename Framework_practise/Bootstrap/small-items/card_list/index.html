@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>名片列表Demo</title>
+		<link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="container">
+			<div class="row">
+				<div class="col-md-12">
+					<header>
+						<h4 style="color:#C6C440;padding-left:5px;">
+							<i class="fa fa-angle-double-right"></i>名片列表</h3>
+					</header>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<form action="" class="form-inline">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="show-items">显示条数</label>
+								<select class="form-control">
+									<option>10</option>
+									<option>20</option>
+									<option>30</option>
+									<option>50</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-4 col-md-offset-5">
+							<div class="form-group">
+								<label for="category">类别:</label>
+								<select class="form-control">
+									<option>所有</option>
+									<option>XXX</option>
+									<option>XXXX</option>
+									<option>XXXXX</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="groupName">名称:</label>
+								<input class="form-control" id="groupName" placeholder="搜索的组名" type="text">
+							</div>
+							<button class="btn btn-primary" type="button">
+								<i class="fa fa-search"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-bordered table-hover text-center">
+						<thead>
+							<tr >
+								<th>序列号
+									<i class="fa  fa-th" title="用户序列号"></i>
+								</th>
+								<th>名称
+									<i class="fa  fa-th" title="用户序列号"></i>
+								</th>
+								<th>帐号
+									<i class="fa  fa-th" title="用户帐号"></i>
+								</th>
+								<th>创建时间
+									<i class="fa  fa-th" title="名片创建时间"></i>
+								</th>
+								<th>到期时间
+									<i class="fa  fa-th" title="名片到期时间"></i>
+								</th>
+								<th>操作
+									<i class="fa  fa-th" title="操作"></i>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+									<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+									<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+									<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+									<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+									<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+								</td>
+							</tr>
+							<td>2</td>
+							<td>测试名字2</td>
+							<td>aa2</td>
+							<td>2015-08-29 11:12:11</td>
+							<td>2015-09-29 11:12:11</td>
+							<td>
+								<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+								<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+								<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+								<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+								<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+								<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+							</td>
+						</tr>
+						<td>3</td>
+						<td>测试名字3</td>
+						<td>aa3</td>
+						<td>2015-08-29 11:12:11</td>
+						<td>2015-09-29 11:12:11</td>
+						<td>
+							<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+							<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+							<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+							<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+							<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+							<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+						</td>
+					</tr>
+					<td>4</td>
+					<td>测试名字4</td>
+					<td>aa4</td>
+					<td>2015-08-29 11:12:11</td>
+					<td>2015-09-29 11:12:11</td>
+					<td>
+						<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+						<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+						<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+						<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+						<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+						<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+					</td>
+				</tr>
+				<td>5</td>
+				<td>测试名字5</td>
+				<td>aa5</td>
+				<td>2015-08-29 11:12:11</td>
+				<td>2015-09-29 11:12:11</td>
+				<td>
+					<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+					<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+					<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+					<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+					<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+					<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+				</td>
+			</tr>
+			<td>6</td>
+			<td>测试名字6</td>
+			<td>aa6</td>
+			<td>2015-08-29 11:12:11</td>
+			<td>2015-09-29 11:12:11</td>
+			<td>
+				<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+				<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+				<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+				<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+				<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+				<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+			</td>
+		</tr>
+		<td>7</td>
+		<td>测试名字7</td>
+		<td>aa7</td>
+		<td>2015-08-29 11:12:11</td>
+		<td>2015-09-29 11:12:11</td>
+		<td>
+			<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+			<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+			<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+			<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+			<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+			<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+		</td>
+	</tr>
+	<td>8</td>
+	<td>测试名字8</td>
+	<td>aa8</td>
+	<td>2015-08-29 11:12:11</td>
+	<td>2015-09-29 11:12:11</td>
+	<td>
+		<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+		<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+		<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+		<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+		<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+		<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+	</td>
+</tr>
+<td>9</td>
+<td>测试名字9</td>
+<td>aa9</td>
+<td>2015-08-29 11:12:11</td>
+<td>2015-09-29 11:12:11</td>
+<td>
+	<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+	<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+	<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+	<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+	<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+	<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+</td>
+</tr>
+<tr>
+<td>10</td>
+<td>测试名字10</td>
+<td>aa10</td>
+<td>2015-08-29 11:12:11</td>
+<td>2015-09-29 11:12:11</td>
+<td>
+	<i class="fa fa-2x fa-pencil-square-o" style="color:#0099FF" title="制作"></i>
+	<i class="fa fa-2x fa-television" style="color:#00CC66" title="预览"></i>
+	<i class="fa fa-2x fa-info-circle" style="color:#00FFFF" title="基础信息"></i>
+	<i class="fa fa-2x fa-copy" style="color:#19EEAE" title="复制"></i>
+	<i class="fa fa-2x fa-ban" style="color:#999999" title="禁用"></i>
+	<i class="fa fa-2x fa-remove" style="color:#990033" title="删除"></i>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+	<nav>
+	<ul class="pagination">
+	<li >
+	<a aria-label="Previous" href="#">
+		<span aria-hidden="true">&laquo;</span>
+	</a>
+	</li>
+	<li class="active">
+	<a href="#">1</a>
+	</li>
+	<li>
+	<a href="#">2</a>
+	</li>
+	<li>
+	<a href="#">3</a>
+	</li>
+	<li>
+	<a href="#">4</a>
+	</li>
+	<li>
+	<a href="#">5</a>
+	</li>
+	<li>
+	<a href="#">共X条</a>
+	</li>
+	<li>
+	<a href="#">共X页</a>
+	</li>
+	<li>
+	<a aria-label="Next" href="#">
+		<span aria-hidden="true">&raquo;</span>
+	</a>
+	</li>
+	<li>
+		<form action="">
+			<div class="form-group">
+				<slect class="form-control">
+					
+				</slect>
+			</div>
+		</form>
+	</li>
+	</ul>
+	</nav>
+	</div>
+</div>
+</div>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

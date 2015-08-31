@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>名片列表Demo</title>
-		<link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<div id="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-12 ">
 					<header>
 						<h4 style="color:#C6C440;padding-left:5px;">
 							<i class="fa fa-angle-double-right"></i>名片列表</h3>
@@ -18,9 +18,9 @@
 				</div>
 			</div>
 			<div class="row extra-margin">
-				<div class="col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-1">
+				<div class="col-xs-12 col-sm-12 col-md-12 ">
 					<form action="" class="form-inline">
-						<div class="col-xs-3 col-md-3 pull-left">
+						<div class="col-xs-12 col-sm-6 col-md-3 pull-left">
 							<div class="form-group">
 								<label for="show-items">显示条数</label>
 								<select class="form-control">
@@ -31,7 +31,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="col-xs-5  col-md-5 pull-right">
+						<div class="col-xs-12 col-sm-6  col-md-5 pull-right">
 							<div class="form-group">
 								<label for="category">类别:</label>
 								<select class="form-control">
@@ -44,7 +44,7 @@
 							<div class="form-group">
 								<label for="groupName">名称:</label>
 								<input class="form-control" id="groupName" placeholder="搜索的组名" type="text">
-								<button class="btn btn-primary" type="button">
+								<button class="btn btn-primary form-control" type="button">
 									<i class="fa fa-search"></i>
 								</button>
 							</div>
@@ -53,18 +53,18 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-12 ">
 					<table class="table table-bordered table-hover text-center">
 						<thead>
 							<tr >
 								<th>
-									<div class="checkboxStyle" id="checkboxStyle">
+									<div class="checkboxStyle">
 										<label for="selectora"></label>
-										<input type="checkbox" id="selectora" class="init-hide">
+										<input  id="selectora" type="checkbox">
 									</div>
 								</th>
 								<th>名称
-									<i class="fa  fa-th" title="用户序列号"></i>
+									<i class="fa  fa-check-square-o" title="用户序列号"></i>
 								</th>
 								<th>帐号
 									<i class="fa  fa-th" title="用户帐号"></i>
@@ -83,7 +83,9 @@
 						<tbody>
 							<tr>
 								<td>
-
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
 								</td>
 								<td>测试名字</td>
 								<td>aa</td>
@@ -91,33 +93,405 @@
 								<td>2015-09-29 11:12:11</td>
 								<td>
 									<button class="btn btn-default" type="button">
-										<i class="fa fa-2x fa-television" title="预览"></i>
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
 									</button>
 									<button class="btn btn-primary" type="button">
-										<i class="fa fa-2x fa-pencil-square-o" title="制作"></i>
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
 									</button>
 									<button class="btn btn-info" type="button">
-										<i class="fa fa-2x fa-info-circle" title="基础信息"></i>
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
 									</button>
 									<button class="btn btn-success" type="button">
-										<i class="fa fa-2x fa-copy" title="复制"></i>
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
 									</button>
 									<button class="btn btn-warning" type="button">
-										<i class="fa fa-2x fa-ban" title="禁用"></i>
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
 									</button>
 									<button class="btn btn-danger" type="button">
-										<i class="fa fa-2x fa-remove" title="删除"></i>
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
 									</button>
 								</td>
 							</tr>
-
+							<tr>
+								<td>
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
+								</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<button class="btn btn-default" type="button">
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
+									</button>
+									<button class="btn btn-primary" type="button">
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
+									</button>
+									<button class="btn btn-info" type="button">
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
+									</button>
+									<button class="btn btn-success" type="button">
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
+									</button>
+									<button class="btn btn-warning" type="button">
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
+									</button>
+									<button class="btn btn-danger" type="button">
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
+								</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<button class="btn btn-default" type="button">
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
+									</button>
+									<button class="btn btn-primary" type="button">
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
+									</button>
+									<button class="btn btn-info" type="button">
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
+									</button>
+									<button class="btn btn-success" type="button">
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
+									</button>
+									<button class="btn btn-warning" type="button">
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
+									</button>
+									<button class="btn btn-danger" type="button">
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
+								</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<button class="btn btn-default" type="button">
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
+									</button>
+									<button class="btn btn-primary" type="button">
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
+									</button>
+									<button class="btn btn-info" type="button">
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
+									</button>
+									<button class="btn btn-success" type="button">
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
+									</button>
+									<button class="btn btn-warning" type="button">
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
+									</button>
+									<button class="btn btn-danger" type="button">
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
+								</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<button class="btn btn-default" type="button">
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
+									</button>
+									<button class="btn btn-primary" type="button">
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
+									</button>
+									<button class="btn btn-info" type="button">
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
+									</button>
+									<button class="btn btn-success" type="button">
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
+									</button>
+									<button class="btn btn-warning" type="button">
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
+									</button>
+									<button class="btn btn-danger" type="button">
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
+								</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<button class="btn btn-default" type="button">
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
+									</button>
+									<button class="btn btn-primary" type="button">
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
+									</button>
+									<button class="btn btn-info" type="button">
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
+									</button>
+									<button class="btn btn-success" type="button">
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
+									</button>
+									<button class="btn btn-warning" type="button">
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
+									</button>
+									<button class="btn btn-danger" type="button">
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
+								</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<button class="btn btn-default" type="button">
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
+									</button>
+									<button class="btn btn-primary" type="button">
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
+									</button>
+									<button class="btn btn-info" type="button">
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
+									</button>
+									<button class="btn btn-success" type="button">
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
+									</button>
+									<button class="btn btn-warning" type="button">
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
+									</button>
+									<button class="btn btn-danger" type="button">
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
+								</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<button class="btn btn-default" type="button">
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
+									</button>
+									<button class="btn btn-primary" type="button">
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
+									</button>
+									<button class="btn btn-info" type="button">
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
+									</button>
+									<button class="btn btn-success" type="button">
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
+									</button>
+									<button class="btn btn-warning" type="button">
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
+									</button>
+									<button class="btn btn-danger" type="button">
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
+								</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<button class="btn btn-default" type="button">
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
+									</button>
+									<button class="btn btn-primary" type="button">
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
+									</button>
+									<button class="btn btn-info" type="button">
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
+									</button>
+									<button class="btn btn-success" type="button">
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
+									</button>
+									<button class="btn btn-warning" type="button">
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
+									</button>
+									<button class="btn btn-danger" type="button">
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkboxStyle">
+										<input name="user-list" type="checkbox">
+									</div>
+								</td>
+								<td>测试名字</td>
+								<td>aa</td>
+								<td>2015-08-29 11:12:11</td>
+								<td>2015-09-29 11:12:11</td>
+								<td>
+									<button class="btn btn-default" type="button">
+										<a href="https://www.baidu.com" target="_blank">
+											<i class="fa fa-2x fa-television" data-placement="bottom" data-toggle="tooltip" title="预览"></i>
+										</a>
+									</button>
+									<button class="btn btn-primary" type="button">
+										<i class="fa fa-2x fa-pencil-square-o" data-placement="bottom" data-toggle="tooltip" title="制作"></i>
+									</button>
+									<button class="btn btn-info" type="button">
+										<i class="fa fa-2x fa-info-circle" data-placement="bottom" data-toggle="tooltip" title="基础信息"></i>
+									</button>
+									<button class="btn btn-success" type="button">
+										<i class="fa fa-2x fa-copy" data-placement="bottom" data-toggle="tooltip" title="复制"></i>
+									</button>
+									<button class="btn btn-warning" type="button">
+										<i class="fa fa-2x fa-ban" data-placement="bottom" data-toggle="tooltip" title="禁用"></i>
+									</button>
+									<button class="btn btn-danger" type="button">
+										<i class="fa fa-2x fa-remove" data-placement="bottom" data-toggle="tooltip" title="删除"></i>
+									</button>
+								</td>
+							</tr>
 
 						</tbody>
 					</table>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
+				<div class="col-md-3 col-md-offset-1 col-xs-12 col-sm-3">
+					<form action="index.html" class="form-inline" method="post">
+						<div class="form-group">
+							<button class="btn btn-lg btn-danger form-control extra-position" type="button">
+								<i class="fa fa-user-times"></i>
+							</button>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-lg btn-success form-control extra-position" data-target="#testModal" data-toggle="modal" type="button">
+								<i class="fa fa-user-plus"></i>
+							</button>
+							<div aria-labelledby="myModalLabel" class="modal fade" id="testModal" role="dialog" tabindex="-1">
+								<div class="modal-dialog modal-sm" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+												<span aria-hidden="true">&times;</span>
+											</button>
+											<h4 class="modal-title" id="myModalLabel">请输入新增名片信息</h4>
+										</div>
+										<div class="modal-body">
+											<form action="">
+												<div class="form-group">
+													<label for="cardName">名称</label>
+													<input class="form-control" id="cardName" type="text">
+												</div>
+												<div class="form-group">
+													<label for="cardPhone">手机</label>
+													<input class="form-control" id="cardPhone" type="text">
+												</div>
+												<div class="form-group">
+													<label for="cardPhone">邮箱</label>
+													<input class="form-control" id="cardEmail" type="text">
+												</div>
+												<div class="form-group">
+													<strong>年限</strong>
+													<select class="form-control" name="">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+													</select>
+												</div><br>
+												<div class="form-group">
+													<strong>类别</strong>
+													<select class="form-control" name="">
+														<option value="XX">xx</option>
+														<option value="XXX">XXX</option>
+														<option value="XX">XX</option>
+														<option value="XX">XX</option>
+														<option value="XX">XX</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="cardUserName">帐号</label>
+													<input class="form-control" id="cardUserName" type="text">
+												</div>
+												<div class="form-group">
+													<label for="cardPass">邮箱</label>
+													<input class="form-control" id="cardPass" type="text">
+												</div>
+											</form>
+										</div>
+										<div class="modal-footer">
+											<button class="btn btn-primary" type="button">保存</button>
+											<button class="btn btn-default" data-dismiss="modal" type="button">关闭</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-6 col-md-offset-2 col-xs-12 col-sm-9">
 					<nav>
 						<ul class="pagination">
 							<li >
@@ -155,12 +529,25 @@
 					</nav>
 				</div>
 			</div>
+
+<!-- 加载效果 -->
+			<div id="spinningSquaresG">
+				<div class="spinningSquaresG" id="spinningSquaresG_1"></div>
+				<div class="spinningSquaresG" id="spinningSquaresG_2"></div>
+				<div class="spinningSquaresG" id="spinningSquaresG_3"></div>
+				<div class="spinningSquaresG" id="spinningSquaresG_4"></div>
+				<div class="spinningSquaresG" id="spinningSquaresG_5"></div>
+				<div class="spinningSquaresG" id="spinningSquaresG_6"></div>
+				<div class="spinningSquaresG" id="spinningSquaresG_7"></div>
+				<div class="spinningSquaresG" id="spinningSquaresG_8"></div>
+			</div>
 		</div>
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-		<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-		<script src="js/myScript.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-		<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+		<script src="js/myScript.js"></script>
 	</body>
 </html>

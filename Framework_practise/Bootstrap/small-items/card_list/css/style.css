@@ -1,3 +1,4 @@
+/*表单基础样式重写*/
 th{
 	text-align: center;
 	vertical-align: middle !important;
@@ -10,4 +11,197 @@ td{
 .extra-margin{
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.extra-position{
+	height:50px;
+	margin-top: 10px;
+	border-radius: 50%;
+}
+
+/*Checkbox*/
+.checkboxStyle > input{
+	width:25px;
+	height:25px;
+}
+
+
+.init-hide{
+	display: none !important;
+}
+
+
+/*加载动画效果*/
+#spinningSquaresG{
+	position:relative;
+	width:234px;
+	height:28px;
+	margin:auto;
+}
+
+.spinningSquaresG{
+	position:absolute;
+	top:0;
+	background-color:rgb(49,124,189);
+	width:28px;
+	height:28px;
+	animation-name:bounce_spinningSquaresG;
+		-o-animation-name:bounce_spinningSquaresG;
+		-ms-animation-name:bounce_spinningSquaresG;
+		-webkit-animation-name:bounce_spinningSquaresG;
+		-moz-animation-name:bounce_spinningSquaresG;
+	animation-duration:1.235s;
+		-o-animation-duration:1.235s;
+		-ms-animation-duration:1.235s;
+		-webkit-animation-duration:1.235s;
+		-moz-animation-duration:1.235s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+	transform:scale(.3);
+		-o-transform:scale(.3);
+		-ms-transform:scale(.3);
+		-webkit-transform:scale(.3);
+		-moz-transform:scale(.3);
+}
+
+#spinningSquaresG_1{
+	left:0;
+	animation-delay:0.496s;
+		-o-animation-delay:0.496s;
+		-ms-animation-delay:0.496s;
+		-webkit-animation-delay:0.496s;
+		-moz-animation-delay:0.496s;
+}
+
+#spinningSquaresG_2{
+	left:29px;
+	animation-delay:0.6125s;
+		-o-animation-delay:0.6125s;
+		-ms-animation-delay:0.6125s;
+		-webkit-animation-delay:0.6125s;
+		-moz-animation-delay:0.6125s;
+}
+
+#spinningSquaresG_3{
+	left:58px;
+	animation-delay:0.739s;
+		-o-animation-delay:0.739s;
+		-ms-animation-delay:0.739s;
+		-webkit-animation-delay:0.739s;
+		-moz-animation-delay:0.739s;
+}
+
+#spinningSquaresG_4{
+	left:88px;
+	animation-delay:0.8655s;
+		-o-animation-delay:0.8655s;
+		-ms-animation-delay:0.8655s;
+		-webkit-animation-delay:0.8655s;
+		-moz-animation-delay:0.8655s;
+}
+
+#spinningSquaresG_5{
+	left:117px;
+	animation-delay:0.992s;
+		-o-animation-delay:0.992s;
+		-ms-animation-delay:0.992s;
+		-webkit-animation-delay:0.992s;
+		-moz-animation-delay:0.992s;
+}
+
+#spinningSquaresG_6{
+	left:146px;
+	animation-delay:1.1085s;
+		-o-animation-delay:1.1085s;
+		-ms-animation-delay:1.1085s;
+		-webkit-animation-delay:1.1085s;
+		-moz-animation-delay:1.1085s;
+}
+
+#spinningSquaresG_7{
+	left:175px;
+	animation-delay:1.235s;
+		-o-animation-delay:1.235s;
+		-ms-animation-delay:1.235s;
+		-webkit-animation-delay:1.235s;
+		-moz-animation-delay:1.235s;
+}
+
+#spinningSquaresG_8{
+	left:205px;
+	animation-delay:1.3615s;
+		-o-animation-delay:1.3615s;
+		-ms-animation-delay:1.3615s;
+		-webkit-animation-delay:1.3615s;
+		-moz-animation-delay:1.3615s;
+}
+
+
+
+@keyframes bounce_spinningSquaresG{
+	0%{
+		transform:scale(1);
+		background-color:rgb(66,184,184);
+	}
+
+	100%{
+		transform:scale(.3) rotate(90deg);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-o-keyframes bounce_spinningSquaresG{
+	0%{
+		-o-transform:scale(1);
+		background-color:rgb(66,184,184);
+	}
+
+	100%{
+		-o-transform:scale(.3) rotate(90deg);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-ms-keyframes bounce_spinningSquaresG{
+	0%{
+		-ms-transform:scale(1);
+		background-color:rgb(66,184,184);
+	}
+
+	100%{
+		-ms-transform:scale(.3) rotate(90deg);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-webkit-keyframes bounce_spinningSquaresG{
+	0%{
+		-webkit-transform:scale(1);
+		background-color:rgb(66,184,184);
+	}
+
+	100%{
+		-webkit-transform:scale(.3) rotate(90deg);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-moz-keyframes bounce_spinningSquaresG{
+	0%{
+		-moz-transform:scale(1);
+		background-color:rgb(66,184,184);
+	}
+
+	100%{
+		-moz-transform:scale(.3) rotate(90deg);
+		background-color:rgb(255,255,255);
+	}
 }

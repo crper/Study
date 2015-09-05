@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>color Animate</title>
+	<link href="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.css" rel="stylesheet">
+	<style>
+		div{
+			width:100px;
+			height:100px;
+			background-color: #0E8F93;
+			position:relative;
+			top:400px;
+			border: 2px solid #111;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+	<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script>
+		jQuery('#demo').click(function(){
+			var $t =  jQuery(this);
+			$t.animate({backgroundColor: "#BA0E0E",borderLeftColor:"#71F59E"}, 500)
+
+		})
+
+		/**
+		 * 支持下列属性
+			backgroundColor
+			borderBottomColor
+			borderLeftColor
+			borderRightColor
+			borderTopColor
+			color
+			columnRuleColor
+			outlineColor
+			textDecorationColor
+			textEmphasisColor
+		 */
+
+	</script>
+
+</body>
+</html>

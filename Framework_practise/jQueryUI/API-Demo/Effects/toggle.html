@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>toggle</title>
+	<link href="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.css" rel="stylesheet">
+	<style>
+		div{
+			width:100px;
+			height:100px;
+			background-color: #0E8F93;
+			position:relative;
+			top:400px;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+	<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script>
+		jQuery('#demo').click(function(){
+			var $t =  jQuery(this);
+			$t.toggle("blind",{direction:"right"})
+		})
+		//blind direction可选值: up, down, left, right, vertical, horizontal.
+	</script>
+</body>
+</html>

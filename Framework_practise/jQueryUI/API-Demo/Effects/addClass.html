@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>addClass</title>
+	<link href="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.css" rel="stylesheet">
+	<style>
+		div{
+			width:100px;
+			height:100px;
+			background: #4E00FF;
+			position:relative;
+			top:400px;
+		}
+
+		.test{
+			width:300px;
+			height:300px;
+		}
+
+		.test1{
+			background-color: #21A15A;
+		}
+	</style>
+</head>
+<body>
+	<div class="test"></div>
+	<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script>
+		jQuery('div').click(function(){
+			jQuery(this).addClass('test1',500);
+		})
+	</script>
+</body>
+</html>

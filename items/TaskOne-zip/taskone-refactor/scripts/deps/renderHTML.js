@@ -24,7 +24,7 @@ define(['jquery', 'data','checkboxSelect','Dropdown'], function ($, data, checkb
                 //函数内设置的是第一页不用js 直接读出来,这里使用JS减去1
                 var showPage = _opts.onPageC*(_opts.currentPage-1);
                 var temp = '', subItem,temp1='';
-          
+
                 var htmlStr = '<div class="wrapper " data-id="{{id}}" data-name="{{name}}" data-bucount="{{bucount}}">' +
                     '<div class="checkbox single-check"></div>' +
                     '<ul class="contact-name">' +

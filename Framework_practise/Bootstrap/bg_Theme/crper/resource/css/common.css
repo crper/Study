@@ -1,0 +1,12 @@
+/**
+ * 这个文件存放自定义通用类
+ */
+
+
+.init-hide{
+	display: none;
+}
+
+.re-show{
+	display: block;
+}

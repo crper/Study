@@ -21,7 +21,9 @@
 	<script>
 		jQuery('#demo').click(function(){
 			var $t =  jQuery(this);
-			$t.toggle("");
+			$t.hide("drop",{direction:"left"},1000);
+
+			// .hide( effect [, options ] [, duration ] [, complete ] )
 		})
 	</script>
 </body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.css" rel="stylesheet">
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: #0e8f93;
+				position: relative;
+				top: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="demo"></div>
+		<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script>
+			jQuery('#demo').click(function () {
+				var $t = jQuery(this);
+				$t.effect("size", {
+					to: {
+						width: 200,
+						height: 600
+					}
+				}, 3000);
+			})
+			/*
+		to
+		Type: Object
+		改变后高和宽。
+		origin (default: [ "top", "left" ])
+		Type: Array
+		特效起始的方向。
+		scale (default: "both")
+		Type: String
+		确定元素的哪个区域将被缩放: "both", "box", "content"。Box值缩放元素的border和padding; content值缩放元素内部的所有内容。
+		 */
+		</script>
+	</body>
+</html>

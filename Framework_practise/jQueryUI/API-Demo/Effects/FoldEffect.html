@@ -21,7 +21,14 @@
 	<script>
 		jQuery('#demo').click(function(){
 			var $t =  jQuery(this);
-			$t.toggle("");
+			$t.toggle("fold",{size:1,horizFirst:true});
+			// fold是折叠效果
+			// size是折叠高度
+			/*horizFirst (default: false)
+			Type: Boolean
+			当先从水平方向开始隐藏时，记住，当显示时，方向是和隐藏时相反的。
+			（愚人码头注：即如果隐藏时为从右至左，那么显示时为从左至右。）
+			*/
 		})
 	</script>
 </body>

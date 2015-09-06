@@ -21,8 +21,13 @@
 	<script>
 		jQuery('#demo').click(function(){
 			var $t =  jQuery(this);
-			$t.toggle("");
+			$t.toggle("puff",{percent:200});
 		})
+		/*
+		percent (default: 150)
+		Type: Number
+		元素放大的百分比。
+		 */
 	</script>
 </body>
 </html>

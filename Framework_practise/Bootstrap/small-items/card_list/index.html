@@ -6,6 +6,7 @@
 		<link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+		<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -60,7 +61,7 @@
 								<th>
 									<div class="checkboxStyle">
 										<label for="selectora"></label>
-										<input  id="selectora" type="checkbox">
+										<input id="selectora" type="checkbox">
 									</div>
 								</th>
 								<th>名称
@@ -425,20 +426,22 @@
 							</button>
 						</div>
 						<div class="form-group">
-							<button class="btn btn-lg btn-success form-control extra-position" data-target="#testModal" data-toggle="modal" type="button">
+							<button class="btn btn-lg btn-success form-control extra-position"  data-target="#testModal" id="test-user-plus" data-toggle="modal" type="button">
 								<i class="fa fa-user-plus"></i>
 							</button>
+							<a  class="btn btn-default" href="demo.html" data-toggle="modal" data-target="#testModal">打开对话框</a>
+
 							<div aria-labelledby="myModalLabel" class="modal fade" id="testModal" role="dialog" tabindex="-1">
-								<div class="modal-dialog modal-sm" role="document">
+								<div class="modal-dialog modal-lg" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
 											<button aria-label="Close" class="close" data-dismiss="modal" type="button">
 												<span aria-hidden="true">&times;</span>
 											</button>
-											<h4 class="modal-title" id="myModalLabel">请输入新增名片信息</h4>
+											<h4 class="modal-title" id="myModalLabel">测试加载页面</h4>
 										</div>
 										<div class="modal-body">
-											<form action="">
+<!-- <form action="">
 												<div class="form-group">
 													<label for="cardName">名称</label>
 													<input class="form-control" id="cardName" type="text">
@@ -479,75 +482,82 @@
 													<label for="cardPass">邮箱</label>
 													<input class="form-control" id="cardPass" type="text">
 												</div>
-											</form>
-										</div>
-										<div class="modal-footer">
-											<button class="btn btn-primary" type="button">保存</button>
-											<button class="btn btn-default" data-dismiss="modal" type="button">关闭</button>
-										</div>
+											</form> -->
+
+
+										</script>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-primary" type="button">保存</button>
+										<button class="btn btn-default" data-dismiss="modal" type="button">关闭</button>
 									</div>
 								</div>
 							</div>
 						</div>
-					</form>
-				</div>
-				<div class="col-md-6 col-md-offset-2 col-xs-12 col-sm-9">
-					<nav>
-						<ul class="pagination">
-							<li >
-								<a aria-label="Previous" href="#">
-									<span aria-hidden="true">&laquo;</span>
-								</a>
-							</li>
-							<li class="active">
-								<a href="#">1</a>
-							</li>
-							<li>
-								<a href="#">2</a>
-							</li>
-							<li>
-								<a href="#">3</a>
-							</li>
-							<li>
-								<a href="#">4</a>
-							</li>
-							<li>
-								<a href="#">5</a>
-							</li>
-							<li>
-								<a href="#">共X条</a>
-							</li>
-							<li>
-								<a href="#">共X页</a>
-							</li>
-							<li>
-								<a aria-label="Next" href="#">
-									<span aria-hidden="true">&raquo;</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+					</div>
+				</form>
 			</div>
+			<div class="col-md-6 col-md-offset-2 col-xs-12 col-sm-9">
+				<nav>
+					<ul class="pagination">
+						<li >
+							<a aria-label="Previous" href="#">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">5</a>
+						</li>
+						<li>
+							<a href="#">共X条</a>
+						</li>
+						<li>
+							<a href="#">共X页</a>
+						</li>
+						<li>
+							<a aria-label="Next" href="#">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 
 <!-- 加载效果 -->
-			<div id="spinningSquaresG">
+		<div class="loading-position init-hide">
+			<div id="spinningSquaresG" >
 				<div class="spinningSquaresG" id="spinningSquaresG_1"></div>
 				<div class="spinningSquaresG" id="spinningSquaresG_2"></div>
 				<div class="spinningSquaresG" id="spinningSquaresG_3"></div>
 				<div class="spinningSquaresG" id="spinningSquaresG_4"></div>
 				<div class="spinningSquaresG" id="spinningSquaresG_5"></div>
-				<div class="spinningSquaresG" id="spinningSquaresG_6"></div>
+				<div class="spinningSquaresG" id="spinningSquaresG_7"></div>
 				<div class="spinningSquaresG" id="spinningSquaresG_7"></div>
 				<div class="spinningSquaresG" id="spinningSquaresG_8"></div>
 			</div>
 		</div>
+		<div id="overlay">
+		</div>
+	</div>
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-		<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-		<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script src="https://cdn.bootcss.com/jquery-validate/1.14.0/jquery.validate.min.js"></script>
-		<script src="js/myScript.js"></script>
-	</body>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+	<script src="js/myScript.js"></script>
+</body>
 </html>

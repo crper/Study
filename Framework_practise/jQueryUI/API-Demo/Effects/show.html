@@ -11,17 +11,21 @@
 			background-color: #0E8F93;
 			position:relative;
 			top:400px;
+			display: none;
 		}
 	</style>
 </head>
 <body>
-	<div id="demo"></div>
+	<button type="button" id="demo">点击显示</button>
+	<div ></div>
 	<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script>
 		jQuery('#demo').click(function(){
 			var $t =  jQuery(this);
-			$t.toggle("");
+			$('div').show("blind",{direction:"left"},1000);
+
+			// .hide( effect [, options ] [, duration ] [, complete ] )
 		})
 	</script>
 </body>

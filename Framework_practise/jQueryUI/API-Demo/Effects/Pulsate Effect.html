@@ -21,8 +21,14 @@
 	<script>
 		jQuery('#demo').click(function(){
 			var $t =  jQuery(this);
-			$t.toggle("");
+			$t.toggle("pulsate",{times:5});
 		})
+		/*
+		times (default: 5)
+		Type: Integer
+		元素闪烁的次数，在隐藏或显示时会额外增加一个半闪烁效果。
+		 */
+
 	</script>
 </body>
 </html>

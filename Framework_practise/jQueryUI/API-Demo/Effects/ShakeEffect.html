@@ -21,8 +21,25 @@
 	<script>
 		jQuery('#demo').click(function(){
 			var $t =  jQuery(this);
-			$t.toggle("");
+			$t.effect("shake",
+					 {
+						 direction:"down",
+						 distance:10,
+						 times:15
+					 });
 		})
+		/**
+		 	direction (default: "left")
+			Type: String
+			一个"left"或"right"值将使元素在水平方向抖动， "up"或"down"值将使元素在垂直方向抖动。 该值指定元素这个效果应沿轴线移动的第一步的方向。
+			distance (default: 20)
+			Type: Number
+			抖动距离。
+			times (default: 3)
+			Type: Integer
+			抖动次数。
+		 */
+
 	</script>
 </body>
 </html>

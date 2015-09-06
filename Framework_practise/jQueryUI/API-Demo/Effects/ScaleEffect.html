@@ -21,8 +21,23 @@
 	<script>
 		jQuery('#demo').click(function(){
 			var $t =  jQuery(this);
-			$t.toggle("");
+			$t.toggle("scale",{direction:"both",scale:"both",percent:300,origin:"center"});
 		})
+
+		/*
+		direction (default: "both")
+		Type: String
+		效果的方向。 可选值: "both", "vertical" or "horizontal".
+		origin (default: [ "middle", "center" ])
+		Type: Array
+		消失点。
+		percent
+		Type: Number
+		缩放百分比。
+		scale (default: "both")
+		Type: String
+		确定元素的哪个区域将被缩放: "both", "box", "content"。 Box值缩放元素的border和padding; content值缩放元素内部的所有内容。
+		 */
 	</script>
 </body>
 </html>

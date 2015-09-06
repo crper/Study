@@ -1,0 +1,62 @@
+/*导航条指定，所以需要去掉导航占有的空间*/
+body{
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+
+
+/*头部菜单样式*/
+.content-header-menu{
+	position: fixed;
+	top:50px;
+	left:0;
+}
+
+.content-header-menu img{
+	width:200px;
+	height:30px;
+	padding:0;
+	margin:0;
+	position: fixed;
+	left:0;
+}
+
+
+
+/*左边菜单样式*/
+.content-left-menu{
+	position:fixed;
+	top:80px;
+	left:0px;
+	width:200px;
+	min-width: 200px;
+	min-height: 100%;
+}
+
+
+
+
+.content-left-menu a{
+	text-decoration: none;
+}
+
+.content-left-menu a:link,a:visited{
+	color:#000;
+}
+
+
+/*右边内容样式*/
+.content-right-body{
+	position: fixed;
+	margin-left: 200px;
+	top:80px;
+	min-height: 100%;
+}
+
+
+
+@media screen and (max-width:768px) {
+	.content-left-menu{
+		display: none;
+	}
+}

@@ -21,8 +21,16 @@
 	<script>
 		jQuery('#demo').click(function(){
 			var $t =  jQuery(this);
-			$t.toggle("");
+			$t.toggle("slide",{direction:"up",distance:60});
 		})
+		/*
+		direction (default: "both")
+		Type: String
+		特效的执行方向。可选值: "left", "right", "up", "down"。
+		distance (default: element's outerWidth（元素的外边缘宽）)
+		Type: Number
+		特效执行的距离。 默认值为元素的高或宽,取决于 direction 参数的值来决定（愚人码头注：水平方向为宽，垂直方向为高）。 可以被设置为任何小于元素宽/高的整数。
+		 */
 	</script>
 </body>
 </html>

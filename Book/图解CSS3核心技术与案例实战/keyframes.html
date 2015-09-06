@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>keyframes</title>
+	<style>
+		.demo{
+			width:200px;
+			height:200px;
+			text-align: center;
+			line-height: 200px;
+			background-color: #FE043C;
+			position: relative;
+			left:50%;
+			margin-left: -100px;
+			-webkit-animation: Demo 6s ease-in-out infinite alternate;
+			        animation: Demo 6s ease-in-out infinite alternate;
+		}
+
+		@-webkit-keyframes Demo{
+			20%{
+				background-color: #F68C1B;
+				top:50px;
+				border-radius: 20%;
+			}
+			40%{
+				background-color: #31B32C;
+				top:100px;
+				border-radius: 40%;
+				-webkit-transform:rotate(90deg) scale(1.4);
+				        transform:rotate(90deg) scale(1.4);
+			}
+
+			60%{
+				background-color: #1B8DF6;
+				top:200px;
+				border-radius: 60%;
+				-webkit-transform: scale(.4) translateX(300);
+				        transform: scale(.4) translateX(300);
+			}
+			80%{
+				background-color: #BA38D5;
+				top:400px;
+				border-radius: 80%;
+				-webkit-transform:rotate(-90deg) scale(1.4);
+				        transform:rotate(-90deg) scale(1.4);
+			}
+			100%{
+				background-color: #2BBADA;
+				top:600px;
+				border-radius: 100%;
+			}
+
+		}
+
+		@keyframes Demo{
+			20%{
+				background-color: #F68C1B;
+				top:50px;
+				border-radius: 20%;
+			}
+			40%{
+				background-color: #31B32C;
+				top:100px;
+				border-radius: 40%;
+				-webkit-transform:rotate(90deg) scale(1.4);
+				        transform:rotate(90deg) scale(1.4);
+			}
+
+			60%{
+				background-color: #1B8DF6;
+				top:200px;
+				border-radius: 60%;
+				-webkit-transform: scale(.4) translateX(300);
+				        transform: scale(.4) translateX(300);
+			}
+			80%{
+				background-color: #BA38D5;
+				top:300px;
+				border-radius: 80%;
+				-webkit-transform:rotate(-90deg) scale(1.4);
+				        transform:rotate(-90deg) scale(1.4);
+			}
+			100%{
+				background-color: #2BBADA;
+				top:400px;
+				border-radius: 100%;
+			}
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="demo">简易动画效果</div>
+</body>
+</html>

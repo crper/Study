@@ -21,8 +21,10 @@
 	<script>
 		jQuery('#demo').click(function(){
 			var $t =  jQuery(this);
-			$t.toggle("");
+			$t.toggle('explode',{pieces:25})
 		})
+		// 爆炸特效通过将元素分拆成若干片来隐藏或显示一个元素。
+		// pieces (默认值: 9)
 	</script>
 </body>
 </html>

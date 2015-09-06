@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>多行li自适应</title>
+		<style>
+			.clearfix:before,
+			.clearfix:after {
+				content: "";
+				display: table;
+			}
+
+			.clearfix:after {
+				clear: both;
+			}
+
+			.clearfix {
+				*zoom: 1;
+				/*IE/7/6*/
+			}
+
+			.container{
+				width:80%;
+				margin: 0 auto;
+			}
+
+			ul {
+				list-style-type: none ;
+				float: left;
+			}
+
+			li{
+				display: inline-block;
+				width:21%;
+				float: left;
+				margin-left: 2%;
+				margin-right:2%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<ul class="clearfix">
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+				<li>测试内容</li>
+			</ul>
+		</div>
+	</body>
+</html>

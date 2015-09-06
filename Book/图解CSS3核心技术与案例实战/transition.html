@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+		.transition{
+			background: #4892E9;
+			width:200px;
+			height:100px;
+			border-radius: 25px;
+			-webkit-transform: scale(1.2);
+			    -ms-transform: scale(1.2);
+			        transform: scale(1.2);
+			-webkit-transition: all 1s ease-in-out 1s;
+			        transition: all 1s ease-in-out 1s;
+		}
+		.transition:hover{
+			background: #0F2638;
+			width:400px;
+			height:400px;
+			border-radius: 200px;
+			-webkit-transform: rotate(180deg);
+			    -ms-transform: rotate(180deg);
+			        transform: rotate(180deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="transition"></div>
+</body>
+</html>

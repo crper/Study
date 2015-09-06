@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo</title>
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<form action="#" class="form-horizontal">
+						<div class="form-group">
+							<label for="username">用户名:</label>
+							<input class="form-control" id="username" name="u-name" placeholder="请输入您的用户名!!" type="text">
+							<p class="help-block">这里请输入您的用户名字!</p>
+						</div>
+						<div class="form-group">
+							<label for="password">密码:</label>
+							<input class="form-control" id="password" name="u-pass" placeholder="请输入您的账号密码!!" type="password">
+							<p class="help-block">这里请输入您的用户密码！！</p>
+						</div>
+						<div class="form-group">
+							<label for="confirm-password">确认密码:</label>
+							<input class="form-control" id="confrim-password" name="cf-pass" placeholder="请输入您的账号密码!!" type="password">
+							<p class="help-block">请再次您的用户密码！！</p>
+						</div>
+						<div class="form-group">
+							<label for="password">确认密码:</label>
+							<input class="form-control" id="password" name="u-pass" placeholder="请输入您的账号密码!!" type="password">
+							<p class="help-block">请再次您的用户密码！！</p>
+						</div>
+
+						<label class="radio-inline">
+							<input checked id="male" name="sexy" type="radio" value="male">
+							男
+						</label>
+						<label class="radio-inline">
+							<input checked id="female" name="sexy" type="radio" value="female">
+							女
+						</label>
+
+						<select class="form-control" multiple>兴趣爱好
+							<option>游泳</option>
+							<option>篮球</option>
+							<option>足球</option>
+							<option>羽毛球</option>
+							<option>乒乓球</option>
+						</select>
+
+						<div class="form-group">
+							<label for="InputFile">File input</label>
+							<input id="InputFile" type="file">
+							<p class="help-block">这里上传您的图片！！</p>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox">
+								勾选确认用户协议
+							</label>
+						</div>
+						<button class="btn btn-default" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+		<script charset="utf-8" src="js/messages_cn.js"></script>
+		<script charset="utf-8" src="js/form_regular.js"></script>
+	</body>
+</html>

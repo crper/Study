@@ -39,6 +39,21 @@ td{
 	margin:auto;
 }
 
+
+.loading-position{
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+#overlay{
+	z-index: 199;
+	background: #000;
+	opacity: .5;
+	height:100%;
+	width:100%;
+}
+
 .spinningSquaresG{
 	position:absolute;
 	top:0;
@@ -70,6 +85,7 @@ td{
 		-ms-transform:scale(.3);
 		-webkit-transform:scale(.3);
 		-moz-transform:scale(.3);
+	z-index: 300;
 }
 
 #spinningSquaresG_1{

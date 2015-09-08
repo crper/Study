@@ -1,98 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>keyframes</title>
-	<style>
-		.demo{
-			width:200px;
-			height:200px;
-			text-align: center;
-			line-height: 200px;
-			background-color: #FE043C;
-			position: relative;
-			left:50%;
-			margin-left: -100px;
-			-webkit-animation: Demo 6s ease-in-out infinite alternate;
-			        animation: Demo 6s ease-in-out infinite alternate;
-		}
-
-		@-webkit-keyframes Demo{
-			20%{
-				background-color: #F68C1B;
-				top:50px;
-				border-radius: 20%;
+	<head>
+		<meta charset="UTF-8">
+		<title>keyframes</title>
+		<style>
+			.demo {
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				line-height: 200px;
+				background-color: #fe043c;
+				position: relative;
+				left: 50%;
+				margin-left: -100px;
+				-webkit-animation: Demo 6s ease-in-out infinite alternate running forwards;
+				animation: Demo 6s ease-in-out infinite alternate running forwards;
 			}
-			40%{
-				background-color: #31B32C;
-				top:100px;
-				border-radius: 40%;
-				-webkit-transform:rotate(90deg) scale(1.4);
-				        transform:rotate(90deg) scale(1.4);
+			.demo1 {
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+				background-color: #fe043c;
+				position: absolute;
+				left: 30%;
+				margin-left: -100px;
+				-webkit-animation: Demo1 6s ease-in-out infinite alternate running forwards;
+				animation: Demo1 6s ease-in-out infinite alternate running forwards;
 			}
 
-			60%{
-				background-color: #1B8DF6;
-				top:200px;
-				border-radius: 60%;
-				-webkit-transform: scale(.4) translateX(300);
-				        transform: scale(.4) translateX(300);
-			}
-			80%{
-				background-color: #BA38D5;
-				top:400px;
-				border-radius: 80%;
-				-webkit-transform:rotate(-90deg) scale(1.4);
-				        transform:rotate(-90deg) scale(1.4);
-			}
-			100%{
-				background-color: #2BBADA;
-				top:600px;
-				border-radius: 100%;
+			@-webkit-keyframes Demo {
+				20% {
+					background-color: #f68c1b;
+					top: 50px;
+					border-radius: 20%;
+				}
+				40% {
+					background-color: #31b32c;
+					top: 100px;
+					border-radius: 40%;
+					-webkit-transform: rotate(90deg) scale(1.4);
+					transform: rotate(90deg) scale(1.4);
+				}
+
+				60% {
+					background-color: #1b8df6;
+					top: 200px;
+					border-radius: 60%;
+					-webkit-transform: scale(.4) translateX(300);
+					transform: scale(.4) translateX(300);
+				}
+				80% {
+					background-color: #ba38d5;
+					top: 300px;
+					border-radius: 80%;
+					-webkit-transform: rotate(-90deg) scale(1.4);
+					transform: rotate(-90deg) scale(1.4);
+				}
+				100% {
+					background-color: #2bbada;
+					top: 400px;
+					border-radius: 100%;
+				}
 			}
 
-		}
+			@keyframes Demo {
+				20% {
+					background-color: #f68c1b;
+					top: 50px;
+					border-radius: 20%;
+				}
+				40% {
+					background-color: #31b32c;
+					top: 100px;
+					border-radius: 40%;
+					-webkit-transform: rotate(90deg) scale(1.4);
+					transform: rotate(90deg) scale(1.4);
+				}
 
-		@keyframes Demo{
-			20%{
-				background-color: #F68C1B;
-				top:50px;
-				border-radius: 20%;
-			}
-			40%{
-				background-color: #31B32C;
-				top:100px;
-				border-radius: 40%;
-				-webkit-transform:rotate(90deg) scale(1.4);
-				        transform:rotate(90deg) scale(1.4);
-			}
-
-			60%{
-				background-color: #1B8DF6;
-				top:200px;
-				border-radius: 60%;
-				-webkit-transform: scale(.4) translateX(300);
-				        transform: scale(.4) translateX(300);
-			}
-			80%{
-				background-color: #BA38D5;
-				top:300px;
-				border-radius: 80%;
-				-webkit-transform:rotate(-90deg) scale(1.4);
-				        transform:rotate(-90deg) scale(1.4);
-			}
-			100%{
-				background-color: #2BBADA;
-				top:400px;
-				border-radius: 100%;
+				60% {
+					background-color: #1b8df6;
+					top: 200px;
+					border-radius: 60%;
+					-webkit-transform: scale(.4) translateX(300);
+					transform: scale(.4) translateX(300);
+				}
+				80% {
+					background-color: #ba38d5;
+					top: 300px;
+					border-radius: 80%;
+					-webkit-transform: rotate(-90deg) scale(1.4);
+					transform: rotate(-90deg) scale(1.4);
+				}
+				100% {
+					background-color: #2bbada;
+					top: 400px;
+					border-radius: 100%;
+				}
 			}
 
-		}
+			@-webkit-keyframes Demo1 {
+				form {
+					background-color: #df5891;
+					-webkit-transform: translateX(50px);
+					transform: translateX(150px);
+					border-radius: 25%;
+					top: 100px;
+				}
 
+				50% {
+					-webkit-transform: scale(2);
+					transform: scale(2);
+					-webkit-transform: translateX(350px);
+					transform: translateX(150px);
+					background-color: #642eb1;
+					border-radius: 35%;
+					top: 200px;
+				}
+				75% {
+					-webkit-transform: scale(2);
+					transform: scale(2.5);
+					-webkit-transform: translateX(150px);
+					transform: translateX(150px);
+					background-color: #642eb1;
+					border-radius: 55%;
+					top: 400px;
+				}
 
-	</style>
-</head>
-<body>
-	<div class="demo">简易动画效果</div>
-</body>
+				to {
+					background-color: #05823b;
+					-webkit-transform: translateX(250px);
+					transform: translateX(250px);
+					border-radius: 75%;
+					top: 600px;
+				}
+			}
+
+			@keyframes Demo1 {
+				form {
+					background-color: #df5891;
+					-webkit-transform: translateX(50px);
+					transform: translateX(150px);
+					border-radius: 25%;
+					top: 100px;
+				}
+
+				50% {
+					-webkit-transform: scale(2);
+					transform: scale(2);
+					-webkit-transform: translateX(350px);
+					transform: translateX(150px);
+					background-color: #642eb1;
+					border-radius: 35%;
+					top: 200px;
+				}
+				75% {
+					-webkit-transform: scale(2);
+					transform: scale(2.5);
+					-webkit-transform: translateX(150px);
+					transform: translateX(150px);
+					background-color: #642eb1;
+					border-radius: 55%;
+					top: 400px;
+				}
+
+				to {
+					background-color: #05823b;
+					-webkit-transform: translateX(250px);
+					transform: translateX(250px);
+					border-radius: 75%;
+					top: 600px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="demo">简易动画效果</div>
+		<div class="demo1">啦啦德玛西亚</div>
+	</body>
 </html>

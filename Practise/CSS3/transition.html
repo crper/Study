@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>transition Demo</title>
+		<style>
+		/* transition: <property> <duration> <timing-function> <delay>;*/
+			.demobox {
+				position: relative;
+				left: 25%;
+				top:300px;
+				border-style: solid;
+				border-width: 1px;
+				display: block;
+				width: 100px;
+				height: 100px;
+				background-color: #56A892;
+				-webkit-transition: all 1s ease-in-out .5s;
+				        transition: all 1s ease-in-out .5s;
+			}
+
+			.demobox:hover {
+				background-color: #fcc;
+				width: 200px;
+				height: 200px;
+				border-radius: 10px;
+				background-color: #2AA2E6;
+				-webkit-transform: rotate(180deg) skew(-5deg,150deg) scale(.5);
+				-ms-transform: rotate(180deg) skew(-5deg,150deg) scale(.5);
+				transform: rotate(180deg) skew(-5deg,150deg) scale(.5);
+			}
+
+			.btn{
+				width:200px;
+				height:50px;
+				box-shadow: 2px 2px 2px rgba(38,55,64,.9);
+				-webkit-transition: all 2s ease-in-out ;
+				        transition: all 2s ease-in-out ;
+			}
+
+			.btn:hover{
+				color:#F5F5F5;
+				font-size:bolder;
+				background: linear-gradient(-45deg, #36C783, #2A9DC8 );
+				box-shadow: 2px 2px 5px #ABABB4 inset;
+				-webkit-transform: translateX(250px) translateY(100px) rotate(45deg);
+				    -ms-transform: translateX(250px) translateY(100px) rotate(45deg);
+				        transform: translateX(250px) translateY(100px) rotate(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<p>盒子和按钮的多个属性一起动画.hover触发</p>
+		<div class="demobox"></div>
+
+		<button type="button" class="btn">啦啦啦德玛西亚</button>
+	</body>
+</html>

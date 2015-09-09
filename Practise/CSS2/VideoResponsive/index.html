@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>视频响应式</title>
 		<style>
+			/*高度设置为0，由padding来充当占位符效果，溢出元素隐藏*/
 			.video-container {
 				position: relative;
 				padding-bottom: 56.25%;
@@ -12,6 +13,7 @@
 				overflow: hidden;
 			}
 
+			/*使用绝对定位，让其宽高100%达到自适应效果*/
 			.video-container iframe,
 			.video-container object,
 			.video-container embed {
@@ -25,8 +27,8 @@
 	</head>
 	<body>
 		<div class="video-container">
-			<iframe height=498 width=510 src="http://player.youku.com/embed/XMTMzMDY2MDg3Ng==" frameborder=0 allowfullscreen></iframe>
+			<iframe allowfullscreen frameborder=0 height=498 src="http://player.youku.com/embed/XMTMzMDY2MDg3Ng==" width=510></iframe>
 		</div>
-		<p>4654</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda esse nam quia sapiente aperiam quasi, asperiores architecto possimus id, tempore odit! Autem consequatur quisquam voluptatem mollitia, quos, velit veniam.</p>
 	</body>
 </html>

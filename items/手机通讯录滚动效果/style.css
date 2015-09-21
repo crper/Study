@@ -1,0 +1,41 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.slider{
+	width:100%;
+	min-height: 250px;
+	background-color: #45B090;
+	position: relative;
+}
+
+
+
+.slider-right-nav {
+	position: absolute;
+	right:0;
+	top:0;
+	z-index: 1000;
+}
+
+.slider-right-nav ul{
+	list-style: none outside none;
+}
+
+.slider-right-nav ul>li,.slider-right-nav ul>li a{
+	 display: inline-block;
+	 width:20px;
+	 height:20px;
+}
+.slider-left-content ul.wrapper>li{
+	background-color: #E04935;
+}
+
+.slider-left-content ul>li a{
+		 height:20px;
+}

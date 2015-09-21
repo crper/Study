@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Demo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<!--引用本地脚本文件-->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
+    <style>
+      #qrcode {
+        height: 300px;
+        width: 300px;
+        background: #eee;
+      }
+
+      input {
+        height: 25px;
+        line-height: 25px;
+        width: 300px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <input id="text" type="text" value="这是一个测试文本,清除后输入您要生成的内容" />
+    <div id="qrcode"></div>
+
+
+
+
+
+
+
+
+
+
+    <!--脚本就是要放在后面.......-->
+    <script type="text/javascript">
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+      	width: 300,
+      	height: 300,
+      	colorDark: "#000000",
+      	colorLight: "#03f594",
+      	correctLevel: QRCode.CorrectLevel.L
+      });
+
+      function makeCode() {
+      	var elText = document.getElementById("text");
+
+      	if (!elText.value) {
+      		alert("Input a text");
+      		elText.focus();
+      		return;
+      	}
+
+      	qrcode.makeCode(elText.value);
+      }
+
+      makeCode();
+
+      $("#text").
+      on("blur", function() {
+      	makeCode();
+      }).
+      on("keydown", function(e) {
+      	if (e.keyCode == 13) {
+      		makeCode();
+      	}
+      });
+
+    </script>
+  </body>

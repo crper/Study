@@ -1,0 +1,152 @@
+@charset "utf-8";
+/*
+1. 变量用$声明
+2. 默认变量在值后面加上 !default 即可。
+3. 在宏,函数,选择器外的声明为全局变量,局部变量在其内
+
+*/
+$baseLineHeight: 2;
+$baseLineHeight: 1.5 !default;
+body {
+    line-height: $baseLineHeight;
+}
+$color: #feacda;
+.block {
+    color: $color; //调用全局变量
+}
+em {
+    $color: red; //定义局部变量
+    a {
+        color: $color; //调用局部变量
+    }
+}
+span {
+    color: $color; //调用全局变量
+}
+
+/*---------------------------------------*/
+/*
+sass嵌套分为三种:
+1. 选择器嵌套
+2. 属性嵌套
+3. 伪类嵌套
+*/
+/*选择器嵌套*/
+.wrap {
+    display: inline-block;
+    a {
+        text-decoration: none;
+        button {
+            background: #ccc;
+        }
+    }
+}
+
+/*属性嵌套*/
+.wrap {
+    border: {
+        left: 1px solid #ff0;
+        right: 2px dotted #eea;
+        top: {
+            left-radius: 20px;
+            right-radius: 30px;
+        };
+        bottom: {
+            left-radius: 20px;
+            right-radius: 30px;
+        };
+    }
+}
+
+/*伪类嵌套--经典CSS Clearfix*/
+/* &代表自身(作用的参数) */
+.clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+/*
+混合宏-声明混合宏
+- 使用“@mixin”来声明一个混合宏,@include调用
+- 混合宏支持不带参数,一个或者多个参数及默认参数
+- 不管你用不用,都会生成写入的属性,一些参数建议用%来替代
+*/
+/*依次展示不带参数,一个参数,多个参数,默认参数的*/
+@mixin noparam {
+    background: #fff;
+}
+.wrap1 {
+    @include noparam;
+}
+
+
+@mixin oneparam($c){
+  background-color: $c;
+}
+
+.wrap2 {
+  @include oneparam($color);
+}
+
+@mixin mostparam($c,$w){
+  background-color: $c;
+  width:$w;
+}
+
+.wrap3 {
+  @include mostparam(#daecae,500);
+}
+
+@mixin defaultparam($w:300px){
+  width:$w;
+}
+
+.wrap4 {
+  @include defaultparam;
+}
+
+
+
+/*
+extend--继承
+与CSS的理念一致
+*/
+
+.btn {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #f36;
+  color: #fff;
+  @extend .btn;
+}
+
+.btn-second {
+  background-color: orange;
+  color: #fff;
+  @extend .btn;
+}
+
+/*
+ %placeholder 声明的代码，
+ 如果不被 @extend 调用的话，不会产生任何代码。
+ 减少代码冗余
+ */
+
+%pd5{
+    padding:5px;
+}
+
+p{
+    @extend %pd5;
+}

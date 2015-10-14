@@ -150,3 +150,49 @@ extend--继承
 p{
     @extend %pd5;
 }
+
+/*
+插值(Interpolation)[迭代]
+更加简洁明了的结构体系
+@each类似JS的for..in
+*/
+
+$prop:(margin,padding);
+@mixin set-value($attr,$value){
+    @each $temp in $prop{
+        #{$temp}-#{$attr}:$value;
+    }
+}
+
+.wrap{
+    @include set-value(left,5px);
+}
+
+
+/*-----------------------*/
+/*
+SASS数据类型
+数字: 如，1、 2、 13、 10px；
+字符串：有引号字符串或无引号字符串，如，"foo"、 'bar'、 baz；
+颜色：如，blue、 #04a3f9、 rgba(255,0,0,0.5)；
+布尔型：如，true、 false；
+空值：如，null；
+值列表：用空格或者逗号分开，如，1.5em 1em 0 2em 、 Helvetica, Arial, sans-serif。
+算数运算也能将数字和颜色值一起运算
+ */
+
+/*加减乘除*/
+$list: twitter,facebook,github,weibo;
+
+$colora:#111;
+$fsize:1em;
+$lh:150px;
+@for $i from 1 through length($list){
+  .icon-#{nth($list,$i)}{
+    background-postion: 0 -20 * $i;
+    background-color: $colora - 10;
+    font-size:$fsize + 5;
+    line-height: $lh / 10;
+
+  }
+}

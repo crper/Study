@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/*
+@if 指令是一个 SassScript，它可以根据条件来处理样式块，
+如果条件为 true 返回一个样式块，反之 false 返回另一个样式块。
+在 Sass 中除了 @if 之，还可以配合 @else if 和 @else 一起使用。
+ */
+@mixin blockOrHidden($boolean:true) {
+    @if $boolean {
+        @debug "$boolean is #{$boolean}";
+        display: block;
+    }
+    @else {
+        @debug "$boolean is #{$boolean}";
+        display: none;
+    }
+}
+.block {
+    @include blockOrHidden;
+}
+.hidden {
+    @include blockOrHidden(false);
+}
+
+/*
+@for循环
+@for $i from <start> through <end>
+@for $i from <start> to <end>
+ */
+//through
+@for $i from 1 through 3 {
+    .item-#{$i} {
+        width: 2em * $i;
+    }
+}
+
+//to
+@for $i from 1 to 3 {
+    .item-#{$i} {
+        width: 2em * $i;
+    }
+}
+
+
+$grid-prefix: span !default;
+$grid-width: 60px !default;
+$grid-gutter: 20px !default;
+
+%grid {
+  float: left;
+  margin-left: $grid-gutter / 2;
+  margin-right: $grid-gutter / 2;
+}
+
+//through
+@for $i from 1 through 12 {
+  .#{$grid-prefix}#{$i}{
+    width: $grid-width * $i + $grid-gutter * ($i - 1);
+    @extend %grid;
+  }
+}
+
+//to
+@for $i from 1 to 13 {
+  .#{$grid-prefix}#{$i}{
+    width: $grid-width * $i + $grid-gutter * ($i - 1);
+    @extend %grid;
+  }
+}
+
+
+/*
+@while 指令也需要 SassScript 表达式（像其他指令一样），并且会生成不同的样式块，直到表达式值为 false 时停止循环。这个和 @for 指令很相似，
+只要 @while 后面的条件为 true 就会执行。
+ */
+ $margin: 4;
+ @while $margin > 0 {
+     .mt-#{$margin*5} {
+         margin-top: $margin * 5;
+     }
+     $margin: $margin - 1;
+ }
+
+
+
+/*
+@each 循环就是去遍历一个列表，然后从列表中取出对应的值。
+
+@each 循环指令的形式：
+
+@each $var in <list>
+ */
+ $list: adam,john,wynn,mason,kuroir;//$list 就是一个列表
+
+ @mixin author-images {
+     @each $author in $list {
+         .photo-#{$author} {
+             background: url("/images/avatars/#{$author}.png") no-repeat;
+         }
+     }
+ }
+
+ .author-bio {
+     @include author-images;
+ }
+
+//字符串函数-unquote()函数
+/*
+unquote() 函数主要是用来删除一个字符串中的引号，如果这个字符串没有带有引号，将返回原始的字符串。
+quote($string)：给字符串添加引号。
+*/
+.test1 {
+    content:  unquote('Hello Sass!') ;
+}
+.test2 {
+    content: unquote("'Hello Sass!");
+}
+.test3 {
+    content: unquote("I'm Web Designer");
+}
+.test4 {
+    content: unquote("'Hello Sass!'");
+}
+.test5 {
+    content: unquote('"Hello Sass!"');
+}
+.test6 {
+    content: unquote(Hello Sass);
+}
+.test7 {
+    content: quote(HelloSass);
+}
+
+//字符串函数-To-upper-case()、To-lower-case()
+//To-upper-case()-大写
+//To-lower-case()-小写
+.test {
+  text: to-upper-case(abcdefg);
+  text: to-lower-case(GA-aAAA-sXa);
+}
+
+
+/*
+数学函数
+percentage($value)：将一个不带单位的数转换成百分比值；
+round($value)：将数值四舍五入，转换成一个最接近的整数；
+ceil($value)：将大于自己的小数转换成下一位整数；
+floor($value)：将一个数去除他的小数部分；
+abs($value)：返回一个数的绝对值；
+min($numbers…)：找出几个数值之间的最小值；
+max($numbers…)：找出几个数值之间的最大值；
+random(): 获取随机数
+*/
+%p{
+    width:percentage(.5);
+}
+%r{
+    text-1:round(.56);
+    text-2:round(.36);
+}
+nav{
+    @extend  %p;
+    @extend  %r;
+}//以此类推,
+
+/*
+列表函数
+length($list)：返回一个列表的长度值--空格隔开,不能用逗号；
+nth($list, $n)：返回一个列表中指定的某个标签值
+join($list1, $list2, [$separator])：仅两个列表给连接在一起，变成一个列表；
+append($list1, $val, [$separator])：将某个值放在列表的最后；
+zip($lists…)：将几个列表结合成一个多维的列表；
+index($list, $value)：返回一个值在列表中的位置值。
+
+type-of()函数主要用来判断一个值是属于什么类型 -- 多了一个颜色类型,其他和编程语言差不多
+unit() 函数主要是用来获取一个值所使用的单位
+unitless() 函数相对来说简单明了些，只是用来判断一个值是否带有单位，如果不带单位返回的值为 true，带单位返回的值为 false：
+comparable() 函数主要是用来判断两个数是否可以进行“加，减”以及“合并”。如果可以返回的值为 true，如果不可以返回的值是 false：
+*/
+
+/*
+Sass 的 map 常常被称为数据地图，也有人称其为数组，因为他总是以 key:value 成对的出现，但其更像是一个 JSON 数据。
+map-get($map,$key)：根据给定的 key 值，返回 map 中相关的值。
+map-merge($map1,$map2)：将两个 map 合并成一个新的 map。
+map-remove($map,$key)：从 map 中删除一个 key，返回一个新 map。
+map-keys($map)：返回 map 中所有的 key。
+map-values($map)：返回 map 中所有的 value。
+map-has-key($map,$key)：根据给定的 key 值判断 map 是否有对应的 value 值，如果有返回 true，否则返回 false。
+keywords($args)：返回一个函数的参数，这个参数可以动态的设置 key 和 value。
+ */
+ $social-colors: (
+     dribble: #ea4c89,
+     facebook: #3b5998,
+     github: #171515,
+     google: #db4437,
+     twitter: #55acee
+ );
+ $social-colors1: (
+     dribble: #ea4c89,
+     facebook: #3b5998,
+     github: #171515,
+     google: #db4437,
+     twitter: #55acee
+ );
+ .btn-dribble{
+   color: map-get($social-colors,facebook);
+ }

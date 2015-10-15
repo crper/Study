@@ -3,5 +3,5 @@
 "mappings": ";;;AAKA,IAAI;EACA,WAAW,EAHE,CAAC",
 "sources": ["../scss/basic.scss"],
 "names": [],
-"file": "basic.css"
+"file": "/css/basic.css"
 }

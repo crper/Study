@@ -6,20 +6,19 @@
 
 */
 body {
-  line-height: 2;
+    line-height: 2;
 }
 
 .block {
-  color: #feacda;
-
+    color: #feacda;
 }
 
 em a {
-  color: red;
+    color: red;
 }
 
 span {
-  color: #feacda;
+    color: #feacda;
 }
 
 /*---------------------------------------*/
@@ -31,37 +30,37 @@ sass嵌套分为三种:
 */
 /*选择器嵌套*/
 .wrap {
-  display: inline-block;
+    display: inline-block;
 }
 
 .wrap a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .wrap a button {
-  background: #ccc;
+    background: #ccc;
 }
 
 /*属性嵌套*/
 .wrap {
-  border-left: 1px solid #ff0;
-  border-right: 2px dotted #eea;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 30px;
+    border-left: 1px solid #ff0;
+    border-right: 2px dotted #eea;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 30px;
 }
 
 /*伪类嵌套--经典CSS Clearfix*/
 /* &代表自身(作用的参数) */
 .clearfix:before,
 .clearfix:after {
-  content: "";
-  display: table;
+    content: "";
+    display: table;
 }
 
 .clearfix:after {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 /*
@@ -72,20 +71,20 @@ sass嵌套分为三种:
 */
 /*依次展示不带参数,一个参数,多个参数,默认参数的*/
 .wrap1 {
-  background: #fff;
+    background: #fff;
 }
 
 .wrap2 {
-  background-color: #feacda;
+    background-color: #feacda;
 }
 
 .wrap3 {
-  background-color: #daecae;
-  width: 500;
+    background-color: #daecae;
+    width: 500;
 }
 
 .wrap4 {
-  width: 300px;
+    width: 300px;
 }
 
 /*
@@ -93,19 +92,19 @@ extend--继承
 与CSS的理念一致
 */
 .btn, .btn-primary, .btn-second {
-  border: 1px solid #ccc;
-  padding: 6px 10px;
-  font-size: 14px;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    font-size: 14px;
 }
 
 .btn-primary {
-  background-color: #f36;
-  color: #fff;
+    background-color: #f36;
+    color: #fff;
 }
 
 .btn-second {
-  background-color: orange;
-  color: #fff;
+    background-color: orange;
+    color: #fff;
 }
 
 /*
@@ -114,7 +113,7 @@ extend--继承
  减少代码冗余
  */
 p {
-  padding: 5px;
+    padding: 5px;
 }
 
 /*
@@ -123,8 +122,8 @@ p {
 @each类似JS的for..in
 */
 .wrap {
-  margin-left: 5px;
-  padding-left: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
 }
 
 /*-----------------------*/
@@ -140,29 +139,29 @@ SASS数据类型
  */
 /*加减乘除*/
 .icon-twitter {
-  background-postion: 0 -20;
-  background-color: #070707;
-  font-size: 6em;
-  line-height: 15px;
+    background-postion: 0 -20;
+    background-color: #070707;
+    font-size: 6em;
+    line-height: 15px;
 }
 
 .icon-facebook {
-  background-postion: 0 -40;
-  background-color: #070707;
-  font-size: 6em;
-  line-height: 15px;
+    background-postion: 0 -40;
+    background-color: #070707;
+    font-size: 6em;
+    line-height: 15px;
 }
 
 .icon-github {
-  background-postion: 0 -60;
-  background-color: #070707;
-  font-size: 6em;
-  line-height: 15px;
+    background-postion: 0 -60;
+    background-color: #070707;
+    font-size: 6em;
+    line-height: 15px;
 }
 
 .icon-weibo {
-  background-postion: 0 -80;
-  background-color: #070707;
-  font-size: 6em;
-  line-height: 15px;
+    background-postion: 0 -80;
+    background-color: #070707;
+    font-size: 6em;
+    line-height: 15px;
 }

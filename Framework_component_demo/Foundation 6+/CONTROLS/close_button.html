@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <title>关闭样式</title>
+        <link rel=
+            "stylesheet" type="text/css" href="../node_modules/foundation-sites/dist/foundation.css">
+        </head>
+        <body>
+            <!-- 添加.callout可以使消息变成消息框模式，让entity变成按钮主要通过.close-button这个类 -->
+            <div class="callout">
+                <button class="close-button" aria-label="Close alert" type="button">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                <p>You can so totally close this!</p>
+            </div>
+            <script src="../node_modules/foundation-sites/node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../node_modules/foundation-sites/dist/foundation.js"></script>
+            <script type="text/javascript">
+                $(document).foundation();
+            </script>
+        </body>
+    </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <title>按钮</title>
+        <link rel=
+            "stylesheet" type="text/css" href="../node_modules/foundation-sites/dist/foundation.css">
+        </head>
+        <body>
+            <h3>按钮效果还可以作用于a标签</h3>
+            <!-- a标签和button标签添加.button类就可以产生按钮效果 -->
+            <!-- Anchors (links) -->
+            <a href="#" class="button">Learn More</a>
+            <a href="#" class="button">View All Features</a>
+            <!-- Buttons (actions) -->
+            <button type="button" class="success button">Save</button>
+            <button type="button" class="alert button">Delete</button>
+            <hr>
+            <h3>按钮有六种规格</h3>
+            <!-- 按钮有六中规格,tiny/small/normal(!default)/large/expanded/small expanded -->
+            <a class="tiny button" href="#">So Tiny</a>
+            <a class="small button" href="#">So Small</a>
+            <a class="button" href="#">So Basic</a>
+            <a class="large button" href="#">So Large</a>
+            <a class="expanded button" href="#">Such Expand</a>
+            <a class="small expanded button" href="#">Wow, Small Expand</a>
+            <hr>
+            <h3>实心和空心按钮有默认的五种颜色</h3>
+            <!-- 和bootstrap大同小异 ，只是单独拼写而已 -->
+            <a class="secondary button" href="#">Secondary Color</a>
+            <a class="success button" href="#">Success Color</a>
+            <a class="alert button" href="#">Alert Color</a>
+            <a class="warning button" href="#">Warning Color</a>
+            <a class="disabled button" href="#">Disabled Button</a><br>
+            <button class="hollow button" href="#">Primary Color</button>
+            <button class="secondary hollow button" href="#">Secondary Color</button>
+            <button class="success hollow button" href="#">Success Color</button>
+            <button class="alert hollow button" href="#">Alert Color</button>
+            <button class="warning hollow button" href="#">Warning Color</button>
+            <hr>
+            <h3>下拉三角标按钮</h3>
+            <!-- 在按钮添加dropdown这个类即可 -->
+            <button class="tiny dropdown button">Dropdown Button</button>
+            <button class="small dropdown button">Dropdown Button</button>
+            <button class="dropdown button">Dropdown Button</button>
+            <button class="large dropdown button">Dropdown Button</button>
+            <button class="expanded dropdown button">Dropdown Button</button>
+            <hr>
+            <h3>关闭按钮</h3>
+            <!-- 这里的隐藏文字用show-for-sr ， bootstrap用的是.caret  -->
+            <button class="button" type="button">
+            <!-- Screen readers will see "close" -->
+            <span class="show-for-sr">Close</span>
+            <!-- Visual users will see the X, but not the "Close" text -->
+            <span aria-hidden="true"><i class="fi-x"></i></span>
+            </button>
+            <script src="../node_modules/foundation-sites/node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../node_modules/foundation-sites/dist/foundation.js"></script>
+        </body>
+    </html>

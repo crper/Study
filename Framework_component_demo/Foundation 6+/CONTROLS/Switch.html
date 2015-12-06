@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <title>开关</title>
+        <link rel=
+            "stylesheet" type="text/css" href="../node_modules/foundation-sites/dist/foundation.css">
+        </head>
+        <body>
+            <!--
+                                        input必须在上，label在后，label和input通过id来关联；
+                                        .switch-input作用于选择；
+                                        .switch-paddle作用于label标签
+            -->
+            <h3>开关按钮checkbox</h3>
+            <div class="switch">
+                <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="exampleSwitch">
+                    <span class="show-for-sr">Download Kittens</span>
+                </label>
+            </div>
+            <h3>radio</h3>
+            <div class="switch">
+                <input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+                <label class="switch-paddle" for="exampleRadioSwitch1">
+                    <span class="show-for-sr">Bulbasaur</span>
+                </label>
+            </div>
+            <div class="switch">
+                <input class="switch-input" id="exampleRadioSwitch2" type="radio" checked name="testGroup">
+                <label class="switch-paddle" for="exampleRadioSwitch2">
+                    <span class="show-for-sr">Bulbasaur</span>
+                </label>
+            </div>
+            <div class="switch">
+                <input class="switch-input" id="exampleRadioSwitch3" type="radio" checked name="testGroup">
+                <label class="switch-paddle" for="exampleRadioSwitch3">
+                    <span class="show-for-sr">Bulbasaur</span>
+                </label>
+            </div>
+            <h3>有三种规格、tiny/small/large</h3>
+            <div class="switch tiny">
+                <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="tinySwitch">
+                    <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+                </label>
+            </div>
+            <div class="switch small">
+                <input class="switch-input" id="smallSwitch" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="smallSwitch">
+                    <span class="show-for-sr">Small Portions Only</span>
+                </label>
+            </div>
+            <div class="switch large">
+                <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="largeSwitch">
+                    <span class="show-for-sr">Show Large Elephants</span>
+                </label>
+            </div>
+            <h3>包含内部文字的选择</h3>
+            <!-- 通过两个span和两个类来控制隐藏显示 -->
+            <p>Do you like me?</p>
+            <div class="switch large">
+                <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="yes-no">
+                    <span class="show-for-sr">Do you like me?</span>
+                    <span class="switch-active" aria-hidden="true">Yes</span>
+                    <span class="switch-inactive" aria-hidden="true">No</span>
+                </label>
+            </div>
+            <script src="../node_modules/foundation-sites/node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../node_modules/foundation-sites/dist/foundation.js"></script>
+        </body>
+    </html>

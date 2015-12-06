@@ -1,0 +1,248 @@
+<!-- 适用于任何背景,控制::before和::after -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3实现折角效果</title>
+    <style media="screen">
+        body{
+            background-color: #ddca7c;
+        }
+        .title{
+            margin:20px;
+        }
+
+        .wrapper{
+        margin:0 auto;
+        width:500px;
+        height:300px;
+        background-color: #36b11d;
+        border-radius: 10px 10px 0 0;
+        font-family: monoca,"微软雅黑",sans-serif;
+        /*父包含块*/
+        position: relative;
+        }
+        .wrapper > p{
+            width:400px;
+            height:200px;
+            display: block;
+            color:#f5f5f5;
+            font-size:14px;
+
+            /*文字换行*/
+            word-wrap: break-word;
+            word-break: break-all;
+
+            /*内容块绝对居中*/
+            position: absolute;
+            top:50%;
+            left:50%;
+            -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
+
+            /*文字增加阴影稍微有立体感一些*/
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .wrapper::before{
+            /*设置折角实现的位置;*/
+            position: absolute;
+            left:0;
+            height:0;
+            bottom: -60px;
+
+
+
+            content:"";
+            display: block;
+            border-width: 30px;
+            border-style: solid;
+            border-color:rgba(0, 255, 0, 0.5) rgba(0, 220, 0, 0.5) transparent transparent;
+            background-color: transparent;
+
+
+        }
+
+        .wrapper::after{
+            /*设置折角实现的位置;*/
+            position: absolute;
+            right:0;
+            height:60px;
+            bottom:-60px;
+            background-color: #36b11d;
+            width:440px;
+            content:"";
+            display: block;
+
+
+        }
+
+
+        /*以下就用到动画这些了..难度稍微复杂些*/
+        /*作用于before*/
+        @-webkit-keyframes  emulate{
+            from{
+                border-color:#21b4ff #21b4ff transparent transparent;
+            }
+            to{
+                border-color:#9d0e2f #9d0e2f transparent transparent;
+
+            }
+
+        }
+        @keyframes  emulate{
+            from{
+                border-color:#21b4ff #21b4ff transparent transparent;
+            }
+            to{
+                border-color:#9d0e2f #9d0e2f transparent transparent;
+
+            }
+
+        }
+        /*作用于after*/
+        @-webkit-keyframes  emulatea{
+            from{
+                background-color:  #07618f ;
+            }
+            to{
+                background-color: #c71840 ;
+            }
+
+        }
+        @keyframes  emulatea{
+            from{
+                background-color:  #07618f ;
+            }
+            to{
+                background-color: #c71840 ;
+            }
+
+        }
+
+        /*作用于包含块*/
+        @-webkit-keyframes wrap{
+            from{
+                border-radius: 10px 10px 0 0;
+                background-color:  #07618f ;
+            }to{
+                border-radius: 100px 100px 0 0;
+                background-color: #c71840 ;
+            }
+        }
+        @keyframes wrap{
+            from{
+                border-radius: 10px 10px 0 0;
+                background-color:  #07618f ;
+            }to{
+                border-radius: 100px 100px 0 0;
+                background-color: #c71840 ;
+            }
+        }
+
+        .wrapper1{
+        margin:0 auto;
+        width:500px;
+        height:300px;
+        background-color: #36b11d;
+        border-radius: 10px 10px 0 0;
+        font-family: monoca,"微软雅黑",sans-serif;
+        /*父包含块*/
+        position: relative;
+
+        /*动画*/
+        -webkit-animation: wrap 3s ease-in-out infinite;
+                animation: wrap 3s ease-in-out infinite;
+        }
+        .wrapper1 > p{
+            width:400px;
+            height:200px;
+            display: block;
+            color:#f5f5f5;
+            font-size:14px;
+
+            /*文字换行*/
+            word-wrap: break-word;
+            word-break: break-all;
+
+            /*内容块绝对居中*/
+            position: absolute;
+            top:50%;
+            left:50%;
+            -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
+
+            /*文字增加阴影稍微有立体感一些*/
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+
+        .wrapper1::before{
+            /*设置折角实现的位置;*/
+            position: absolute;
+            left:0;
+            bottom: -60px;
+
+            content:"";
+            display: block;
+            border-color: #36b11d;
+            border-width: 30px;
+            border-style: solid;
+            background-color: transparent;
+
+            -webkit-animation: emulate 3s ease-out infinite;
+
+                    animation: emulate 3s ease-out infinite;
+        }
+
+        .wrapper1::after{
+            /*设置折角实现的位置;*/
+            position: absolute;
+            right:0;
+            height:60px;
+            bottom:-60px;
+            background-color: #36b11d;
+            width:440px;
+            content:"";
+            display: block;
+            -webkit-animation: emulatea 3s ease-out infinite;
+                    animation: emulatea 3s ease-out infinite;
+        }
+
+
+    </style>
+</head>
+<body>
+    <p class="title">
+        不需要纯色背景的CSS3折角实现
+    </p>
+    <div class="wrapper">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+    <br>
+    <p class="title">
+        动画CSS3折角实现
+    </p>
+    <div class="wrapper1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+</body>
+</html>

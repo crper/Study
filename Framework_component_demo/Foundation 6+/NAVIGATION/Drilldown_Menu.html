@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>内部菜单</title>
+    <link rel="stylesheet" type="text/css" href="../node_modules/foundation-sites/dist/foundation.css">
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/foundation-icons/foundation-icons.css">
+</head>
+
+<body>
+    <h3>层层递进的菜单</h3>
+    <ul class="vertical menu" data-drilldown="" style="width: 200px" id="m1">
+        <li>
+            <a href="#">Item 1</a>
+            <ul class="vertical menu">
+                <li>
+                    <a href="#">Item 1A</a>
+                    <ul class="vertical menu">
+                        <li><a href="#">Item 1Aa</a></li>
+                        <li><a href="#">Item 1Ba</a></li>
+                        <li><a href="#">Item 1Ca</a></li>
+                        <li><a href="#">Item 1Da</a></li>
+                        <li><a href="#">Item 1Ea</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Item 1B</a></li>
+                <li><a href="#">Item 1C</a></li>
+                <li><a href="#">Item 1D</a></li>
+                <li><a href="#">Item 1E</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Item 2</a>
+            <ul class="vertical menu">
+                <li><a href="#">Item 2A</a></li>
+                <li><a href="#">Item 2B</a></li>
+                <li><a href="#">Item 2C</a></li>
+                <li><a href="#">Item 2D</a></li>
+                <li><a href="#">Item 2E</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Item 3</a>
+            <ul class="vertical menu">
+                <li><a href="#">Item 3A</a></li>
+                <li><a href="#">Item 3B</a></li>
+                <li><a href="#">Item 3C</a></li>
+                <li><a href="#">Item 3D</a></li>
+                <li><a href="#">Item 3E</a></li>
+            </ul>
+        </li>
+        <li><a href="#"> Item 4</a></li>
+    </ul>
+    <script src="../node_modules/foundation-sites/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/foundation.js"></script>
+    <script type="text/javascript">
+    $(document).foundation();
+    </script>
+</body>
+
+</html>

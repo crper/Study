@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>综合</title>
+</head>
+
+<body>
+    <div id="app">
+        <input v-model="newTodo" v-on:keyup.enter="addTodo">
+        <ul>
+            <li v-for="todo in todos">
+                <span>{{ todo.text }}{{{test}}}</span>
+                <button v-on:click="removeTodo($index)">X</button>
+            </li>
+        </ul>
+    </div>
+    <script src="../../bower_components/vue/dist/vue.js"></script>
+    <script src="demo.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+
+</html>

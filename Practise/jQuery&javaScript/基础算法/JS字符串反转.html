@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS字符串反转</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //方法1：原生JS的内置方法，推荐！
+    function reverseString(str) {
+        console.log("原有字符串:" + str);
+        str = str.split(",").reverse().join(",");
+        console.log("反转字符串:" + str);
+        return str;
+    }
+    reverseString("Greetings from Earth");
+
+    /**
+     * split(",")将每个字符串转换为一个数组元素
+     * reverse()反序每个数组元素
+     * join(",")将反序后的数组用","分隔，再换成字符串
+     */
+
+
+    //方法2：for遍历和substring及字符串拼接
+    var str2=''; //必须设置为空，不然会出现undefined；
+    function reverseStringUsefor(str1) {
+        for (var i = 0; i < str1.length; i++) {
+            console.log("原有字符串:" + str1);
+            str2 += str1.substring(str1.length - i - 1, str1.length - i);
+            console.log("反转字符串:" + str2);
+
+        }
+    };
+    reverseStringUsefor('Hello');
+    /**
+     * 通过for循环遍历，然后通过substring来裁切拼接；
+     * 对于非常长的字符串来说，这个非常不可取，很慢！！
+     */
+    </script>
+</body>
+
+</html>

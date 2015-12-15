@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS计算阶层</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //第一种，for遍历
+    function factorialize(num) {
+        var test = 1;
+        for (var i = 1; i <= num; i++) {
+            test *= i;
+        }
+        num = test;
+        return num;
+    }
+
+    console.log("第一种："+factorialize(5));
+
+
+    //第二种，迭代函数
+    function factorial(n, total) {
+        if (n === 1) return total;
+        return factorial(n - 1, n * total);
+    }
+    console.log("第二种："+factorial(5, 1)) // 120
+
+    /**
+     * 这个写法是网上大牛的写法，叫做尾调用优化
+     * 可以防止栈溢出，复杂度O(1)
+     * 一些函数式编程语言将其写入了语言规格，ES6 也是如此
+     */
+    </script>
+</body>
+
+</html>
